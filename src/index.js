@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from "react-router-dom";
+import { ModalProvider } from './Context/ModalContext'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <ModalProvider>
+        <App />
+      </ModalProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

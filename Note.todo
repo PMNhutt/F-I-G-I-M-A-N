@@ -1,0 +1,19 @@
+@@@@@@@@ LÀM TỚI ĐÂU RESPONSIVE TỚI ĐÓ @@@@@@@@@@
+
+
+@ DATA 
+
+@ MAIN FUNCTIONS
+☐ categories...
+☐ sorting...
+☐ pagination...
+☐ detail...
+    --> pop up modal show detail
+☐ add to cart...
+☐ remove from cart...
+
+@ OTHER NOTES
+☐ preview img when hover on product
+☐ add locomotive scroll
+
+--nav z-index: 5

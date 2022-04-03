@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Main from './Components/Main/Main';
+import { ModalContext } from './Context/ModalContext';
+import { useEffect, useContext } from 'react';
 
 function App() {
+
+  const modal = useContext(ModalContext)
+
+  useEffect(() => {
+    modal.showModal === true ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
+  }, [modal.showModal])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Main />
     </div>
   );
 }
