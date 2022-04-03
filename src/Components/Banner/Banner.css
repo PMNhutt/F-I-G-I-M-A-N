@@ -4,24 +4,57 @@
 
 .banner {
     background-color:#1e332b;
-    background-image: 
-    radial-gradient(at 63% 82%, hsla(238,50%,53%,1) 0, transparent 50%), 
-    radial-gradient(at 9% 32%, hsla(254,85%,74%,1) 0, transparent 52%), 
-    radial-gradient(at 63% 11%, hsla(254,59%,21%,1) 0, transparent 48%), 
-    radial-gradient(at 82% 64%, hsla(265,58%,63%,1) 0, transparent 54%), 
-    radial-gradient(at 70% 78%, hsla(238,32%,51%,1) 0, transparent 42%), 
-    radial-gradient(at 34% 70%, hsla(253,16%,70%,1) 0, transparent 54%), 
-    radial-gradient(at 95% 12%, hsla(263,81%,74%,1) 0, transparent 42%);
-    /* background-color:#01040d;
-    background-image: 
-    radial-gradient(at 87% 23%, hsla(221,94%,18%,1) 0, transparent 100%), 
-    radial-gradient(at 0% 51%, hsla(220,82%,30%,1) 0, transparent 100%), 
-    radial-gradient(at 54% 0%, hsla(221,94%,18%,1) 0, transparent 57%), 
-    radial-gradient(at 80% 93%, hsla(199,54%,49%,1) 0, transparent 81%), 
-    radial-gradient(at 12% 7%, hsla(200,55%,62%,1) 0, transparent 56%); */
+    background-image:
+    radial-gradient(at 0% 99%, hsla(254,53%,30%,0.99) 0px, transparent 50%),
+    radial-gradient(at 38% 42%, hsla(238,51%,53%,1) 0px, transparent 50%),
+    radial-gradient(at 65% 78%, hsla(254,85%,78%,1) 0px, transparent 50%),
+    radial-gradient(at 20% 14%, hsla(265,57%,62%,1) 0px, transparent 50%),
+    radial-gradient(at 85% 69%, hsla(238,32%,51%,1) 0px, transparent 50%),
+    radial-gradient(at 88% 25%, hsla(254,17%,70%,0.97) 0px, transparent) ;
+
+    background-size: 150% 150%;
     width: 100%;
     position: relative;
+    animation: Gradient 10s infinite ease ;
 }
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/* @keyframes radBackground {
+    0%, 100%{
+
+        background-image: 
+        radial-gradient(at 63% 82%, hsla(238,50%,53%,1) 0, transparent 50%), 
+        radial-gradient(at 9% 32%, hsla(254,85%,74%,1) 0, transparent 52%), 
+        radial-gradient(at 63% 11%, hsla(254,59%,21%,1) 0, transparent 48%), 
+        radial-gradient(at 82% 64%, hsla(265,58%,63%,1) 0, transparent 54%), 
+        radial-gradient(at 70% 78%, hsla(238,32%,51%,1) 0, transparent 42%), 
+        radial-gradient(at 34% 70%, hsla(253,16%,70%,1) 0, transparent 54%), 
+        radial-gradient(at 95% 12%, hsla(263,81%,74%,1) 0, transparent 42%);
+    }
+
+    50%{
+
+        background-image:
+        radial-gradient(at 0% 99%, hsla(254,53%,30%,0.99) 0px, transparent 50%),
+        radial-gradient(at 38% 42%, hsla(238,51%,53%,1) 0px, transparent 50%),
+        radial-gradient(at 65% 78%, hsla(254,85%,78%,1) 0px, transparent 50%),
+        radial-gradient(at 20% 14%, hsla(265,57%,62%,1) 0px, transparent 50%),
+        radial-gradient(at 85% 69%, hsla(238,32%,51%,1) 0px, transparent 50%),
+        radial-gradient(at 88% 25%, hsla(254,17%,70%,0.97) 0px, transparent) ;
+    }
+    
+} */
 
 .banner-container {
     position: relative;
@@ -43,7 +76,7 @@
 }
 
 .banner-left .banner-info h2{
-    font-size: 5vw;
+    font-size: 5.5vw;
     font-family: 'Lobster', cursive;
 }
 
@@ -67,7 +100,7 @@
     width: fit-content;
     backdrop-filter: blur(5px);
     border-radius: 26px;
-    box-shadow: 35px 35px 68px 0px rgba(145, 192, 255, 0.5), 
+    box-shadow: 20px 0px 68px 0px rgba(145, 192, 255, 0.5), 
     inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6), 
     inset 0px 11px 28px 0px rgb(255, 255, 255);
     transition: 0.5s;
@@ -113,7 +146,7 @@
     top: 20vw !important;
     backdrop-filter: blur(5px);
     border-radius: 26px;
-    box-shadow: 35px 35px 68px 0px rgba(145, 192, 255, 0.5), 
+    box-shadow: 20px 0px 68px 0px rgba(145, 192, 255, 0.5), 
     inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6), 
     inset 0px 11px 28px 0px rgb(255, 255, 255);
 }
@@ -128,7 +161,7 @@
     top: 2vw !important;
     backdrop-filter: blur(5px);
     border-radius: 50%;
-    box-shadow: 35px 35px 68px 0px rgba(145, 192, 255, 0.5), 
+    box-shadow: 20px 0px 68px 0px rgba(145, 192, 255, 0.5), 
     inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6), 
     inset 0px 11px 28px 0px rgb(255, 255, 255);
     cursor: pointer;
