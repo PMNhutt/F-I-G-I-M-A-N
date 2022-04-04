@@ -6,6 +6,7 @@ import heartLogo from '../../logo/heart.png';
 import { styled } from '@mui/material/styles';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import Zoom from '@mui/material/Zoom';
+import { isMobile } from 'react-device-detect';
 
 function Banner() {
 
@@ -29,15 +30,15 @@ function Banner() {
     //custom tooltip
     const MyTooltip = styled(({ className, ...props }) => (
         <Tooltip {...props} classes={{ popper: className }} />
-      ))(() => ({
+    ))(() => ({
         [`& .${tooltipClasses.tooltip}`]: {
-          backdropFilter: 'blur(5px)',
-          color: 'rgba(255, 255, 255, 1)',
-          boxShadow: '35px 35px 68px 0px rgba(145, 192, 255, 0.5),inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255)',
-          fontSize: 15,
-          borderRadius: '26px'
+            backdropFilter: 'blur(5px)',
+            color: 'rgba(255, 255, 255, 1)',
+            boxShadow: '35px 35px 68px 0px rgba(145, 192, 255, 0.5),inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255)',
+            fontSize: 15,
+            borderRadius: '26px'
         },
-      }));
+    }));
 
 
     return (
@@ -59,13 +60,13 @@ function Banner() {
                 <div ref={scene} id="scene" className="banner-right">
 
                     <div
-                        data-depth-x="0.1"
+                        data-depth-x={isMobile == true ? "0" : "0.1"}
                         className="banner-img"
                         style={{ backgroundImage: "url(https://www.sideshow.com/storage/product-images/907278/bumblebee-dlx_transformers_silo.png)" }}
                     ></div>
 
                     <div
-                        data-depth="0.3"
+                        data-depth={isMobile == true ? "0" : "0.3"}
                         className="layer2"
                         style={{
                             backgroundImage: `url(
@@ -78,7 +79,7 @@ function Banner() {
                     <MyTooltip title="Tìm hiểu thêm" placement="top" TransitionComponent={Zoom}>
 
                         <div
-                            data-depth="0.6"
+                            data-depth={isMobile == true ? "0" : "0.6"}
                             className="layer3"
                             onClick={() => handleLayer3Click()}
                             style={{
