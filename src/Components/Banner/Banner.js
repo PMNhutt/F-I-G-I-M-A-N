@@ -62,7 +62,10 @@ function Banner() {
                     <div
                         data-depth-x={isMobile == true ? "0" : "0.1"}
                         className="banner-img"
-                        style={{ backgroundImage: "url(https://www.sideshow.com/storage/product-images/907278/bumblebee-dlx_transformers_silo.png)" }}
+                        style={{
+                            // backgroundColor: "blue"
+                            // backgroundImage: "url(https://www.sideshow.com/storage/product-images/907278/bumblebee-dlx_transformers_silo.png)"
+                        }}
                     ></div>
 
                     <div
