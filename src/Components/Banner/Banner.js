@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react'
 import './Banner.css'
-import Parallax from 'parallax-js/dist/parallax.min.js'
+// import Parallax from 'parallax-js/dist/parallax.min.js'
 import logo from '../../logo/bumblebeeDLXLogo.png';
 import heartLogo from '../../logo/heart.png';
 import { styled } from '@mui/material/styles';
@@ -12,16 +12,16 @@ function Banner() {
 
     const scene = useRef()
 
-    useEffect(() => {
-        var parallaxInstance = new Parallax(scene.current, {
-            relativeInput: true,
-            // hoverOnly: true,
-        });
+    // useEffect(() => {
+    //     var parallaxInstance = new Parallax(scene.current, {
+    //         relativeInput: true,
+    //         // hoverOnly: true,
+    //     });
 
-        return () => {
-            parallaxInstance.disable()
-        }
-    }, [])
+    //     return () => {
+    //         parallaxInstance.disable()
+    //     }
+    // }, [])
 
     //handleLayer3Click
     const handleLayer3Click = () => {
@@ -60,7 +60,7 @@ function Banner() {
                 <div ref={scene} id="scene" className="banner-right">
 
                     <div
-                        data-depth-x={isMobile == true ? "0" : "0.1"}
+                        // data-depth-x={isMobile == true ? "0" : "0.1"}
                         className="banner-img"
                         style={{
                             backgroundImage: "url(https://www.sideshow.com/storage/product-images/907278/bumblebee-dlx_transformers_silo.png)"
@@ -68,7 +68,7 @@ function Banner() {
                     ></div>
 
                     <div
-                        data-depth={isMobile == true ? "0" : "0.3"}
+                        // data-depth={isMobile == true ? "0" : "0.3"}
                         className="layer2"
                         style={{
                             backgroundImage: `url(
@@ -81,7 +81,7 @@ function Banner() {
                     {/* <MyTooltip title="Tìm hiểu thêm" placement="top" TransitionComponent={Zoom}> */}
 
                         <div
-                            data-depth={isMobile == true ? "0" : "0.6"}
+                            // data-depth={isMobile == true ? "0" : "0.6"}
                             className="layer3"
                             onClick={() => handleLayer3Click()}
                             style={{
