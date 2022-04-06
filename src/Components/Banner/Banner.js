@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react'
 import './Banner.css'
-import Parallax from 'parallax-js'
+import Parallax from 'parallax-js/dist/parallax.min.js'
 import logo from '../../logo/bumblebeeDLXLogo.png';
 import heartLogo from '../../logo/heart.png';
 import { styled } from '@mui/material/styles';
@@ -28,17 +28,17 @@ function Banner() {
     }
 
     //custom tooltip
-    const MyTooltip = styled(({ className, ...props }) => (
-        <Tooltip {...props} classes={{ popper: className }} />
-    ))(() => ({
-        [`& .${tooltipClasses.tooltip}`]: {
-            backdropFilter: 'blur(5px)',
-            color: 'rgba(255, 255, 255, 1)',
-            boxShadow: '35px 35px 68px 0px rgba(145, 192, 255, 0.5),inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255)',
-            fontSize: 15,
-            borderRadius: '26px'
-        },
-    }));
+    // const MyTooltip = styled(({ className, ...props }) => (
+    //     <Tooltip {...props} classes={{ popper: className }} />
+    // ))(() => ({
+    //     [`& .${tooltipClasses.tooltip}`]: {
+    //         backdropFilter: 'blur(5px)',
+    //         color: 'rgba(255, 255, 255, 1)',
+    //         boxShadow: '35px 35px 68px 0px rgba(145, 192, 255, 0.5),inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255)',
+    //         fontSize: 15,
+    //         borderRadius: '26px'
+    //     },
+    // }));
 
 
     return (
@@ -63,8 +63,7 @@ function Banner() {
                         data-depth-x={isMobile == true ? "0" : "0.1"}
                         className="banner-img"
                         style={{
-                            // backgroundColor: "blue"
-                            // backgroundImage: "url(https://www.sideshow.com/storage/product-images/907278/bumblebee-dlx_transformers_silo.png)"
+                            backgroundImage: "url(https://www.sideshow.com/storage/product-images/907278/bumblebee-dlx_transformers_silo.png)"
                         }}
                     ></div>
 
@@ -79,7 +78,7 @@ function Banner() {
                     >
                     </div>
 
-                    <MyTooltip title="Tìm hiểu thêm" placement="top" TransitionComponent={Zoom}>
+                    {/* <MyTooltip title="Tìm hiểu thêm" placement="top" TransitionComponent={Zoom}> */}
 
                         <div
                             data-depth={isMobile == true ? "0" : "0.6"}
@@ -92,7 +91,7 @@ function Banner() {
                             }}
                         >
                         </div>
-                    </MyTooltip>
+                    {/* </MyTooltip> */}
 
                 </div>
             </div>

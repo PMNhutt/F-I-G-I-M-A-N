@@ -85,17 +85,17 @@ function Nav() {
 
 
   //custom tooltip
-  const MyTooltip = styled(({ className, ...props }) => (
-    <Tooltip {...props} classes={{ popper: className }} />
-  ))(() => ({
-    [`& .${tooltipClasses.tooltip}`]: {
-      backdropFilter: 'blur(5px)',
-      color: 'rgba(255, 255, 255, 1)',
-      boxShadow: '35px 35px 68px 0px rgba(145, 192, 255, 0.5),inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255)',
-      fontSize: 15,
-      borderRadius: '26px'
-    },
-  }));
+  // const MyTooltip = styled(({ className, ...props }) => (
+  //   <Tooltip {...props} classes={{ popper: className }} />
+  // ))(() => ({
+  //   [`& .${tooltipClasses.tooltip}`]: {
+  //     backdropFilter: 'blur(5px)',
+  //     color: 'rgba(255, 255, 255, 1)',
+  //     boxShadow: '35px 35px 68px 0px rgba(145, 192, 255, 0.5),inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255)',
+  //     fontSize: 15,
+  //     borderRadius: '26px'
+  //   },
+  // }));
   //=========================//
 
 
@@ -109,16 +109,16 @@ function Nav() {
       <div className="res-600">
         {changeMenu == true && (
           <div className="navbar-res-search">
-            <MyTooltip title="Tìm kiếm mô hình" TransitionComponent={Zoom}>
+            {/* <MyTooltip title="Tìm kiếm mô hình" TransitionComponent={Zoom}> */}
               <SearchIcon sx={{ fontSize: "1.5rem" }} />
-            </MyTooltip>
+            {/* </MyTooltip> */}
           </div>
         )}
 
         <div className="navbar-res" onClick={() => handleOpen()}>
-          <MyTooltip title="Menu" TransitionComponent={Zoom}>
+          {/* <MyTooltip title="Menu" TransitionComponent={Zoom}> */}
             <MenuRoundedIcon sx={{ fontSize: "1.5rem" }} />
-          </MyTooltip>
+          {/* </MyTooltip> */}
         </div>
       </div>
 
@@ -196,16 +196,16 @@ function Nav() {
 
         <div className="navbar-link " style={{ lineHeight: "10px" }}>
           <div className="nav-child">
-            <MyTooltip title="Tìm kiếm mô hình" TransitionComponent={Zoom}>
+            {/* <MyTooltip title="Tìm kiếm mô hình" TransitionComponent={Zoom}> */}
               <SearchIcon sx={{ fontSize: "1.5rem" }} />
-            </MyTooltip>
+            {/* </MyTooltip> */}
           </div>
         </div>
         <div className="navbar-link " style={{ lineHeight: "10px" }}>
           <NavLink to="/cart" className="nav-child" >
-            <MyTooltip title="Giỏ hàng" TransitionComponent={Zoom}>
+            {/* <MyTooltip title="Giỏ hàng" TransitionComponent={Zoom}> */}
               <ShoppingCartOutlinedIcon sx={{ fontSize: "1.5rem" }} />
-            </MyTooltip>
+            {/* </MyTooltip> */}
           </NavLink>
         </div>
         <div className="navbar-link">
