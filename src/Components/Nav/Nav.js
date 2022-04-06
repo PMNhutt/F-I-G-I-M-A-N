@@ -24,7 +24,7 @@ function Nav() {
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 80) {
         setScroll(true);
       } else {
         setScroll(false);
@@ -123,9 +123,9 @@ function Nav() {
       </div>
 
 
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence >
         {openMenu == true && (
-          <motion.div className="backdrop"
+          <div className="backdrop"
             variants={backdrop}
             initial="hidden"
             animate="visible"
@@ -133,7 +133,7 @@ function Nav() {
             ref={modalRef}
             onClick={(e) => closeModal(e)}
           >
-            <motion.div className="res-menu"
+            <div className="res-menu"
               variants={resmenu}
               initial="hidden"
               animate="visible"
@@ -179,8 +179,8 @@ function Nav() {
                   </NavLink>
                 </div>
               )}
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
       </AnimatePresence>
 
