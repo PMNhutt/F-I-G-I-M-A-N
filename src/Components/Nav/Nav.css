@@ -216,12 +216,8 @@
     .res-menu {
         backdrop-filter: blur(5px);
         border-radius: 26px;
-        padding: 2vw 15vw 8vw 15vw;
-        margin-top: 2vw;
-        background-color: rgba(255, 255, 255, 0.15);
-        box-shadow: 35px 35px 68px 0px rgba(121, 97, 245, 0.5), 
-        inset -8px -8px 16px 0px rgba(121, 97, 245, 0.6), 
-        inset 0px 11px 28px 0px rgb(255, 255, 255);
+        padding: 2vw 41vw 8vw 41vw;
+        background-color: rgba(0, 0, 0, 0.15);
         width: fit-content;
         position: relative;
         left: 50%;
@@ -346,12 +342,8 @@
     .res-menu {
         backdrop-filter: blur(5px);
         border-radius: 26px;
-        padding: 2vw 20vw 8vw 20vw;
-        margin-top: 2vw;
-        background-color: rgba(255, 255, 255, 0.18);
-        box-shadow: 35px 35px 68px 0px rgba(121, 97, 245, 0.5), 
-        inset -8px -8px 16px 0px rgba(121, 97, 245, 0.6), 
-        inset 0px 11px 28px 0px rgb(255, 255, 255);
+        padding: 2vw 31vw 8vw 31vw;
+        background-color: rgba(0, 0, 0, 0.18);
         width: fit-content;
         position: relative;
         left: 50%;
