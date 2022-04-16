@@ -94,6 +94,8 @@ function Nav() {
                   <NavLink to="/" className={(navData) => navData.isActive ? "active" : "nav-child"}> Trang Chủ</NavLink>
                   <NavLink to="/product" className={(navData) => navData.isActive ? "active" : "nav-child"}> Sản Phẩm</NavLink>
                   <NavLink to="/news" className={(navData) => navData.isActive ? "active" : "nav-child"}> Tin Tức</NavLink>
+                  <input type="text" placeholder="Tìm kiếm sản phẩm" />
+
                 </motion.div>
               </OutsideClickHandler>
             )}
@@ -103,7 +105,7 @@ function Nav() {
 
         <div className="nav-links-right">
           <input type="text" placeholder="Tìm kiếm sản phẩm" />
-          <SearchIcon className="icon" />
+          <SearchIcon className="icon search-icon" />
           <ShoppingCartOutlinedIcon className="icon" />
           <NavLink to="/login"><span className="login-btn">Đăng Nhập</span></NavLink>
         </div>
