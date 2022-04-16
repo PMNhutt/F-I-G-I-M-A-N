@@ -5,11 +5,11 @@ import { useEffect, useContext } from 'react';
 
 function App() {
 
-  const modal = useContext(ModalContext)
+  // const modal = useContext(ModalContext)
 
-  useEffect(() => {
-    modal.showModal === true ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
-  }, [modal.showModal])
+  // useEffect(() => {
+  //   modal.showModal === true ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
+  // }, [modal.showModal])
 
   return (
     <div className="App">

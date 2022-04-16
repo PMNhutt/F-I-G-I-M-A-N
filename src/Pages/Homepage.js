@@ -4,7 +4,7 @@ import Banner from '../Components/Banner/Banner'
 
 function Homepage() {
   return (
-    <div style={{minHeight: "200vh"}}>
+    <div>
         <Nav />
         <Banner />
     </div>
