@@ -120,7 +120,7 @@ body {
 .login-btn {
     text-transform: uppercase;
     font-weight: 600;
-    padding: 10px 3vw;
+    padding: 10px 2vw;
     /* box-shadow:
         20px 0px 68px 0px rgba(168, 197, 253, 0.5),
         inset -8px -8px 16px 0px rgba(168, 197, 253, 0.6),
@@ -132,6 +132,12 @@ body {
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: 0.5s;
+}
+
+.login-btn:hover {
+    background: rgba(183, 218, 255, 0.4);
+
 }
 
 .nav-links-res {
@@ -143,7 +149,7 @@ body {
     text-align: center;
     position: absolute;
     background-color: rgba(0, 0, 0, .5);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
     /* padding: 1vw 13vw; */
     border-radius: 10px;
     top: 9vw;
@@ -176,12 +182,12 @@ body {
         font-size: 3vw;
     }
 
-    .nav-links-res-modal {
+    .nav_scroll .nav-links-res-modal {
         display: block;
         text-align: center;
         position: absolute;
         background-color: rgba(0, 0, 0, .5);
-        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
         /* padding: 1vw 13vw; */
         border-radius: 10px;
         top: 9vw;

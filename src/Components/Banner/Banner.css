@@ -9,4 +9,133 @@
 
 .banner .container {
     height: 100vh;
+    position: relative;
+    padding: 0 5vw;
+}
+
+.banner-left-cover {
+    background: linear-gradient(77deg, rgba(0, 0, 0, .6), transparent 85%);
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 26.09%;
+    top: 0;
+    transition: opacity .5s;
+}
+
+.banner .content {
+    position: absolute;
+    top: 30%;
+    width: 40%;
+    color: var(--text-color);
+}
+
+.banner .content h1 {
+    font-family: Lobster, sans-serif;
+    font-size: 5.5vw;
+    margin-bottom: 2vw;
+}
+
+.banner .content h3 {
+    font-size: 1.7vw;
+    margin-bottom: 2.5vw;
+
+}
+
+.content .banner-btn {
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--text-color);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.2vw;
+    font-weight: 600;
+    padding: 0.7vw 1vw;
+    background: rgba(183, 218, 255, 0.25);
+
+    box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: 0.5s;
+}
+
+.content .banner-btn:hover {
+    background: rgba(183, 218, 255, 0.4);
+}
+
+
+/* ============ RESPONSIVE ============= */
+
+/* ====== Tablet: width >= 740px and < 1024px  */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+
+    .banner-left-cover {
+        background: linear-gradient(77deg, rgba(0, 0, 0, .7), transparent 92%);
+    }
+
+    .banner .content {
+        top: 30%;
+        width: 50%;
+    }
+
+    .banner .content h1 {
+        font-family: Lobster, sans-serif;
+        font-size: 6.5vw;
+        margin-bottom: 2vw;
+    }
+
+    .banner .content h3 {
+        font-size: 2vw;
+        margin-bottom: 2.5vw;
+
+    }
+
+    .content .banner-btn {
+        font-size: 1.6vw;
+    }
+
+}
+
+
+
+/* ====== Mobile: width < 740px  */
+@media only screen and (max-width: 46.1875em) {
+
+    .banner-left-cover {
+        background: linear-gradient(77deg, rgba(0, 0, 0, .8), transparent 100%);
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+        right: 0%;
+        top: 0;
+    }
+
+    .banner .content {
+        position: absolute;
+        top: 30%;
+        width: 80%;
+    }
+
+    .banner .content h1 {
+        font-family: Lobster, sans-serif;
+        font-size: 11.5vw;
+        margin-bottom: 5vw;
+    }
+
+    .banner .content h3 {
+        font-size: 4.7vw;
+        margin-bottom: 7.5vw;
+    }
+
+    .content .banner-btn {
+        font-size: 3.2vw;
+        padding: 2.7vw 2vw;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 10px;
+    }
+
+
 }
