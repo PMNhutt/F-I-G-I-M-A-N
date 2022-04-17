@@ -12,8 +12,8 @@ import OutsideClickHandler from 'react-outside-click-handler';
 
 function Nav() {
 
-  //modal menu context
-  const resMenu = useContext(ModalContext)
+  //modal cart context
+  const cartMenu = useContext(ModalContext)
 
   //scroll nav
   const [scroll, setScroll] = useState(false);
@@ -49,19 +49,20 @@ function Nav() {
     window.addEventListener('resize', () => {
       if (window.innerWidth > 1200) {
         setOpenMenu(false)
-        resMenu.setShowModal(false)
       }
-      // if (window.innerWidth <= 600) {
-      //   setChangeMenu(true)
-      // } else {
-      //   setChangeMenu(false)
-      // }
     });
 
     return () => {
       window.removeEventListener('resize')
     }
   }, [])
+
+
+  const handleOpenCart = () => {
+    cartMenu.setShowModal(true)
+  }
+
+  
 
   //=========================//
 
@@ -106,9 +107,10 @@ function Nav() {
         <div className="nav-links-right">
           <input type="text" placeholder="Tìm kiếm sản phẩm" />
           <SearchIcon className="icon search-icon" />
-          <ShoppingCartOutlinedIcon className="icon" />
+          <ShoppingCartOutlinedIcon className="icon" onClick={() => handleOpenCart()} />
           <NavLink to="/login"><span className="login-btn">Đăng Nhập</span></NavLink>
         </div>
+
       </div>
 
     </div>

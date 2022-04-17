@@ -24,6 +24,22 @@
     transition: opacity .5s;
 }
 
+.banner-bottom-cover {
+    background-color: transparent;
+    background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+    background-position: 0 top;
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    bottom: -18%;
+    height: 30.7vw;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: auto;
+    width: 100%;
+}
+
 .banner .content {
     position: absolute;
     top: 30%;
@@ -72,7 +88,7 @@
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
 
     .banner-left-cover {
-        background: linear-gradient(77deg, rgba(0, 0, 0, .7), transparent 92%);
+        background: linear-gradient(77deg, rgba(0, 0, 0, .7), transparent 80%);
     }
 
     .banner .content {
@@ -94,6 +110,15 @@
 
     .content .banner-btn {
         font-size: 1.6vw;
+    }
+
+    .banner-bottom-cover {
+        /* bottom: -1px;
+        height: 14.7vw; */
+        bottom: -14%;
+        height: 34.7vw;
+        left: 0;
+        opacity: 1;
     }
 
 }
@@ -135,6 +160,13 @@
         backdrop-filter: blur(4px);
         -webkit-backdrop-filter: blur(4px);
         border-radius: 10px;
+    }
+
+
+    .banner-bottom-cover {
+        bottom: -6%;
+        height: 34.7vw;
+        left: 0;
     }
 
 

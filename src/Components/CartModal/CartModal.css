@@ -1,0 +1,104 @@
+.cart-modal {
+    position: fixed;
+    z-index: 9999999;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-height: 100vh;
+    width: 420px;
+    padding: 104px 50px 50px;
+    background-color: rgba(183, 218, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #e3e3e3;
+}
+
+.backdrop-background {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.cart-lottie {
+    text-align: center;
+    margin: 10px 0 !important;
+}
+
+.view-cart-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.close-cart-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.close-cart-btn:hover {
+    transform: rotate(90deg);
+    color: rgb(23, 131, 198);
+}
+
+.view-cart {
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.3vw;
+    cursor: pointer;
+    padding: 10px 1vw;
+    background: rgba(183, 218, 255, 0.25);
+    box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: 0.5s;
+}
+
+.view-cart:hover {
+    background: rgba(183, 218, 255, 0.4);  
+}
+
+.cart-items h3 {
+    text-align: center;
+}
+
+
+/* ========================= RESPONSIVE ========================== */
+
+
+/* ====== Tablet: width >= 740px and < 1024px  */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+
+    .view-cart {
+        font-size: 1.8vw;
+    }
+}
+
+/* ====== Mobile: width < 740px  */
+@media only screen and (max-width: 46.1875em) {
+
+
+    .cart-modal {
+        min-height: 100vh;
+        width: 250px;
+    }
+
+    .view-cart {
+        font-size: 3vw;
+        border-radius: 7px;
+    }
+}
