@@ -10,7 +10,7 @@
 .banner .container {
     height: 100vh;
     position: relative;
-    padding: 0 5vw;
+    padding: 0 7vw;
 }
 
 .banner-left-cover {
@@ -72,7 +72,7 @@
     box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.5s;
 }
@@ -93,23 +93,27 @@
 
     .banner .content {
         top: 30%;
-        width: 50%;
+        width: 45%;
     }
 
     .banner .content h1 {
         font-family: Lobster, sans-serif;
         font-size: 6.5vw;
-        margin-bottom: 2vw;
+        margin-bottom: 3vw;
     }
 
     .banner .content h3 {
         font-size: 2vw;
-        margin-bottom: 2.5vw;
+        margin-bottom: 5.5vw;
 
     }
 
     .content .banner-btn {
-        font-size: 1.6vw;
+        font-size: 1.8vw;
+    }
+
+    .content .banner-btn {
+        padding: 1.7vw 1vw;
     }
 
     .banner-bottom-cover {

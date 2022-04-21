@@ -7,8 +7,10 @@ import figiLogo from '../../data/figiman.png';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import NotesIcon from '@mui/icons-material/Notes';
 import OutsideClickHandler from 'react-outside-click-handler';
-
+import { Tooltip, tooltipClasses } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
 function Nav() {
 
@@ -62,7 +64,20 @@ function Nav() {
     cartMenu.setShowModal(true)
   }
 
-  
+
+  const CustomToolTip = styled(({ className, ...props }) => (
+    <Tooltip {...props} classes={{ popper: className }} />
+  ))(() => ({
+    [`& .${tooltipClasses.tooltip}`]: {
+      backgroundColor: '#d0d2d4',
+      color: '#141414',
+      width: 'fit-content',
+      padding: '10px',
+      fontSize: 15,
+      fontFamily: 'Work Sans, sans-serif',
+    },
+  }));
+
 
   //=========================//
 
@@ -79,7 +94,7 @@ function Nav() {
           </div>
 
           <div className="nav-links-res">
-            <MenuRoundedIcon className="res-icon" onClick={() => handleOpen()} />
+            <NotesIcon className="res-icon" onClick={() => handleOpen()} />
           </div>
 
           <AnimatePresence>
@@ -107,7 +122,9 @@ function Nav() {
         <div className="nav-links-right">
           <input type="text" placeholder="Tìm kiếm sản phẩm" />
           <SearchIcon className="icon search-icon" />
-          <ShoppingCartOutlinedIcon className="icon" onClick={() => handleOpenCart()} />
+          <CustomToolTip enterDelay={1000} placement="bottom" title="Giỏ hàng">
+            <ShoppingCartOutlinedIcon className="icon" onClick={() => handleOpenCart()} />
+          </CustomToolTip>
           <NavLink to="/login"><span className="login-btn">Đăng Nhập</span></NavLink>
         </div>
 

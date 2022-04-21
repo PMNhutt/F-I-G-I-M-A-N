@@ -11,10 +11,10 @@
 
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(87, 139, 206);
+  background-color: var(--text-color);
   border-radius: 26px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(61, 117, 185);
+  background-color: rgb(164, 165, 166);
 }

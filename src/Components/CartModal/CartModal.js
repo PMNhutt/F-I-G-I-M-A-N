@@ -58,14 +58,17 @@ function CartModal() {
 
                             {cartEmpty == true && (
                                 <>
-                                    <Player
-                                        autoplay
-                                        loop
-                                        src="https://assets7.lottiefiles.com/packages/lf20_3VDN1k.json"
-                                        style={{ height: '80%', width: '100%' }}
-                                        className="cart-lottie"
-                                    >
-                                    </Player>
+                                    <div className="cart-lottie-container">
+                                        <Player
+                                            autoplay
+                                            loop
+                                            src="https://assets7.lottiefiles.com/packages/lf20_3VDN1k.json"
+                                            style={{ height: '80%', width: '80%' }}
+                                            className="cart-lottie"
+                                        >
+                                        </Player>
+                                    </div>
+
                                     <h3>Giỏ hàng rỗng...</h3>
                                 </>
 

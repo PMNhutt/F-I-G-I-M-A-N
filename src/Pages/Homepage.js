@@ -1,5 +1,6 @@
 import Nav from '../Components/Nav/Nav'
 import Banner from '../Components/Banner/Banner'
+import HomeInfo from '../Components/HomeInfo/HomeInfo'
 import { ModalContext } from '../Context/ModalContext';
 import { useEffect, useContext } from 'react';
 
@@ -15,6 +16,7 @@ function Homepage() {
     <div>
       <Nav />
       <Banner />
+      <HomeInfo />
     </div>
   )
 }

@@ -7,12 +7,14 @@
 :root {
     /* --background-color: #151918; */
     --background-color: #141414;
-    --text-color: #c3c7cc;
+    --text-color: #d0d2d4;
+    --color-blue: #2c88cc;
+    --color-bold-blue: #0076d0;
 }
 
 body {
     font-family: 'Work Sans', sans-serif;
-    height: 200vh;
+    /* height: 200vh; */
     background-color: var(--background-color);
 }
 
@@ -21,13 +23,14 @@ body {
 
 .active {
     font-weight: 700 !important;
+    color: var(--color-blue) !important;
 }
 
 .navigation {
     user-select: none;
     position: fixed;
     z-index: 999;
-    padding: 0 5vw;
+    padding: 0 7vw;
     width: 100%;
     /* backdrop-filter: blur(6px); */
     background-image:
@@ -38,11 +41,13 @@ body {
     user-select: none;
     position: fixed;
     z-index: 999;
-    padding: 0 5vw;
+    padding: 0 7vw;
     width: 100%;
     backdrop-filter: blur(6px);
     background-image:
         linear-gradient(180deg, rgba(0, 0, 0, .7) 5%, transparent);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
 }
 
 .nav_scroll .container,
@@ -62,7 +67,7 @@ body {
 
 .nav-links-mid,
 .nav-links-right {
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     font-weight: 300;
 }
 
@@ -82,6 +87,23 @@ body {
     color: var(--text-color);
     text-decoration: none;
     margin-left: 2vw;
+    transition: 0.2s;
+}
+
+.nav-links-mid a:hover {
+    color: var(--color-blue);
+}
+
+.nav-links-right .search-icon {
+    background-color: rgba(0, 0, 0, .5);
+    margin-left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, .5);
+    margin-left: 0;
+    padding: 8px;
+    height: 40px;
 }
 
 .nav-links-right input {
@@ -96,8 +118,9 @@ body {
     width: 15vw;
     border: none;
     outline: none;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, .3);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgba(0, 0, 0, .5);
     transition: 0.5s;
 }
 
@@ -108,13 +131,14 @@ body {
     box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .nav_scroll .logo img,
 .navigation .logo img {
-    height: 3vw;
+    height: 2.5vw;
     margin-right: 2vw;
 }
 
@@ -131,7 +155,7 @@ body {
     box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.5s;
 }
@@ -211,6 +235,7 @@ body {
 
     .nav-links-res-modal a:hover {
         background-color: #ecf0f10f;
+        color: var(--color-blue);
     }
 
     .nav-links-right {
@@ -219,7 +244,7 @@ body {
 
     .nav-links-right .icon {
         font-size: 3vw;
-        margin-left: 1.1vw;
+        /* margin-left: 1.1vw; */
         cursor: pointer;
     }
 

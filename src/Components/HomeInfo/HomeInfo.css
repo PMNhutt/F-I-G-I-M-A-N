@@ -1,0 +1,225 @@
+.home-info {
+    padding: 0 7vw;
+}
+
+.service-warp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--text-color);
+}
+
+.service-warp .container {
+    display: flex;
+    padding: 30px 30px;
+    /* background-color: var(--text-color); */
+    background-color: rgba(183, 218, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 5px;
+}
+
+.service-warp .container .item {
+    color: var(--text-color);
+    display: flex;
+    margin: 0 20px;
+    user-select: none;
+}
+
+.service-warp .item-icon {
+    display: flex;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.service-warp .item-text {
+    margin-left: 10px;
+}
+
+.service-warp .main-icon {
+    color: var(--color-blue);
+    font-size: 2.5vw;
+}
+
+.service-warp .help-icon {
+    font-size: 17px;
+    margin-left: 5px;
+}
+
+.service-warp .item:hover>.item-icon {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+
+.service-warp .item-help-text {
+    position: absolute;
+    bottom: 75%;
+    right: 72%;
+}
+
+.service-warp .item-help-container {
+    width: 10vw;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* ================== BEST SELLER =================== */
+
+.best-seller {
+    position: relative;
+    margin-top: 100px;
+}
+
+.best-seller .container .heading {
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.best-seller .container .heading h1{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.best-seller .container .heading .heading-left {
+    display: flex;
+    font-size: 1.2em;
+}
+
+.best-seller .container .heading a {
+    text-decoration: none;
+    color: var(--text-color);
+    user-select: none;
+    margin-left: 30px;
+}
+
+.best-seller .container .heading p{
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.best-seller .container .heading p:hover{
+    color: var(--color-blue);
+}
+
+.product-grid-container {
+    margin: 0px 0 !important;
+}
+
+.css-zow5z4-MuiGrid-root>.MuiGrid-item {
+    padding-right: 24px !important;
+    padding-left: 0px !important;
+}
+
+
+/* ================== COLLECTION =================== */
+.collection{
+    position: relative;
+    margin-top: 100px;
+}
+
+
+
+
+/* ========================= RESPONSIVE ========================== */
+/* ====== Tablet: width >= 740px and < 1024px  */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+
+    .home-info {
+        padding: 0 5vw;
+    }
+
+    .service-warp .container {
+        flex-wrap: wrap;
+        display: flex;
+        padding: 0px 30px;
+    }
+
+    .service-warp .container .item {
+        flex: 1 0 auto;
+        width: 40%;
+        margin: 20px 20px;
+    }
+
+    .service-warp .main-icon {
+        color: var(--color-blue);
+        font-size: 3.5vw;
+    }
+}
+
+/* ====== Mobile: width < 740px  */
+@media only screen and (max-width: 46.1875em) {
+
+    .home-info {
+        padding: 0 5vw;
+    }
+
+    .service-warp .container {
+        flex-wrap: wrap;
+        display: flex;
+        padding: 0px 30px;
+        flex-direction: column;
+    }
+
+    .service-warp .container .item {
+        color: var(--text-color);
+        display: flex;
+        margin: 10px 20px;
+    }
+
+    .service-warp .main-icon {
+        color: var(--color-blue);
+        font-size: 6.5vw;
+    }
+
+}
