@@ -12,7 +12,7 @@
 
 .service-warp .container {
     display: flex;
-    padding: 30px 30px;
+    padding: 40px 109px;
     /* background-color: var(--text-color); */
     background-color: rgba(183, 218, 255, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -124,6 +124,7 @@
     color: var(--text-color);
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 .best-seller .container .heading h1{
@@ -152,14 +153,6 @@
     color: var(--color-blue);
 }
 
-.product-grid-container {
-    margin: 0px 0 !important;
-}
-
-.css-zow5z4-MuiGrid-root>.MuiGrid-item {
-    padding-right: 24px !important;
-    padding-left: 0px !important;
-}
 
 
 /* ================== COLLECTION =================== */
@@ -168,6 +161,28 @@
     margin-top: 100px;
 }
 
+.collection .container .heading h1{
+    color: var(--text-color);
+    margin-bottom:  50px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.collection .container .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.collection .container .content .collection1 img {
+    margin-right: 20px;
+}
+
+.collection .container .content .collection1 img, 
+.collection .container .content .collection2 img{
+    height: 435px;
+    cursor: pointer;
+
+}
 
 
 
@@ -195,6 +210,19 @@
         color: var(--color-blue);
         font-size: 3.5vw;
     }
+
+    .collection .container .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .collection .container .content .collection1 img, 
+    .collection .container .content .collection2 img{
+        height: 435px;
+        cursor: pointer;
+        margin-bottom: 30px;
+    }
 }
 
 /* ====== Mobile: width < 740px  */
@@ -220,6 +248,19 @@
     .service-warp .main-icon {
         color: var(--color-blue);
         font-size: 6.5vw;
+    }
+
+    .collection .container .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .collection .container .content .collection1 img, 
+    .collection .container .content .collection2 img{
+        height: 60vw;
+        cursor: pointer;
+        margin-bottom: 30px;
     }
 
 }

@@ -113,7 +113,7 @@ function HomeInfo() {
                             <a href="/product"><p>Jujutsu Kaisen</p></a>
                             <a href="/product"><p>Naruto</p></a>
                             <a href="/product"><p>One Piece</p></a>
-                            <a href="/product"><p>Xem tất cả</p></a>
+                            <a href="/product"><p>Xem thêm</p></a>
                         </div>
                     </div>
 
@@ -141,11 +141,27 @@ function HomeInfo() {
 
             {/* ===================== Collection ========================== */}
             <div className="collection">
-                <div className="container"></div>
+                <div className="container">
+                    <div className="heading">
+                        <h1>Bộ Sưu Tập Độc Đáo</h1>
+                    </div>
+
+                    <div className="content">
+
+                        <div className="collection1">
+                            <img src={require('../../data/productImage/Marvel DC/Marvel/moon-knight_marvel_gallery_624dc18ca6187.jpg')}></img>
+                        </div>
+
+                        <div className="collection2">
+                            <img src={require('../../data/productImage/Marvel DC/DC Comics/batman-and-bat-signal_dc-comics.jpg')}></img>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
-            {/* ===================== New Arrival ========================== */}
-            <div className="new-arrival">
+            {/* ===================== News ========================== */}
+            <div className="news">
                 <div className="container"></div>
             </div>
 
