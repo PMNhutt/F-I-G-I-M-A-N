@@ -1,7 +1,7 @@
 .footer {
     /* height: 50vh; */
     padding: 0 7vw;
-    margin-top: 100px;
+    margin-top: 200px;
     color: var(--text-light-color);
     position: relative;
 }
@@ -153,7 +153,7 @@
     }
 
     .footer .logo {
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         display: flex;
         flex-direction: column;
         width: 80%;
@@ -166,5 +166,9 @@
     .footer .content .customer-sp input[type="text"] {
         height: 40px;
         width: 50vw;
+    }
+
+    .footer .content .contact {
+        margin-bottom: 30px;
     }
 }

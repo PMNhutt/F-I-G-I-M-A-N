@@ -179,11 +179,104 @@
 
 .collection .container .content .collection1 img, 
 .collection .container .content .collection2 img{
-    height: 435px;
+    height: 29vw;
     cursor: pointer;
 
 }
 
+/* ================== NEWS =================== */
+.news {
+    margin-top: 150px;
+}
+
+.news .content {
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.news .container .heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news .container .heading a {
+    text-decoration: none;
+    color: var(--text-color);
+    user-select: none;
+}
+
+.news .container .heading .heading-left {
+    font-size: 1.2em;
+}
+
+.news .container .heading p {
+    transition: 0.2s;
+}
+
+.news .container .heading p:hover{
+    color: var(--color-blue);
+}
+
+.news .container .heading h1{
+    color: var(--text-color);
+    margin-bottom:  50px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.news .content .thumbnail img {
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.news .content .thumbnail,
+.news .content .info .top-info {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.news .content .info .top-info {
+    color: var(--text-color);
+    display: flex;
+}
+
+.news .content .info .top-info p {
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.news .content .info .top-info p:hover {
+    color: var(--color-blue);
+}
+
+.news .content .info .title h3 {
+    color: var(--text-color);
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.news .content .info .title h3:hover {
+    text-decoration: underline;
+}
+
+.news .content .news-item:hover .thumbnail img {
+    transform: scale(1.1);
+}
+
+
+/* ======================== END ========================== */
+.end {
+    margin-top: 100px;
+    background-color: rgba(183, 218, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
 
 
 /* ========================= RESPONSIVE ========================== */
@@ -219,7 +312,7 @@
     
     .collection .container .content .collection1 img, 
     .collection .container .content .collection2 img{
-        height: 435px;
+        height: 63vw;
         cursor: pointer;
         margin-bottom: 30px;
     }
@@ -261,6 +354,13 @@
         height: 60vw;
         cursor: pointer;
         margin-bottom: 30px;
+    }
+
+    .news .content {
+        border-radius: 5px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
     }
 
 }
