@@ -51,7 +51,6 @@
     transform: translateY(-50%);
     transition: 0.5s;
     /* position: absolute; */
-    z-index: 10;
     cursor: auto;
     border-radius: 5px;
 }
@@ -115,6 +114,17 @@
     background-color: transparent;
     border: none;
 
+}
+
+.figurePoster .container .figure-status {
+    color: var(--text-color);
+    background-color: var(--color-red);
+    padding: 5px 10px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    border-radius: 2px;
+    width: fit-content;
 }
 
 

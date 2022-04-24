@@ -10,6 +10,7 @@ import LockIcon from '@mui/icons-material/Lock';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import Grid from '@mui/material/Grid';
 import FigurePoster from '../FigurePoster/FigurePoster';
+import PreviewIcon from '@mui/icons-material/Preview';
 
 
 function HomeInfo() {
@@ -131,6 +132,7 @@ function HomeInfo() {
                                     ImgSrc={product.thumbImg}
                                     name={product.name}
                                     price={product.price}
+                                    status={product.status}
                                 />
                             </Grid>
                         ))}
@@ -150,10 +152,16 @@ function HomeInfo() {
 
                         <div className="collection1">
                             <img src={require('../../data/productImage/Marvel DC/Marvel/moon-knight_marvel_gallery_624dc18ca6187.jpg')}></img>
+                            <div className="check-collection">
+                                <div className="btn"><span><PreviewIcon className="preview-icon" /></span>Xem Chi Tiết</div>
+                            </div>
                         </div>
 
                         <div className="collection2">
                             <img src={require('../../data/productImage/Marvel DC/DC Comics/batman-and-bat-signal_dc-comics.jpg')}></img>
+                            <div className="check-collection">
+                                <div className="btn"><span><PreviewIcon className="preview-icon" /></span>Xem Chi Tiết</div>
+                            </div>
                         </div>
 
                     </div>
@@ -163,7 +171,7 @@ function HomeInfo() {
             {/* ===================== News ========================== */}
             <div className="news">
                 <div className="container">
-                <div className="heading">
+                    <div className="heading">
                         <h1>Tin Tức</h1>
                         <div className="heading-left">
                             <a href="/news"><p>Xem thêm</p></a>
@@ -178,7 +186,7 @@ function HomeInfo() {
                             </div>
                             <div className="info">
                                 <div className="top-info">
-                                    <p>Thông báo  </p><span style={{marginLeft: '5px'}}>| 23-04-2022</span>
+                                    <p>Thông báo  </p><span style={{ marginLeft: '5px' }}>| 23-04-2022</span>
                                 </div>
                                 <div className="title">
                                     <h3>Mừng ngày khai trương, FIGIMAN giảm 50% tất cả mô hình khi mua tại cửa hàng!</h3>
@@ -188,12 +196,12 @@ function HomeInfo() {
                         </div>
 
                         <div className="news-item">
-                        <div className="thumbnail">
+                            <div className="thumbnail">
                                 <img src={require('../../data/News/news2-title.jpg')}></img>
                             </div>
                             <div className="info">
                                 <div className="top-info">
-                                    <p>Mẹo vặt </p><span style={{marginLeft: '5px'}}> | 23-04-2022</span>
+                                    <p>Mẹo vặt </p><span style={{ marginLeft: '5px' }}> | 23-04-2022</span>
                                 </div>
                                 <div className="title">
                                     <h3>Các cách bảo quản mô hình để tránh bị hư hỏng tốt nhất!</h3>
@@ -203,12 +211,12 @@ function HomeInfo() {
                         </div>
 
                         <div className="news-item">
-                        <div className="thumbnail">
+                            <div className="thumbnail">
                                 <img src={require('../../data/News/news3-title.jpg')}></img>
                             </div>
                             <div className="info">
                                 <div className="top-info">
-                                    <p>Mẹo vặt </p><span style={{marginLeft: '5px'}}>|  23-04-2022</span>
+                                    <p>Mẹo vặt </p><span style={{ marginLeft: '5px' }}>|  23-04-2022</span>
                                 </div>
                                 <div className="title">
                                     <h3>Những điều thú vị nào đang chờ đón bạn tại FIGIMAN?</h3>
