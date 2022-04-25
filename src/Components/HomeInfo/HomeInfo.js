@@ -1,8 +1,9 @@
 import './HomeInfo.css'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Tooltip, tooltipClasses } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { products } from '../../data/products';
+import { motion, AnimatePresence } from 'framer-motion'
 import HelpIcon from '@mui/icons-material/Help';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
@@ -11,6 +12,7 @@ import RefreshIcon from '@mui/icons-material/Refresh';
 import Grid from '@mui/material/Grid';
 import FigurePoster from '../FigurePoster/FigurePoster';
 import PreviewIcon from '@mui/icons-material/Preview';
+
 
 
 function HomeInfo() {
@@ -29,10 +31,28 @@ function HomeInfo() {
     }));
 
 
-    // data 
-    useEffect(() => {
-        // console.log(products)
-    }, [])
+    // Tabs
+    const [tabValue, setTabValue] = useState(1)
+
+    const toggleTab = (index) => {
+        setTabValue(index)
+    }
+
+    //animation Grid
+    const grid = {
+        visible: {
+            opacity: 1, y: 0, transition: {
+                ease: "easeOut",
+                duration: 0.5
+            }
+        },
+        hidden: {
+            opacity: 0, y: "5vw", transition: {
+                ease: "easeOut",
+                duration: 0.5
+            }
+        }
+    }
 
     // =========================================================
 
@@ -110,33 +130,125 @@ function HomeInfo() {
                     <div className="heading">
                         <h1>Mô hình bán chạy</h1>
                         <div className="heading-left">
-                            <a href="/product"><p className="active">My Hero Academia</p></a>
-                            <a href="/product"><p>Jujutsu Kaisen</p></a>
-                            <a href="/product"><p>Naruto</p></a>
-                            <a href="/product"><p>One Piece</p></a>
+                            <a onClick={() => toggleTab(1)}><p className={tabValue === 1 ? "active" : ""}>Naruto</p></a>
+                            <a onClick={() => toggleTab(2)}><p className={tabValue === 2 ? "active" : ""}>One Piece</p></a>
+                            <a onClick={() => toggleTab(3)}><p className={tabValue === 3 ? "active" : ""}>Jujutsu Kaisen</p></a>
+                            <a onClick={() => toggleTab(4)}><p className={tabValue === 4 ? "active" : ""}>My Hero Academia</p></a>
                             <a href="/product"><p>Xem thêm</p></a>
                         </div>
                     </div>
 
-                    <Grid container spacing={3} className="product-grid-container">
-                        {products.slice(0, 8).map((product, index) => (
-                            <Grid
-                                sm={6}
-                                md={3}
-                                xs={12}
-                                item key={index}
-                                className="product-grid-item"
-                            >
-                                <FigurePoster
-                                    key={index}
-                                    ImgSrc={product.thumbImg}
-                                    name={product.name}
-                                    price={product.price}
-                                    status={product.status}
-                                />
+                    {tabValue === 1 && (
+                        <motion.div
+                            variants={grid}
+                            initial="hidden"
+                            animate="visible"
+                        >
+                            <Grid container spacing={3} className="product-grid-container">
+                                {products.slice(43, 51).map((product, index) => (
+                                    <Grid
+                                        sm={6}
+                                        md={3}
+                                        xs={12}
+                                        item key={index}
+                                        className="product-grid-item"
+                                    >
+                                        <FigurePoster
+                                            key={index}
+                                            ImgSrc={product.thumbImg}
+                                            name={product.name}
+                                            price={product.price}
+                                            status={product.status}
+                                        />
+                                    </Grid>
+                                ))}
                             </Grid>
-                        ))}
-                    </Grid>
+                        </motion.div>
+                    )}
+
+                    {tabValue === 2 && (
+                        <motion.div
+                            variants={grid}
+                            initial="hidden"
+                            animate="visible"
+                        >
+                            <Grid container spacing={3} className="product-grid-container">
+                                {products.slice(54, 62).map((product, index) => (
+                                    <Grid
+                                        sm={6}
+                                        md={3}
+                                        xs={12}
+                                        item key={index}
+                                        className="product-grid-item"
+                                    >
+                                        <FigurePoster
+                                            key={index}
+                                            ImgSrc={product.thumbImg}
+                                            name={product.name}
+                                            price={product.price}
+                                            status={product.status}
+                                        />
+                                    </Grid>
+                                ))}
+                            </Grid>
+                        </motion.div>
+                    )}
+
+                    {tabValue === 3 && (
+                        <motion.div
+                            variants={grid}
+                            initial="hidden"
+                            animate="visible"
+                        >
+                            <Grid container spacing={3} className="product-grid-container">
+                                {products.slice(31, 39).map((product, index) => (
+                                    <Grid
+                                        sm={6}
+                                        md={3}
+                                        xs={12}
+                                        item key={index}
+                                        className="product-grid-item"
+                                    >
+                                        <FigurePoster
+                                            key={index}
+                                            ImgSrc={product.thumbImg}
+                                            name={product.name}
+                                            price={product.price}
+                                            status={product.status}
+                                        />
+                                    </Grid>
+                                ))}
+                            </Grid>
+                        </motion.div>
+                    )}
+
+                    {tabValue === 4 && (
+                        <motion.div
+                            variants={grid}
+                            initial="hidden"
+                            animate="visible"
+                        >
+                            <Grid container spacing={3} className="product-grid-container">
+                                {products.slice(0, 8).map((product, index) => (
+                                    <Grid
+                                        sm={6}
+                                        md={3}
+                                        xs={12}
+                                        item key={index}
+                                        className="product-grid-item"
+                                    >
+                                        <FigurePoster
+                                            key={index}
+                                            ImgSrc={product.thumbImg}
+                                            name={product.name}
+                                            price={product.price}
+                                            status={product.status}
+                                        />
+                                    </Grid>
+                                ))}
+                            </Grid>
+                        </motion.div>
+                    )}
                 </div>
 
             </div>

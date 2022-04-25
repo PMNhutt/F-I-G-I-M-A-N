@@ -28,23 +28,27 @@ export const categories = [
                     id: 6,
                     name: "My Hero Academia"
                 },
+                {
+                    id: 7,
+                    name: "My Hero Academia"
+                },
 
             ]
     },
     {
-        id: 7,
+        id: 8,
         name: "Marvel Universe"
     },
     {
-        id: 8,
+        id: 9,
         name: "DC Comics"
     },
     {
-        id: 9,
+        id: 10,
         name: "Nendoroid"
     },
     {
-        id: 10,
+        id: 11,
         name: "Genshin Impact"
     },
 
