@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import './CartModal.css'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ModalContext } from '../../Context/ModalContext'
@@ -32,8 +32,65 @@ function CartModal() {
         cartMenu.setShowModal(false)
     }
 
-    //cart empty or not
-    const [cartEmpty, setCartEmpty] = useState(true)
+    //delete product from cart
+    const [deleteProduct, setDeleteProduct] = useState(false)
+
+    const handleDeleteProduct = (indexId) => {
+        // console.log("re-render")
+        setDeleteProduct(prev => !prev)
+
+        let newAmount = 0
+
+        let added = cartMenu.productList.find((product) => {
+            return product.id === indexId
+        })
+
+        cartMenu.productList.map((pro, index) => {
+            if (pro.id == added.id) {
+
+                if (pro.amount == 1) {
+                    cartMenu.productList.splice(index, 1)
+
+                    cartMenu.setProductList(prev => [...prev])
+                } else {
+                    newAmount = pro.amount - 1
+                    cartMenu.productList.splice(index, 1)
+                    cartMenu.setProductList(prev => [...prev, {
+                        id: pro.id,
+                        name: pro.name,
+                        ImgSrc: pro.ImgSrc,
+                        price: pro.price,
+                        amount: newAmount,
+                    }])
+                }
+            }
+
+        })
+
+
+    }
+
+
+    //total price of product
+    const [totalPrice, setTotalPrice] = useState(0)
+    useEffect(() => {
+        let total = 0;
+        cartMenu.productList.forEach(product => {
+            total += product.price * product.amount
+            // console.log(product)
+        })
+
+        if (cartMenu.productList < 1) {
+            cartMenu.setCartEmpty(true)
+
+        }
+        setTotalPrice(total)
+
+    }, [cartMenu.productList])
+
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
 
     //====================================
 
@@ -53,10 +110,10 @@ function CartModal() {
                             <CloseIcon onClick={() => handleCloseCart()} />
                         </div>
 
-                        <h2>Giỏ hàng:</h2>
+                        <h2 style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.18)' }}>Giỏ hàng:</h2>
                         <div className="cart-items">
 
-                            {cartEmpty == true && (
+                            {cartMenu.cartEmpty == true && (
                                 <>
                                     <div className="cart-lottie-container">
                                         <Player
@@ -74,22 +131,67 @@ function CartModal() {
 
                             )}
 
+                            {cartMenu.cartEmpty == false && (
+                                <>
+                                    <div className="lists">
+                                        {cartMenu.productList.map((product, index) => (
+                                            <div className="product-item"
+                                                key={index}
+                                            >
+
+
+                                                <div className="product-img"
+                                                    style={{
+                                                        backgroundImage: `url(
+                                                        "${product.ImgSrc}"
+                                                    )`,
+                                                    }}
+                                                >
+                                                    {/* <img src={product.ImgSrc} /> */}
+                                                </div>
+                                                <div className="product-info">
+                                                    <p className="product-name">{product.name}</p>
+                                                    <p className="product-price"><span>{product.amount} &times; </span>{numberWithCommas(product.price)} ₫</p>
+                                                </div>
+                                                <div className="delete-product">
+                                                    <span onClick={() => handleDeleteProduct(product.id)} style={{ fontSize: '20px' }}>&times;</span>
+                                                </div>
+
+                                            </div>
+                                        ))}
+                                    </div>
+                                </>
+                            )}
+
 
                         </div>
 
-                        <a href="/product" className="view-cart-btn">
-                            <button className="view-cart">
-                                {cartEmpty == true ? "Ghé Shop Ngay" : "Xem Giỏ Hàng"}
-                            </button>
-                        </a>
+                        <div className="cart-bottom" style={{
+                            borderTop:
+                                `${cartMenu.cartEmpty == false ? "1px solid rgba(255, 255, 255, 0.18)" : "0px"}`
+                        }}>
 
-                        {cartEmpty == false && (
-                            <a href="/">
-                                <button className="checkout-btn">
-                                    Thanh Toán
-                                </button>
+                            {cartMenu.cartEmpty == false && (
+                                <div className="subTotal" style={{ marginTop: '10px' }}>
+                                    <h3>Tổng cộng:</h3>
+                                    <h3>{numberWithCommas(totalPrice)} ₫</h3>
+                                </div>
+                            )}
+
+                            <a href="/product" className="view-cart-btn">
+                                <div className="view-cart">
+                                    {cartMenu.cartEmpty == true ? "Ghé Shop Ngay" : "Xem Giỏ Hàng"}
+                                </div>
                             </a>
-                        )}
+
+                            {cartMenu.cartEmpty == false && (
+                                <a href="/" className="checkout-btn">
+                                    <div className="checkout">
+                                        Thanh Toán
+                                    </div>
+                                </a>
+                            )}
+                        </div>
 
                     </motion.div>
 

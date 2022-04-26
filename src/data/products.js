@@ -6,7 +6,7 @@ export const products = [
         id: 1,
         name: "Izuku Midoriya (World Heroes Mission)",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Izuku Midoriya (World Heroes Mission)/izuku-midoriya-world-heroes-mission_my-hero-academia_silo_sm.png'),
-        price: "500,000 ₫",
+        price: 500000,
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "available",
         categoryID: 6,
@@ -47,7 +47,7 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "available",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Shoto Todoroki (World Heroes Mission)/shoto-todoroki-world-heroes-mission_my-hero-academia_silo_sm.png'),
-        price: "500,000 ₫",
+        price: 500000,
         categoryID: 6,
         stock: 10,
         details:
@@ -86,7 +86,7 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "available",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Katsuki Bakugo (World Heroes Mission)/katsuki-bakugo-world-heroes-mission_my-hero-academia_silo_sm.png'),
-        price: "500,000 ₫",
+        price: 500000,
         categoryID: 6,
         stock: 10,
         details:
@@ -125,7 +125,7 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "new",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Ochaco Uraraka/ochaco-uraraka__silo_sm.png'),
-        price: "700,000 ₫",
+        price: 700000,
         categoryID: 6,
         stock: 5,
         details:
@@ -165,7 +165,7 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "available",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Mina Ashido Hero Suit Version/mina-ashido-hero-suit-version_my-hero-academia_silo_sm.png'),
-        price: "600,000 ₫",
+        price: 600000,
         categoryID: 6,
         stock: 10,
         details:
@@ -205,7 +205,7 @@ export const products = [
         tagName: ["Anime"],
         status: "available",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Himiko Toga/himiko-toga_my-hero-academia_silo_sm.png'),
-        price: "550,000 ₫",
+        price: 550000,
         categoryID: 6,
         stock: 10,
         details:
@@ -245,7 +245,7 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "new",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Hawks/hawks_my-hero-academia_silo_sm.png'),
-        price: "720,000 ₫",
+        price: 720000,
         categoryID: 6,
         stock: 10,
         details:
@@ -285,7 +285,7 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "new",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Katsuki Bakugo/katsuki-bakugo_my-hero-academia_silo_sm.png'),
-        price: "700,000 ₫",
+        price: 700000,
         categoryID: 6,
         stock: 10,
         details:
@@ -325,7 +325,7 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "available",
         thumbImg: require('./productImage/Anime/MyheroAcademia/All Might (Casual Wear)/all-might-casual-wear_my-hero-academia_silo_sm.png'),
-        price: "250,000 ₫",
+        price: 250000,
         categoryID: 6,
         stock: 10,
         details:
@@ -365,7 +365,7 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "available",
         thumbImg: require('./productImage/Anime/MyheroAcademia/All Might (Silver Age)/all-might-silver-age_my-hero-academia_silo_sm.png'),
-        price: "250,000 ₫",
+        price: 250000,
         categoryID: 6,
         stock: 10,
         details:
@@ -405,7 +405,7 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "available",
         thumbImg: require('./productImage/Anime/MyheroAcademia/All Might (Golden Age)/all-might-golden-age_my-hero-academia_silo_sm.png'),
-        price: "250,000 ₫",
+        price: 250000,
         categoryID: 6,
         stock: 10,
         details:
@@ -445,7 +445,7 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "available",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Izuku Midoriya/izuku-midoriya_my-hero-academia_silo_sm.png'),
-        price: "450,000 ₫",
+        price: 450000,
         categoryID: 6,
         stock: 10,
         details:
@@ -485,7 +485,7 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "available",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Izuku Midoriya v2/izuku-midoriya_my-hero-academia_silo_sm.png'),
-        price: "650,000 ₫",
+        price: 650000,
         categoryID: 6,
         stock: 10,
         details:
@@ -525,7 +525,7 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "available",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Himiko Toga v2/himiko-toga_my-hero-academia_silo_sm version2.png'),
-        price: "350,000 ₫",
+        price: 350000,
         categoryID: 6,
         stock: 10,
         details:
@@ -565,8 +565,8 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "preOrder",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Izuku Midoriya vs Stain/izuku-midoriya-vs-stain_my-hero-academia_silo_sm.png'),
-        price: "3,550,000 ₫",
-        depositPrice: '300,000 ₫',
+        price: 3550000,
+        depositPrice: 300000,
         categoryID: 6,
         stock: 0,
         details:
@@ -606,7 +606,7 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "available",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Katsuki Bakugo (Version 2)/katsuki-bakugo-version-2_my-hero-academia_silo_sm.png'),
-        price: "650,000 ₫",
+        price: 650000,
         categoryID: 6,
         stock: 10,
         details:
@@ -646,8 +646,8 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "preOrder",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Midoriya, Bakugo & Todoroki (Deluxe Version)/midoriya-bakugo-todoroki-deluxe-version_my-hero-academia_silo_sm.png'),
-        price: "5,550,000 ₫",
-        depositPrice: '500,000 ₫',
+        price: 5550000,
+        depositPrice: 500000,
         categoryID: 6,
         stock: 0,
         details:
@@ -687,7 +687,7 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "new",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Ochaco Uraraka (Version 2)/ochaco-uraraka-ver2__silo_sm.png'),
-        price: "350,000 ₫",
+        price: 350000,
         categoryID: 6,
         stock: 10,
         details:
@@ -729,7 +729,7 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "new",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Shoto Todoroki (Version 2)/shoto-todoroki-version-2_my-hero-academia_silo_sm.png'),
-        price: "350,000 ₫",
+        price: 350000,
         categoryID: 6,
         stock: 10,
         details:
@@ -769,7 +769,7 @@ export const products = [
         tagName: ["Anime", "Siêu Anh Hùng"],
         status: "new",
         thumbImg: require('./productImage/Anime/MyheroAcademia/Tsuyu Asui Uniform Version/tsuyu-asui-uniform-version_my-hero-academia_silo_sm.png'),
-        price: "300,000 ₫",
+        price: 300000,
         categoryID: 6,
         stock: 10,
         details:
@@ -812,8 +812,8 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "preOrder",
         thumbImg: require('./productImage/Anime/DragonBall/Cell First Form/cell-first-form_dragon-ball_silo_sm.png'),
-        price: "450,000 ₫",
-        depositPrice: '150,000 ₫',
+        price: 450000,
+        depositPrice: 150000,
         categoryID: 2,
         stock: 0,
         details:
@@ -853,8 +853,8 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "preOrder",
         thumbImg: require('./productImage/Anime/DragonBall/Cell Perfect (Vs Omnibus Super)/cell-perfect-vs-omnibus-super_dragon-ball_silo_sm.png'),
-        price: "350,000 ₫",
-        depositPrice: '100,000 ₫',
+        price: 350000,
+        depositPrice: 100000,
         categoryID: 2,
         stock: 0,
         details:
@@ -895,8 +895,8 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "preOrder",
         thumbImg: require('./productImage/Anime/DragonBall/Golden Frieza (Back To The Film)/golden-frieza-back-to-the-film_dragon-ball_silo_sm.png'),
-        price: "350,000 ₫",
-        depositPrice: '100,000 ₫',
+        price: 350000,
+        depositPrice: 100000,
         categoryID: 2,
         stock: 0,
         details:
@@ -936,7 +936,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/DragonBall/Omega Shenron (Vs Omnibus Super)/omega-shenron-vs-omnibus-super_dragon-ball_silo_sm.png'),
-        price: "455,000 ₫",
+        price: 455000,
         categoryID: 2,
         stock: 10,
         details:
@@ -976,7 +976,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/DragonBall/Piccolo/piccolo_dragon-ball_silo_sm.png'),
-        price: "455,000 ₫",
+        price: 455000,
         categoryID: 2,
         stock: 10,
         details:
@@ -1016,7 +1016,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/DragonBall/Son Goku (Ex Mystical Adventure)/son-goku-ex-mystical-adventure_dragon-ball_silo_sm.png'),
-        price: "255,000 ₫",
+        price: 255000,
         categoryID: 2,
         stock: 10,
         details:
@@ -1056,7 +1056,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "new",
         thumbImg: require('./productImage/Anime/DragonBall/Super Saiyan 4 Son Goku/super-saiyan-4-son-goku_dragon-ball_silo_sm.png'),
-        price: "355,000 ₫",
+        price: 354000,
         categoryID: 2,
         stock: 10,
         details:
@@ -1096,7 +1096,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "new",
         thumbImg: require('./productImage/Anime/DragonBall/Super Saiyan God Super Saiyan Gogeta/super-saiyan-god-super-saiyan-gogeta_dragon-ball_silo_sm.png'),
-        price: "355,000 ₫",
+        price: 356000,
         categoryID: 2,
         stock: 10,
         details:
@@ -1136,7 +1136,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "new",
         thumbImg: require('./productImage/Anime/DragonBall/Super Saiyan God Super Saiyan Son Goku & Vegeta (Vs Omnibus Super)/super-saiyan-god-super-saiyan-son-goku-vegeta-vs-omnibus-super_dragon-ball_silo_sm.png'),
-        price: "455,000 ₫",
+        price: 455000,
         categoryID: 2,
         stock: 10,
         details:
@@ -1172,7 +1172,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/DragonBall/Trunks (Manga Dimensions)/trunks-manga-dimensions_dragon-ball_silo_sm.png'),
-        price: "455,000 ₫",
+        price: 455000,
         categoryID: 2,
         stock: 10,
         details:
@@ -1212,7 +1212,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/DragonBall/Vegeta/vegeta_dragon-ball_silo_sm.png'),
-        price: "455,000 ₫",
+        price: 455000,
         categoryID: 2,
         stock: 10,
         details:
@@ -1254,8 +1254,8 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "preOrder",
         thumbImg: require('./productImage/Anime/JujutsuKaisen/Yuta Okkotsu and Special Grade Vengeful Cursed Spirit Rika Orimoto/yuta-okkotsu-and-special-grade-vengeful-cursed-spirit-rika-orimoto_jujutsu-kaisen_silo_sm.png'),
-        price: "850,000 ₫",
-        depositPrice: "350,000 ₫",
+        price: 850000,
+        depositPrice: 350000,
         categoryID: 7,
         stock: 0,
         details:
@@ -1297,8 +1297,8 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "preOrder",
         thumbImg: require('./productImage/Anime/JujutsuKaisen/Yuta Okkotsu (0 Version)/yuta-okkotsu-0-version_jujutsu-kaisen_silo_sm.png'),
-        price: "350,000 ₫",
-        depositPrice: "150,000 ₫",
+        price: 350000,
+        depositPrice: 150000,
         categoryID: 7,
         stock: 0,
         details:
@@ -1338,7 +1338,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/JujutsuKaisen/Yuji Itadori v2/yuji-itadori_jujutsu-kaisen_silo_sm.png'),
-        price: "350,000 ₫",
+        price: 350000,
         categoryID: 7,
         stock: 10,
         details:
@@ -1378,7 +1378,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/JujutsuKaisen/Yuji Itadori/yuji-itadori_jujutsu-kaisen_silo_sm.png'),
-        price: "350,000 ₫",
+        price: 350000,
         categoryID: 7,
         stock: 10,
         details:
@@ -1418,7 +1418,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "new",
         thumbImg: require('./productImage/Anime/JujutsuKaisen/Sukuna Ryomen/sukuna-ryomen_jujutsu-kaisen_silo_sm.png'),
-        price: "750,000 ₫",
+        price: 750000,
         categoryID: 7,
         stock: 10,
         details:
@@ -1458,7 +1458,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "new",
         thumbImg: require('./productImage/Anime/JujutsuKaisen/Suguru Geto (0 Version)/suguru-geto-0-version_jujutsu-kaisen_silo_sm.png'),
-        price: "750,000 ₫",
+        price: 750000,
         categoryID: 7,
         stock: 10,
         details:
@@ -1498,7 +1498,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/JujutsuKaisen/Satoru Gojo v3/satoru-gojo_jujutsu-kaisen_silo_sm.png'),
-        price: "850,000 ₫",
+        price: 850000,
         categoryID: 7,
         stock: 10,
         details:
@@ -1538,7 +1538,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/JujutsuKaisen/Satoru Gojo v2/satoru-gojo_jujutsu-kaisen_silo_sm.png'),
-        price: "850,000 ₫",
+        price: 850000,
         categoryID: 7,
         stock: 10,
         details:
@@ -1578,7 +1578,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "new",
         thumbImg: require('./productImage/Anime/JujutsuKaisen/Satoru Gojo (0 Version)/satoru-gojo-0-version_jujutsu-kaisen_silo_sm.png'),
-        price: "780,000 ₫",
+        price: 780000,
         categoryID: 7,
         stock: 10,
         details:
@@ -1618,7 +1618,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/JujutsuKaisen/Satoru Gojo/satoru-gojo_dragon-ball_silo_sm.png'),
-        price: "550,000 ₫",
+        price: 550000,
         categoryID: 7,
         stock: 10,
         details:
@@ -1658,7 +1658,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/JujutsuKaisen/Nobara Kugisaki/nobara-kugisaki__silo_sm.png'),
-        price: "620,000 ₫",
+        price: 620000,
         categoryID: 7,
         stock: 10,
         details:
@@ -1698,7 +1698,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "new",
         thumbImg: require('./productImage/Anime/JujutsuKaisen/Megumi Fushiguro Figma/megumi-fushiguro-figma_jujutsu-kaisen_silo_sm.png'),
-        price: "420,000 ₫",
+        price: 420000,
         categoryID: 7,
         stock: 10,
         details:
@@ -1740,7 +1740,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "new",
         thumbImg: require('./productImage/Anime/Naruto/Uchiha Sasuke/uchiha-sasuke_naruto-shippuden_silo_sm.png'),
-        price: "920,000 ₫",
+        price: 920000,
         categoryID: 4,
         stock: 5,
         details:
@@ -1780,7 +1780,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "new",
         thumbImg: require('./productImage/Anime/Naruto/Uchiha Madara/uchiha-madara_naruto-shippuden_silo_sm.png'),
-        price: "920,000 ₫",
+        price: 920000,
         categoryID: 4,
         stock: 5,
         details:
@@ -1820,8 +1820,8 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "preOrder",
         thumbImg: require('./productImage/Anime/Naruto/Itachi Uchiha (Susanoo Version) With LED Base/itachi-uchiha-susanoo-version-with-led-base_naruto-shippuden_silo_sm.png'),
-        price: "820,000 ₫",
-        depositPrice: "200, 000 ₫",
+        price: 820000,
+        depositPrice: 200000,
         categoryID: 4,
         stock: 5,
         details:
@@ -1861,8 +1861,8 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "preOrder",
         thumbImg: require('./productImage/Anime/Naruto/Namikaze Minato vs Kurama/namikaze-minato-vs-kurama_naruto-shippuden_silo_sm.png'),
-        price: "1,020,000 ₫",
-        depositPrice: "500, 000 ₫",
+        price: 1020000,
+        depositPrice: 500000,
         categoryID: 4,
         stock: 5,
         details:
@@ -1902,7 +1902,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/Naruto/Sakura Haruno (Version 3)/sakura-haruno-version-3_naruto-shippuden_silo_sm.png'),
-        price: "720,000 ₫",
+        price: 720000,
         categoryID: 4,
         stock: 5,
         details:
@@ -1942,7 +1942,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/Naruto/Namikaze Minato/namikaze-minato_naruto-shippuden_silo_sm.png'),
-        price: "720,000 ₫",
+        price: 720000,
         categoryID: 4,
         stock: 7,
         details:
@@ -1982,7 +1982,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/Naruto/Naruto Uzumaki (Sage Mode)/naruto-uzumaki-sage-mode_naruto-shippuden_silo_sm.png'),
-        price: "720,000 ₫",
+        price: 750000,
         categoryID: 4,
         stock: 7,
         details:
@@ -2022,7 +2022,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/Naruto/Sasuke Uchiha/sasuke-uchiha_naruto-shippuden_silo_sm.png'),
-        price: "250,000 ₫",
+        price: 253000,
         categoryID: 4,
         stock: 7,
         details:
@@ -2062,7 +2062,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/Naruto/Itachi Uchiha (Susanoo Version)/itachi-uchiha-susanoo-version_naruto-shippuden_silo_sm.png'),
-        price: "750,000 ₫",
+        price: 765000,
         categoryID: 4,
         stock: 7,
         details:
@@ -2102,7 +2102,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/Naruto/Kakashi Hatake DX/kakashi-hatake-dx_naruto-shippuden_silo_sm.png'),
-        price: "220,000 ₫",
+        price: 225000,
         categoryID: 4,
         stock: 7,
         details:
@@ -2142,7 +2142,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/Naruto/Sakura Haruno/sakura-haruno_naruto-shippuden_silo_sm.png'),
-        price: "220,000 ₫",
+        price: 225000,
         categoryID: 4,
         stock: 7,
         details:
@@ -2185,7 +2185,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "new",
         thumbImg: require('./productImage/Anime/OnePiece/Aokiji Kuzan/aokiji-kuzan_one-piece_silo_sm.png'),
-        price: "725,000 ₫",
+        price: 725000,
         categoryID: 3,
         stock: 7,
         details:
@@ -2225,8 +2225,8 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "preOrder",
         thumbImg: require('./productImage/Anime/OnePiece/Borsalino Kizaru/borsalino-kizaru_one-piece_silo_sm.png'),
-        price: "825,000 ₫",
-        depositPrice: "350,000 ₫",
+        price: 825000,
+        depositPrice: 350000,
         categoryID: 3,
         stock: 0,
         details:
@@ -2266,7 +2266,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "new",
         thumbImg: require('./productImage/Anime/OnePiece/Kaido/kaido_one-piece_silo_sm.png'),
-        price: "825,000 ₫",
+        price: 825000,
         categoryID: 3,
         stock: 2,
         details:
@@ -2306,7 +2306,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "new",
         thumbImg: require('./productImage/Anime/OnePiece/Perona/perona_one-piece_silo_sm.png'),
-        price: "750,000 ₫",
+        price: 750000,
         categoryID: 3,
         stock: 2,
         details:
@@ -2346,7 +2346,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "new",
         thumbImg: require('./productImage/Anime/OnePiece/Monkey D. Luffy (Wano Country - Third Act)/monkey-d-luffy-wano-country-third-act_one-piece_silo_sm.png'),
-        price: "400,000 ₫",
+        price: 400000,
         categoryID: 3,
         stock: 7,
         details:
@@ -2386,8 +2386,8 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "preOrder",
         thumbImg: require('./productImage/Anime/OnePiece/Roronoa Zoro VS Hawkins/roronoa-zoro-vs-hawkins_one-piece_silo_sm.png'),
-        price: "720,000 ₫",
-        depositPrice: "200,000 ₫",
+        price: 720000,
+        depositPrice: 200000,
         categoryID: 3,
         stock: 0,
         details:
@@ -2427,7 +2427,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/OnePiece/Yamato - Raimei Hakke (Extra Battle)/yamato-raimei-hakke-extra-battle_one-piece_silo_sm.png'),
-        price: "320,000 ₫",
+        price: 320000,
         categoryID: 3,
         stock: 10,
         details:
@@ -2467,7 +2467,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/OnePiece/Portrait of Pirates “Heavenly Demon” Donquixote Doflamingo/portrait-of-pirates-heavenly-demon-donquixote-doflamingo_one-piece_silo_sm.png'),
-        price: "420,000 ₫",
+        price: 420000,
         categoryID: 3,
         stock: 10,
         details:
@@ -2507,7 +2507,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/OnePiece/Luffy Taro Warriors Alliance/luffy-taro-warriors-alliance_one-piece_silo_sm.png'),
-        price: "420,000 ₫",
+        price: 420000,
         categoryID: 3,
         stock: 10,
         details:
@@ -2547,7 +2547,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/OnePiece/Portrait of Pirates Sabo Fire Fist Inheritance/portrait-of-pirates-sabo-fire-fist-inheritance_one-piece_silo_sm.png'),
-        price: "320,000 ₫",
+        price: 320000,
         categoryID: 3,
         stock: 10,
         details:
@@ -2588,7 +2588,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/OnePiece/Portrait of Pirates Warriors Alliance Oden Kozuki/portrait-of-pirates-warriors-alliance-oden-kozuki_one-piece_silo_sm.png'),
-        price: "450,000 ₫",
+        price: 450000,
         categoryID: 3,
         stock: 10,
         details:
@@ -2628,7 +2628,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "new",
         thumbImg: require('./productImage/Anime/OnePiece/Roronoa Zoro/roronoa-zoro-wt100-commemorative-eiichiro-oda-illustration-daikaizoku-hyakkei_one-piece_silo_sm.png'),
-        price: "465,000 ₫",
+        price: 465000,
         categoryID: 3,
         stock: 10,
         details:
@@ -2668,7 +2668,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "new",
         thumbImg: require('./productImage/Anime/OnePiece/Yamato (Glitter of Ha)/yamato-glitter-of-ha_one-piece_silo_sm.png'),
-        price: "465,000 ₫",
+        price: 465000,
         categoryID: 3,
         stock: 10,
         details:

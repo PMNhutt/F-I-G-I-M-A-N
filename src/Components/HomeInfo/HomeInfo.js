@@ -159,6 +159,7 @@ function HomeInfo() {
                                             name={product.name}
                                             price={product.price}
                                             status={product.status}
+                                            id={product.id}
                                         />
                                     </Grid>
                                 ))}
@@ -187,6 +188,7 @@ function HomeInfo() {
                                             name={product.name}
                                             price={product.price}
                                             status={product.status}
+                                            id={product.id}
                                         />
                                     </Grid>
                                 ))}
@@ -215,6 +217,7 @@ function HomeInfo() {
                                             name={product.name}
                                             price={product.price}
                                             status={product.status}
+                                            id={product.id}
                                         />
                                     </Grid>
                                 ))}
@@ -243,6 +246,7 @@ function HomeInfo() {
                                             name={product.name}
                                             price={product.price}
                                             status={product.status}
+                                            id={product.id}
                                         />
                                     </Grid>
                                 ))}

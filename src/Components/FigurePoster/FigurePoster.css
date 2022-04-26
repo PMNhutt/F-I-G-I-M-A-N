@@ -88,6 +88,51 @@
     width: fit-content;
     cursor: pointer;
     margin-top: 20px;
+    user-select: none;
+}
+
+.figurePoster .container .figure-info-hover .loading-btn {
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 1vw;
+    background: rgba(10, 116, 229, 0.25);
+    box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: 0.5s;
+    width: fit-content;
+    cursor: pointer;
+    margin-top: 20px;
+    user-select: none;
+    pointer-events: none;
+    display: flex;
+}
+
+.figurePoster .container .figure-info-hover .loading-icon {
+    font-size: 1.2vw;
+    margin-left: 5px;
+    font-weight: bold;
+    color: #fff;
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .figurePoster .container .figure-info-hover .add-to-cart-btn:hover {
@@ -160,6 +205,10 @@
         margin-right: 30px;
         margin-left: 0px;
     }
+
+    .figurePoster .container .figure-info-hover .loading-icon {
+        font-size: 2.2vw;
+    }
 }
 
 
@@ -180,6 +229,10 @@
     .best-seller .container .heading a {
         margin-right: 20px;
         margin-left: 0px;
+    }
+
+    .figurePoster .container .figure-info-hover .loading-icon {
+        font-size: 3.2vw;
     }
 }
 
