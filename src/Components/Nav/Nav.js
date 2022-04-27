@@ -2,15 +2,14 @@ import { useEffect, useState, useRef, useContext } from 'react';
 import { ModalContext } from '../../Context/ModalContext';
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion'
+import { Tooltip, tooltipClasses } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import './Nav.css';
 import figiLogo from '../../data/figiman.png';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import SearchIcon from '@mui/icons-material/Search';
-import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import NotesIcon from '@mui/icons-material/Notes';
 import OutsideClickHandler from 'react-outside-click-handler';
-import { Tooltip, tooltipClasses } from '@mui/material';
-import { styled } from '@mui/material/styles';
 
 function Nav() {
 
@@ -78,6 +77,27 @@ function Nav() {
     },
   }));
 
+  //get total amount for cart notification
+  const [totalAmount, setTotalAmount] = useState(0)
+  const [shake, setShake] = useState(false)
+
+  useEffect(() => {
+    console.log("re-render");
+    let total = 0;
+    cartMenu.productList.forEach(product => {
+      total += product.amount
+    })
+    let delay;
+    delay = setTimeout(() => {
+      setTotalAmount(total)
+      setShake(true)
+    }, 1000)
+    setShake(false)
+
+    return () => clearTimeout(delay);
+
+  }, [cartMenu.productList])
+
 
   //=========================//
 
@@ -123,7 +143,12 @@ function Nav() {
           <input type="text" placeholder="Tìm kiếm sản phẩm" />
           <SearchIcon className="icon search-icon" />
           <CustomToolTip enterDelay={1000} placement="bottom" title="Giỏ hàng">
-            <ShoppingCartOutlinedIcon className="icon" onClick={() => handleOpenCart()} />
+            <div className={!shake ? "cart-wrapper cart-shake" : "cart-wrapper"} onClick={() => handleOpenCart()}>
+              <ShoppingCartOutlinedIcon className="icon"  />
+              <div className="cart-notifications">
+                <p>{totalAmount}</p>
+              </div>
+            </div>
           </CustomToolTip>
           <NavLink to="/login"><span className="login-btn">Đăng Nhập</span></NavLink>
         </div>

@@ -54,7 +54,7 @@ function FigurePoster({ ImgSrc, name, price, status, id }) {
     }
 
     useEffect(() => {
-        let delay = null
+        let delay
         if (loadingBtn === true) {
             delay = setTimeout(() => {
                 setLoadingBtn(false)
