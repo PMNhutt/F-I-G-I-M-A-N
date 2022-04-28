@@ -1,7 +1,11 @@
 import { useContext, useEffect, useState } from 'react'
 import { ModalContext } from '../../Context/ModalContext'
+import { Tooltip, tooltipClasses } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { products } from '../../data/products';
 import './FigurePoster.css'
 import CachedIcon from '@mui/icons-material/Cached';
+import ZoomOutMapRoundedIcon from '@mui/icons-material/ZoomOutMapRounded';
 
 function FigurePoster({ ImgSrc, name, price, status, id }) {
 
@@ -68,6 +72,30 @@ function FigurePoster({ ImgSrc, name, price, status, id }) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     }
 
+
+    const CustomToolTip = styled(({ className, ...props }) => (
+        <Tooltip {...props} classes={{ popper: className }} />
+    ))(() => ({
+        [`& .${tooltipClasses.tooltip}`]: {
+            backgroundColor: '#d0d2d4',
+            color: '#141414',
+            width: 'fit-content',
+            padding: '10px',
+            fontSize: 15,
+            fontFamily: 'Work Sans, sans-serif',
+        },
+    }));
+
+    //open peek modal 
+    const handleOpenPeek = () => {
+        cartMenu.setShowPeekModal(true)
+        let newProduct
+        newProduct = products.find(product => product.id == id)
+        if (newProduct !== undefined) {
+            cartMenu.setProduct(newProduct)
+        }
+    }
+
     // =================================================================
 
     return (
@@ -93,6 +121,14 @@ function FigurePoster({ ImgSrc, name, price, status, id }) {
                         <h3>Đặt trước</h3>
                     </div>
                 )}
+
+                <CustomToolTip placement="top" title="Xem nhanh">
+                    <div className="figure-peek" onClick={() => handleOpenPeek()}>
+                        <div className="peek-icon-wrapper">
+                            <ZoomOutMapRoundedIcon className="peek-icon" />
+                        </div>
+                    </div>
+                </CustomToolTip>
 
 
                 <div className="figure-info-hover">

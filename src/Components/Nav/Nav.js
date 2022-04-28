@@ -82,7 +82,6 @@ function Nav() {
   const [shake, setShake] = useState(false)
 
   useEffect(() => {
-    console.log("re-render");
     let total = 0;
     cartMenu.productList.forEach(product => {
       total += product.amount

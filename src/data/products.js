@@ -1823,7 +1823,7 @@ export const products = [
         price: 820000,
         depositPrice: 200000,
         categoryID: 4,
-        stock: 5,
+        stock: 0,
         details:
         {
             description: "Từ bộ anime nổi tiếng Naruto: Shippuden and the Precious G.E.M. series là Itachi Uchiha (Phiên bản Susanoo Với Hình ảnh Sưu tập Cơ sở LED! Susanoo là một hình đại diện hình người đáng sợ được làm hoàn toàn bằng chakra biểu hiện của người dùng. Đây là một kỹ thuật đặc biệt được truyền lại bởi các thành viên của gia tộc Uchiha và là khả năng mạnh nhất hiện có để những người đã đánh thức Mangekyō Sharingan ở cả hai mắt"
@@ -1864,7 +1864,7 @@ export const products = [
         price: 1020000,
         depositPrice: 500000,
         categoryID: 4,
-        stock: 5,
+        stock: 0,
         details:
         {
             description: "Cũng giống như khái niệm thương hiệu của HEX Collectibles, họ luôn tìm cách cải tiến các sản phẩm trên thị trường. Tìm cách mới để đẩy ranh giới và nắm bắt bản chất của các nhân vật chúng ta yêu thích và đưa các nhân vật được yêu mến vào cuộc sống theo phong cách năng động mà họ nổi tiếng"
@@ -1982,7 +1982,7 @@ export const products = [
         tagName: ["Anime", "Hành động"],
         status: "available",
         thumbImg: require('./productImage/Anime/Naruto/Naruto Uzumaki (Sage Mode)/naruto-uzumaki-sage-mode_naruto-shippuden_silo_sm.png'),
-        price: 750000,
+        price: 325000,
         categoryID: 4,
         stock: 7,
         details:

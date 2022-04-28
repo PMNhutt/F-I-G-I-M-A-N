@@ -149,7 +149,7 @@
     cursor: pointer;
 }
 
-.product-item .product-info{
+.product-item .product-info {
     width: 13.3vw;
 }
 
@@ -184,7 +184,8 @@
 /* ====== Tablet: width >= 740px and < 1024px  */
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
 
-    .view-cart, .checkout {
+    .view-cart,
+    .checkout {
         font-size: 1.8vw;
     }
 }
@@ -199,7 +200,8 @@
         padding: 104px 5px 50px;
     }
 
-    .view-cart, .checkout {
+    .view-cart,
+    .checkout {
         font-size: 3vw;
         border-radius: 7px;
     }

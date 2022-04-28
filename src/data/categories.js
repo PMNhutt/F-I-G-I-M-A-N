@@ -5,35 +5,28 @@ export const categories = [
     }
     ,
     {
-        name: "Anime",
-        results:
-            [
-                {
-                    id: 2,
-                    name: "Dragon Ball"
-                },
-                {
-                    id: 3,
-                    name: "One Piece"
-                },
-                {
-                    id: 4,
-                    name: "Naruto"
-                },
-                {
-                    id: 5,
-                    name: "Kimetsu no yaiba"
-                },
-                {
-                    id: 6,
-                    name: "My Hero Academia"
-                },
-                {
-                    id: 7,
-                    name: "My Hero Academia"
-                },
-
-            ]
+        id: 2,
+        name: "Dragon Ball"
+    },
+    {
+        id: 3,
+        name: "One Piece"
+    },
+    {
+        id: 4,
+        name: "Naruto"
+    },
+    {
+        id: 5,
+        name: "Kimetsu no yaiba"
+    },
+    {
+        id: 6,
+        name: "My Hero Academia"
+    },
+    {
+        id: 7,
+        name: "Jujutsu Kaisen"
     },
     {
         id: 8,

@@ -5,7 +5,6 @@ import { ModalContext } from '../../Context/ModalContext'
 import { Player } from '@lottiefiles/react-lottie-player';
 import CloseIcon from '@mui/icons-material/Close';
 
-
 function CartModal() {
 
     //modal cart context
@@ -26,6 +25,7 @@ function CartModal() {
             }
         }
     }
+
 
     const handleCloseCart = () => {
         // setOpenCart(false)
@@ -115,16 +115,22 @@ function CartModal() {
 
                             {cartMenu.cartEmpty == true && (
                                 <>
-                                    <div className="cart-lottie-container">
-                                        <Player
-                                            autoplay
-                                            loop
-                                            src="https://assets7.lottiefiles.com/packages/lf20_3VDN1k.json"
-                                            style={{ height: '80%', width: '80%' }}
-                                            className="cart-lottie"
+                                    <AnimatePresence >
+                                        <motion.div className="cart-lottie-container"
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0 }}
                                         >
-                                        </Player>
-                                    </div>
+                                            <Player
+                                                autoplay
+                                                loop
+                                                src="https://assets7.lottiefiles.com/packages/lf20_3VDN1k.json"
+                                                style={{ height: '80%', width: '80%' }}
+                                                className="cart-lottie"
+                                            >
+                                            </Player>
+                                        </motion.div>
+                                    </AnimatePresence>
 
                                     <h3>Giỏ hàng rỗng...</h3>
                                 </>
@@ -134,32 +140,40 @@ function CartModal() {
                             {cartMenu.cartEmpty == false && (
                                 <>
                                     <div className="lists">
-                                        {cartMenu.productList.map((product, index) => (
-                                            <div className="product-item"
-                                                key={index}
-                                            >
-
-
-                                                <div className="product-img"
-                                                    style={{
-                                                        backgroundImage: `url(
-                                                        "${product.ImgSrc}"
-                                                    )`,
+                                        <AnimatePresence>
+                                            {cartMenu.productList.map((product, index) => (
+                                                <motion.div className="product-item"
+                                                    key={product.id}
+                                                    exit={{
+                                                        opacity: 0, scale: 0.5, transition: {
+                                                            ease: "easeOut",
+                                                            duration: 0.3
+                                                        }
                                                     }}
                                                 >
-                                                    {/* <img src={product.ImgSrc} /> */}
-                                                </div>
-                                                <div className="product-info">
-                                                    <p className="product-name">{product.name}</p>
-                                                    <p className="product-price"><span>{product.amount} &times; </span>{numberWithCommas(product.price)} ₫</p>
-                                                </div>
-                                                <div className="delete-product">
-                                                    <span onClick={() => handleDeleteProduct(product.id)} style={{ fontSize: '20px' }}>&times;</span>
-                                                </div>
+                                                    <div className="product-img"
+                                                        style={{
+                                                            backgroundImage: `url(
+                                                        "${product.ImgSrc}"
+                                                    )`,
+                                                        }}
+                                                    >
+                                                        {/* <img src={product.ImgSrc} /> */}
+                                                    </div>
+                                                    <div className="product-info">
+                                                        <p className="product-name">{product.name}</p>
+                                                        <p className="product-price"><span>{product.amount} &times; </span>{numberWithCommas(product.price)} ₫</p>
+                                                    </div>
+                                                    <div className="delete-product">
+                                                        <span onClick={() => handleDeleteProduct(product.id)} style={{ fontSize: '20px' }}>&times;</span>
+                                                    </div>
 
-                                            </div>
-                                        ))}
+                                                </motion.div>
+                                            ))}
+                                        </AnimatePresence>
+
                                     </div>
+
                                 </>
                             )}
 

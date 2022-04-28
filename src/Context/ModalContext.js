@@ -6,9 +6,9 @@ function ModalProvider({ children }) {
 
     const [showModal, setShowModal] = useState(false)
     const [cartEmpty, setCartEmpty] = useState(true)
-    const [product, setProduct] = useState({})
+    const [product, setProduct] = useState()
     const [productList, setProductList] = useState([])
-
+    const [showPeekModal, setShowPeekModal] = useState(false)
     
 
     const values = {
@@ -16,6 +16,7 @@ function ModalProvider({ children }) {
         cartEmpty, setCartEmpty,
         product, setProduct,
         productList, setProductList,
+        showPeekModal, setShowPeekModal
     }
 
     return (
