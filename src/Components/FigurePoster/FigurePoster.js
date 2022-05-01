@@ -7,7 +7,7 @@ import './FigurePoster.css'
 import CachedIcon from '@mui/icons-material/Cached';
 import ZoomOutMapRoundedIcon from '@mui/icons-material/ZoomOutMapRounded';
 
-function FigurePoster({ ImgSrc, name, price, status, id }) {
+function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
 
 
     function truncate(str, n) {
@@ -18,41 +18,66 @@ function FigurePoster({ ImgSrc, name, price, status, id }) {
     const cartMenu = useContext(ModalContext)
 
     const [loadingBtn, setLoadingBtn] = useState(false)
+    const [add, setAdd] = useState(false)
+    const [stockAvailable, setStockAvailable] = useState(true)
 
     const handleAddToCart = () => {
         cartMenu.setCartEmpty(false)
+        setAdd(prev => !prev)
+
 
         let added = cartMenu.productList.find((product) => {
             return product.id === id
         })
 
-        if (added == undefined) {
-            cartMenu.setProductList(prev => [...prev, {
-                id: id,
-                name: name,
-                ImgSrc: ImgSrc,
-                price: price,
-                amount: 1,
-            }])
-        } else {
-            let newAmount = 0
-            cartMenu.productList.map((pro, index) => {
-                if (pro.id == added.id) {
-                    newAmount = pro.amount + 1
-                    cartMenu.productList.splice(index, 1)
-                }
-            })
-            cartMenu.setProductList(prev => [...prev, {
-                id: id,
-                name: name,
-                ImgSrc: ImgSrc,
-                price: price,
-                amount: newAmount,
-            }])
+        let addedAmount = 0
+        let checkValidAmount = true
+        // addedAmount = context.product.stock - addedProduct.amountAdded
+        if (id === cartMenu.addedProduct.id) {
+            addedAmount = cartMenu.addedProduct.amountAdded
 
+            // console.log("handle add: ", addedAmount)
 
+            if (addedAmount >= stock) {
+                checkValidAmount = false
+            } else {
+                checkValidAmount = true
+            }
         }
 
+        if (checkValidAmount == true) {
+            setStockAvailable(true)
+            if (added == undefined) {
+                cartMenu.setProductList(prev => [...prev, {
+                    id: id,
+                    name: name,
+                    ImgSrc: ImgSrc,
+                    price: price,
+                    amount: 1,
+                    maxAmount: stock,
+                }])
+            } else {
+                let newAmount = 0
+                cartMenu.productList.map((pro, index) => {
+                    if (pro.id == added.id) {
+                        newAmount = pro.amount + 1
+                        cartMenu.productList.splice(index, 1)
+                    }
+                })
+                cartMenu.setProductList(prev => [...prev, {
+                    id: id,
+                    name: name,
+                    ImgSrc: ImgSrc,
+                    price: price,
+                    amount: newAmount,
+                    maxAmount: stock,
+                }])
+
+
+            }
+        } else {
+            setStockAvailable(false)
+        }
 
         setLoadingBtn(true)
     }
@@ -96,6 +121,64 @@ function FigurePoster({ ImgSrc, name, price, status, id }) {
         }
     }
 
+    //check added products
+    useEffect(() => {
+
+        let added = cartMenu.productList.find((product) => {
+            return product.id === id
+        })
+        let prevID
+        if (added !== undefined) {
+            cartMenu.setAddedProduct({
+                id: added.id,
+                amountAdded: added.amount,
+            })
+            prevID = added.id
+        } else {
+            cartMenu.setAddedProduct({
+                id: prevID,
+                amountAdded: 0,
+            })
+        }
+
+
+    }, [add, cartMenu.showModal])
+
+
+    //set state for "added" button
+    useEffect(() => {
+        let addedAmount = 0
+
+        let added = cartMenu.productList.find((product) => {
+            return product.id === id
+        })
+
+        if (added !== undefined) {
+            if (id === cartMenu.addedProduct.id) {
+                addedAmount = cartMenu.addedProduct.amountAdded
+
+                if (addedAmount == stock) {
+                    setStockAvailable(false)
+                } else {
+                    setStockAvailable(true)
+                }
+            } else {
+                if (id === added.id) {
+                    addedAmount = added.amount
+
+                    if (addedAmount == stock) {
+                        setStockAvailable(false)
+                    } else {
+                        setStockAvailable(true)
+                    }
+                    
+                }
+            }
+        }
+
+
+    }, [cartMenu.addedProduct.amountAdded, cartMenu.showModal, cartMenu.productList])
+
     // =================================================================
 
     return (
@@ -135,10 +218,14 @@ function FigurePoster({ ImgSrc, name, price, status, id }) {
                     <h3>{name}</h3>
                     <p>{numberWithCommas(price)} ₫</p>
                     <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                        <div className={loadingBtn == false ? "add-to-cart-btn" : "loading-btn"} onClick={() => handleAddToCart()}>
-                            {loadingBtn == false ? "Thêm Vào Giỏ" : "Đang thêm..."}
+                        {status !== "preOrder" && (<div className={loadingBtn == false ? (stockAvailable == true ? "add-to-cart-btn" : "add-to-cart-btn disable-click") : "loading-btn"} onClick={() => handleAddToCart()}>
+                            {loadingBtn == false ? (stockAvailable == true ? "Thêm Vào Giỏ" : "Đã thêm") : "Đang thêm..."}
                             {loadingBtn == true && <div ><CachedIcon className="loading-icon" /></div>}
-                        </div>
+                        </div>)}
+
+                        {status === "preOrder" && (<div className="preOrder-btn">
+                            Liên hệ
+                        </div>)}
                     </div>
                 </div>
 

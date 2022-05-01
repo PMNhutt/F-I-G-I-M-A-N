@@ -160,6 +160,7 @@ function HomeInfo() {
                                             price={product.price}
                                             status={product.status}
                                             id={product.id}
+                                            stock={product.stock}
                                         />
                                     </Grid>
                                 ))}
@@ -189,6 +190,7 @@ function HomeInfo() {
                                             price={product.price}
                                             status={product.status}
                                             id={product.id}
+                                            stock={product.stock}
                                         />
                                     </Grid>
                                 ))}
@@ -218,6 +220,7 @@ function HomeInfo() {
                                             price={product.price}
                                             status={product.status}
                                             id={product.id}
+                                            stock={product.stock}
                                         />
                                     </Grid>
                                 ))}
@@ -247,6 +250,7 @@ function HomeInfo() {
                                             price={product.price}
                                             status={product.status}
                                             id={product.id}
+                                            stock={product.stock}
                                         />
                                     </Grid>
                                 ))}

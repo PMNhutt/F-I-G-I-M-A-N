@@ -92,6 +92,7 @@
 }
 
 .figurePoster .container .figure-info-hover .loading-btn {
+    color: var(--text-light-color);
     text-transform: uppercase;
     font-weight: 600;
     padding: 10px 1vw;
@@ -105,6 +106,26 @@
     width: fit-content;
     cursor: pointer;
     margin-top: 20px;
+    user-select: none;
+    pointer-events: none;
+    display: flex;
+}
+
+.figurePoster .container .figure-info-hover .preOrder-btn {
+    margin-top: 20px;
+    color: var(--text-light-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 1vw;
+    background: rgba(10, 116, 229, 0.25);
+    box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: 0.5s;
+    width: fit-content;
+    cursor: pointer;
     user-select: none;
     pointer-events: none;
     display: flex;
@@ -224,6 +245,12 @@
 
 .figurePoster .container .figure-peek .peek-icon-wrapper .peek-icon {
     font-size: 1.25vw;
+}
+
+.disable-click {
+    pointer-events: none;
+    color: var(--text-light-color);
+    background: rgba(10, 116, 229, 0.25) !important;
 }
 
 /* ========================= RESPONSIVE ========================== */

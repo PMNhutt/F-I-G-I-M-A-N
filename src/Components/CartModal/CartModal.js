@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from 'react'
+import { useContext, useState, useEffect, memo } from 'react'
 import './CartModal.css'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ModalContext } from '../../Context/ModalContext'
@@ -36,7 +36,6 @@ function CartModal() {
     const [deleteProduct, setDeleteProduct] = useState(false)
 
     const handleDeleteProduct = (indexId) => {
-        // console.log("re-render")
         setDeleteProduct(prev => !prev)
 
         let newAmount = 0
@@ -61,6 +60,7 @@ function CartModal() {
                         ImgSrc: pro.ImgSrc,
                         price: pro.price,
                         amount: newAmount,
+                        maxAmount: pro.maxAmount,
                     }])
                 }
             }
@@ -77,7 +77,6 @@ function CartModal() {
         let total = 0;
         cartMenu.productList.forEach(product => {
             total += product.price * product.amount
-            // console.log(product)
         })
 
         if (cartMenu.productList < 1) {
@@ -163,6 +162,7 @@ function CartModal() {
                                                     <div className="product-info">
                                                         <p className="product-name">{product.name}</p>
                                                         <p className="product-price"><span>{product.amount} &times; </span>{numberWithCommas(product.price)} ₫</p>
+                                                        {/* {console.log("amount in cart:", product.amount)} */}
                                                     </div>
                                                     <div className="delete-product">
                                                         <span onClick={() => handleDeleteProduct(product.id)} style={{ fontSize: '20px' }}>&times;</span>
@@ -223,4 +223,4 @@ function CartModal() {
     )
 }
 
-export default CartModal
+export default memo(CartModal)
