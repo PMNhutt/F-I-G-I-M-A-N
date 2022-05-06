@@ -1,7 +1,8 @@
-import { useContext, useState, useEffect } from 'react'
+import { useContext, useState, useEffect, Suspense } from 'react'
 import { ModalContext } from '../../Context/ModalContext'
 import { motion, AnimatePresence } from 'framer-motion'
 import { categories } from '../../data/categories';
+import { useImage, Img } from 'react-image'
 import './FigurePeekModal.css'
 import CloseIcon from '@mui/icons-material/Close';
 import CachedIcon from '@mui/icons-material/Cached';
@@ -34,6 +35,7 @@ function FigurePeekModal() {
         context.setShowPeekModal(false)
         setInputValue(1)
         setStockAvailable(false)
+        setOtherImages()
     }
     //close with esc key
     useEffect(() => {
@@ -237,6 +239,35 @@ function FigurePeekModal() {
 
     }
 
+    //handle chose otherImages
+    const [otherImages, setOtherImages] = useState()
+    const handlePickImg = (src) => {
+        setOtherImages(src)
+    }
+
+    const [activeSrc, setActiveSrc] = useState()
+    useEffect(() => {
+        if (context.product != undefined) {
+            if (otherImages != undefined) {
+                // console.log(otherImages)
+                setActiveSrc(otherImages)
+            } else {
+                // console.log("run")
+                setActiveSrc(context.product.details.imageDescription)
+            }
+        }
+
+    }, [context.showPeekModal, otherImages])
+
+    // react-img
+    function MyImageComponent() {
+        const { src } = useImage({
+            srcList: { activeSrc },
+        })
+
+        return <img src={src} />
+    }
+
 
     // =================================
     return (
@@ -276,7 +307,10 @@ function FigurePeekModal() {
                         {/* main peek detail */}
                         <div className="peek-imgs">
                             <div className="active-img">
-                                <img src={context.product.details.imageDescription} />
+                                <Suspense fallback={"loading"}>
+                                    <img src={activeSrc} />
+                                    {/* <MyImageComponent /> */}
+                                </Suspense>
                             </div>
                             <div className="img-list">
                                 {context.product.details.otherImages.map((image) => (
@@ -284,6 +318,7 @@ function FigurePeekModal() {
                                         style={{
                                             backgroundImage: `url( "${image.imgUrl}")`
                                         }}
+                                        onClick={() => handlePickImg(image.imgUrl)}
                                     >
                                     </div>
                                 ))}

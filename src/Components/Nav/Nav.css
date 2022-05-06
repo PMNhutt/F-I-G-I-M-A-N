@@ -201,7 +201,7 @@ body {
     top: -13px;
     right: -10px;
     background-color: var(--color-blue);
-    /* padding: 2px 6.2px; */
+    z-index: 99;
     border-radius: 50%;
     width: 23px;
     height: 23px;
