@@ -1,11 +1,11 @@
-import { useContext, useState, useEffect, Suspense } from 'react'
+import React, { useContext, useState, useEffect, Suspense}from 'react'
 import { ModalContext } from '../../Context/ModalContext'
 import { motion, AnimatePresence } from 'framer-motion'
 import { categories } from '../../data/categories';
-import { useImage, Img } from 'react-image'
 import './FigurePeekModal.css'
 import CloseIcon from '@mui/icons-material/Close';
 import CachedIcon from '@mui/icons-material/Cached';
+import Loading from '../Loading/Loading'
 
 
 function FigurePeekModal() {
@@ -260,14 +260,9 @@ function FigurePeekModal() {
     }, [context.showPeekModal, otherImages])
 
     // react-img
-    function MyImageComponent() {
-        const { src } = useImage({
-            srcList: { activeSrc },
-        })
-
-        return <img src={src} />
-    }
-
+    const MyImage = React.lazy(() => {
+        return import('./Image')
+    })
 
     // =================================
     return (
@@ -307,9 +302,9 @@ function FigurePeekModal() {
                         {/* main peek detail */}
                         <div className="peek-imgs">
                             <div className="active-img">
-                                <Suspense fallback={"loading"}>
-                                    <img src={activeSrc} />
-                                    {/* <MyImageComponent /> */}
+                                <Suspense fallback={<Loading />}>
+                                    {/* <img src={activeSrc} /> */}
+                                    <MyImage src={activeSrc} />
                                 </Suspense>
                             </div>
                             <div className="img-list">
