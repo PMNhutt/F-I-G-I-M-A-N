@@ -1,12 +1,11 @@
-import React, { useContext, useState, useEffect, Suspense}from 'react'
+import React, { useContext, useState, useEffect, Suspense } from 'react'
 import { ModalContext } from '../../Context/ModalContext'
 import { motion, AnimatePresence } from 'framer-motion'
 import { categories } from '../../data/categories';
 import './FigurePeekModal.css'
 import CloseIcon from '@mui/icons-material/Close';
 import CachedIcon from '@mui/icons-material/Cached';
-import Loading from '../Loading/Loading'
-
+import Image from './Image'
 
 function FigurePeekModal() {
 
@@ -249,10 +248,8 @@ function FigurePeekModal() {
     useEffect(() => {
         if (context.product != undefined) {
             if (otherImages != undefined) {
-                // console.log(otherImages)
                 setActiveSrc(otherImages)
             } else {
-                // console.log("run")
                 setActiveSrc(context.product.details.imageDescription)
             }
         }
@@ -260,9 +257,10 @@ function FigurePeekModal() {
     }, [context.showPeekModal, otherImages])
 
     // react-img
-    const MyImage = React.lazy(() => {
-        return import('./Image')
-    })
+    // const MyImage = React.lazy(() => {
+    //     return import('./Image')
+    // })
+
 
     // =================================
     return (
@@ -302,10 +300,8 @@ function FigurePeekModal() {
                         {/* main peek detail */}
                         <div className="peek-imgs">
                             <div className="active-img">
-                                <Suspense fallback={<Loading />}>
-                                    {/* <img src={activeSrc} /> */}
-                                    <MyImage src={activeSrc} />
-                                </Suspense>
+                                {/* <img src={activeSrc} /> */}
+                                {<Image src={activeSrc} />}
                             </div>
                             <div className="img-list">
                                 {context.product.details.otherImages.map((image) => (

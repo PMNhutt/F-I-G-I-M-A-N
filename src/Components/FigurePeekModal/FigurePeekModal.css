@@ -30,17 +30,6 @@
     width: 40.00535117056857vw;
     overflow: hidden scroll;
     border-radius: 5px;
-    /* animation: animateIn 1s ease; */
-    transition: 0.5s;
-}
-
-@keyframes animateIn {
-    from {
-        opacity: 0
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .peek-imgs .active-img::-webkit-scrollbar,
@@ -317,6 +306,7 @@
     left: 10px;
     border-radius: 5px;
     width: fit-content;
+    z-index: 99;
 }
 
 .peek-status-order {
@@ -328,6 +318,7 @@
     left: 10px;
     border-radius: 5px;
     width: fit-content;
+    z-index: 99;
 }
 
 .peek-modal .error-message {
