@@ -3,9 +3,9 @@ import './Loading.css'
 
 function Loading() {
   return (
-    <div class="loader-wrapper">
-      <div class="loadingio-spinner-ripple-g42tsysya4">
-        <div class="ldio-8yhnsrjvsdu">
+    <div className="loader-wrapper">
+      <div className="loadingio-spinner-ripple-g42tsysya4">
+        <div className="ldio-8yhnsrjvsdu">
           <div></div>
           <div></div>
         </div>

@@ -43,6 +43,7 @@ function FigurePeekModal() {
                 context.setShowPeekModal(false)
                 setInputValue(1)
                 setStockAvailable(false)
+                setOtherImages()
             }
         }
         window.addEventListener('keydown', close)
@@ -301,7 +302,7 @@ function FigurePeekModal() {
                         <div className="peek-imgs">
                             <div className="active-img">
                                 {/* <img src={activeSrc} /> */}
-                                {<Image src={activeSrc} />}
+                                <Image src={activeSrc} />
                             </div>
                             <div className="img-list">
                                 {context.product.details.otherImages.map((image) => (
