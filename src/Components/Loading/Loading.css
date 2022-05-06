@@ -4,7 +4,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #0b0b0b;
+    /* background-color: #0b0b0b; */
+    background-color: rgba(183, 218, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     display: grid;
     place-items: center;
 }

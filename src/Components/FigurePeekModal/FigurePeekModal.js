@@ -5,7 +5,7 @@ import { categories } from '../../data/categories';
 import './FigurePeekModal.css'
 import CloseIcon from '@mui/icons-material/Close';
 import CachedIcon from '@mui/icons-material/Cached';
-import Image from './Image'
+import Image from '../FigurePeekModal/Image'
 
 function FigurePeekModal() {
 

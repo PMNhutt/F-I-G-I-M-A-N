@@ -6,6 +6,7 @@ import { products } from '../../data/products';
 import './FigurePoster.css'
 import CachedIcon from '@mui/icons-material/Cached';
 import ZoomOutMapRoundedIcon from '@mui/icons-material/ZoomOutMapRounded';
+import Image from '../FigurePeekModal/Image'
 
 function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
 
@@ -179,13 +180,18 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
 
     }, [cartMenu.addedProduct.amountAdded, cartMenu.showModal, cartMenu.productList])
 
+    //loader img loading
+    const [loadedImage, setLoadedImage] = useState(false)
+
+
     // =================================================================
 
     return (
         <div className="figurePoster">
             <div className="container">
                 <div className="figure-thumbnail">
-                    <img src={ImgSrc} />
+                    {/* <img src={ImgSrc} /> */}
+                    <Image src={ImgSrc}/>
                 </div>
 
                 <div className="figure-info">
