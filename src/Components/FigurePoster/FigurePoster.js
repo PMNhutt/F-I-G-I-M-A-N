@@ -180,8 +180,6 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
 
     }, [cartMenu.addedProduct.amountAdded, cartMenu.showModal, cartMenu.productList])
 
-    //loader img loading
-    const [loadedImage, setLoadedImage] = useState(false)
 
 
     // =================================================================
