@@ -5,6 +5,9 @@ import { categories } from '../../data/categories';
 import './FigurePeekModal.css'
 import CloseIcon from '@mui/icons-material/Close';
 import CachedIcon from '@mui/icons-material/Cached';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ErrorIcon from '@mui/icons-material/Error';
+import ReportIcon from '@mui/icons-material/Report';
 import Image from '../FigurePeekModal/Image'
 
 function FigurePeekModal() {
@@ -64,7 +67,6 @@ function FigurePeekModal() {
     const [add, setAdd] = useState(false)
 
     const handleAddToCart = () => {
-        context.setCartEmpty(false)
         setAdd(prev => !prev)
 
         let added = context.productList.find((product) => {
@@ -87,8 +89,11 @@ function FigurePeekModal() {
 
         // && inputValue <= (context.product.stock - addedAmount)
         if (checkValidAmount == true) {
+            
             if (inputValue >= 1) {
+                context.setCartEmpty(false)
                 context.setError(false)
+                context.setAddedAnouncement(true)
                 if (added == undefined) {
                     context.setProductList(prev => [...prev, {
                         id: context.product.id,
@@ -119,6 +124,7 @@ function FigurePeekModal() {
                 }
             } else {
                 context.setError(true)
+                context.setAddedAnouncement(false)
             }
         } else {
             context.setError(true)
@@ -163,6 +169,7 @@ function FigurePeekModal() {
         if (loadingBtn === true) {
             delay = setTimeout(() => {
                 setLoadingBtn(false)
+                context.setAddedAnouncement(false)
             }, 2000)
         }
 
@@ -294,7 +301,18 @@ function FigurePeekModal() {
                             {context.error == true && (<motion.div className="error-message"
                                 exit={{ opacity: 0 }}
                             >
-                                {stockAvailable === false ? "Có lỗi xảy ra!!!" : "Bạn đã chọn số lượng tối đa"}
+                                {stockAvailable === false ? <span>Có lỗi xảy ra <ErrorIcon sx={{ fontSize: '2vw', marginLeft: '5px' }} /></span> :
+                                    <span>Bạn đã chọn tối đa <ReportIcon sx={{ fontSize: '2vw', marginLeft: '5px' }} /></span>}
+                            </motion.div>)}
+                        </AnimatePresence>
+
+                        <AnimatePresence>
+                            {context.addedAnouncement == true && (<motion.div className="added-message"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                            >
+                                <span>Đã thêm vào giỏ <CheckCircleIcon sx={{ fontSize: '2vw', marginLeft: '5px' }} /></span>
                             </motion.div>)}
                         </AnimatePresence>
 
@@ -305,7 +323,7 @@ function FigurePeekModal() {
                                 <Image src={activeSrc} />
                             </div>
                             <div className="img-list">
-                                {context.product.details.otherImages.map((image) => (
+                                {context.product.details.otherImages.slice(0, 4).map((image) => (
                                     <div className="img-item" key={image.id}
                                         style={{
                                             backgroundImage: `url( "${image.imgUrl}")`

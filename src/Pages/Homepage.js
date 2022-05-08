@@ -2,6 +2,7 @@ import Nav from '../Components/Nav/Nav'
 import Banner from '../Components/Banner/Banner'
 import HomeInfo from '../Components/HomeInfo/HomeInfo'
 import Footer from '../Components/Footer/Footer'
+import ServiceChat from '../Components/ServiceChat/ServiceChat'
 import { ModalContext } from '../Context/ModalContext';
 import { useEffect, useContext } from 'react';
 
@@ -18,6 +19,7 @@ function Homepage() {
       <Nav />
       <Banner />
       <HomeInfo />
+      <ServiceChat />
       <Footer />
     </div>
   )

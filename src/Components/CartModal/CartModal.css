@@ -23,7 +23,7 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .8);
 }
 
 .cart-lottie {
@@ -49,6 +49,7 @@
     cursor: pointer;
     transition: 0.5s;
 }
+
 
 .close-cart-btn:hover {
     transform: rotate(90deg);
@@ -175,6 +176,24 @@
 
 .product-item .delete-product:hover {
     color: var(--color-red);
+}
+
+.product-item .delete-product:active {
+    animation: press 0.2s 1 linear;
+}
+
+@keyframes press {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.92);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
 
 

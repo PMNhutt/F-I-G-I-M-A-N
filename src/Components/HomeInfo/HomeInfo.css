@@ -1,5 +1,7 @@
 .home-info {
     padding: 0 7vw;
+    background-image: url('../../data/steam.png');
+    background-size: cover;
 }
 
 .service-warp {
