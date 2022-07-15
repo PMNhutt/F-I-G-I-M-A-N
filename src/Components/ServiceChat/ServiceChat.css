@@ -347,6 +347,11 @@
         font-family: 'Work Sans', sans-serif;
         color: #000;
     }
+
+    .open-chat-icon {
+        width: 5vw;
+        height: 5vw;
+    }
 }
 
 
@@ -402,5 +407,10 @@
         font-size: 4.2vw;
         font-family: 'Work Sans', sans-serif;
         color: #000;
+    }
+
+    .open-chat-icon {
+        width: 10vw;
+        height: 10vw;
     }
 }

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState, useRef } from 'react'
 import { ModalContext } from '../../Context/ModalContext'
 import { Tooltip, tooltipClasses } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -36,8 +36,6 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
         // addedAmount = context.product.stock - addedProduct.amountAdded
         if (id === cartMenu.addedProduct.id) {
             addedAmount = cartMenu.addedProduct.amountAdded
-
-            // console.log("handle add: ", addedAmount)
 
             if (addedAmount >= stock) {
                 checkValidAmount = false
@@ -172,7 +170,7 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
                     } else {
                         setStockAvailable(true)
                     }
-                    
+
                 }
             }
         }
@@ -181,60 +179,61 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
     }, [cartMenu.addedProduct.amountAdded, cartMenu.showModal, cartMenu.productList])
 
 
-
     // =================================================================
 
     return (
-        <div className="figurePoster">
-            <div className="container">
-                <div className="figure-thumbnail">
-                    {/* <img src={ImgSrc} /> */}
-                    <Image src={ImgSrc}/>
-                </div>
-
-                <div className="figure-info">
-                    <h3>{truncate(name, 25)}</h3>
-                    <p>{numberWithCommas(price)} ₫</p>
-                </div>
-
-                {status === "new" && (
-                    <div className="figure-status">
-                        <h3>Mới</h3>
+        <>
+            <div className="figurePoster" >
+                <div className="container">
+                    <div className="figure-thumbnail">
+                        {/* <img src={ImgSrc} /> */}
+                        <Image src={ImgSrc} />
                     </div>
-                )}
 
-                {status === "preOrder" && (
-                    <div className="figure-status-order">
-                        <h3>Đặt trước</h3>
+                    <div className="figure-info">
+                        <h3>{truncate(name, 25)}</h3>
+                        <p>{numberWithCommas(price)} ₫</p>
                     </div>
-                )}
 
-                <CustomToolTip placement="top" title="Xem nhanh">
-                    <div className="figure-peek" onClick={() => handleOpenPeek()}>
-                        <div className="peek-icon-wrapper">
-                            <ZoomOutMapRoundedIcon className="peek-icon" />
+                    {status === "new" && (
+                        <div className="figure-status">
+                            <h3>Mới</h3>
+                        </div>
+                    )}
+
+                    {status === "preOrder" && (
+                        <div className="figure-status-order">
+                            <h3>Đặt trước</h3>
+                        </div>
+                    )}
+
+                    <CustomToolTip placement="top" title="Xem nhanh">
+                        <div className="figure-peek" onClick={() => handleOpenPeek()}>
+                            <div className="peek-icon-wrapper">
+                                <ZoomOutMapRoundedIcon className="peek-icon" />
+                            </div>
+                        </div>
+                    </CustomToolTip>
+
+
+                    <div className="figure-info-hover">
+                        <h3>{name}</h3>
+                        <p>{numberWithCommas(price)} ₫</p>
+                        <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                            {status !== "preOrder" && (<div className={loadingBtn == false ? (stockAvailable == true ? "add-to-cart-btn" : "add-to-cart-btn disable-click") : "loading-btn"} onClick={() => handleAddToCart()}>
+                                {loadingBtn == false ? (stockAvailable == true ? "Thêm Vào Giỏ" : "Đã thêm") : "Đang thêm..."}
+                                {loadingBtn == true && <div ><CachedIcon className="loading-icon" /></div>}
+                            </div>)}
+
+                            {status === "preOrder" && (<div className="preOrder-btn">
+                                Liên hệ
+                            </div>)}
                         </div>
                     </div>
-                </CustomToolTip>
 
-
-                <div className="figure-info-hover">
-                    <h3>{name}</h3>
-                    <p>{numberWithCommas(price)} ₫</p>
-                    <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                        {status !== "preOrder" && (<div className={loadingBtn == false ? (stockAvailable == true ? "add-to-cart-btn" : "add-to-cart-btn disable-click") : "loading-btn"} onClick={() => handleAddToCart()}>
-                            {loadingBtn == false ? (stockAvailable == true ? "Thêm Vào Giỏ" : "Đã thêm") : "Đang thêm..."}
-                            {loadingBtn == true && <div ><CachedIcon className="loading-icon" /></div>}
-                        </div>)}
-
-                        {status === "preOrder" && (<div className="preOrder-btn">
-                            Liên hệ
-                        </div>)}
-                    </div>
                 </div>
-
             </div>
-        </div>
+        </>
     )
 }
 

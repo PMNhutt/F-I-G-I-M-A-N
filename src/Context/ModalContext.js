@@ -11,6 +11,7 @@ function ModalProvider({ children }) {
     const [showPeekModal, setShowPeekModal] = useState(false)
     const [error, setError] = useState(false)
     const [addedAnouncement, setAddedAnouncement] = useState(false)
+    const [cartPosition, setCartPosition] = useState()
     const [addedProduct, setAddedProduct] = useState({
         id: 0,
         amountAdded: 0,
@@ -26,6 +27,7 @@ function ModalProvider({ children }) {
         error, setError,
         addedProduct, setAddedProduct,
         addedAnouncement, setAddedAnouncement,
+        cartPosition, setCartPosition,
     }
 
     return (

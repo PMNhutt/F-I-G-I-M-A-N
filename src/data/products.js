@@ -2553,7 +2553,7 @@ export const products = [
         details:
         {
             description: "Sabo được đoàn tụ với Luffy tại Đấu trường La Mã Corrida, nơi cậu cho thấy mình được thừa hưởng sức mạnh của Mera Mera no Mi cùng với ý chí của Ace." +
-            "Anh ấy đã được điêu khắc bằng khả năng Hiken trong một tư thế năng động cùng với biểu cảm đầy thuyết phục thể hiện cá tính của anh ấy khiến người hâm mộ thích thú. Một con số chất lượng cao đầy những điểm nổi bật!"
+                "Anh ấy đã được điêu khắc bằng khả năng Hiken trong một tư thế năng động cùng với biểu cảm đầy thuyết phục thể hiện cá tính của anh ấy khiến người hâm mộ thích thú. Một con số chất lượng cao đầy những điểm nổi bật!"
             ,
             imageDescription: require('./productImage/Anime/OnePiece/Portrait of Pirates Sabo Fire Fist Inheritance/portrait-of-pirates-sabo-fire-fist-inheritance_one-piece_feature.jpg'),
             company: "Mega House",
@@ -2704,5 +2704,2758 @@ export const products = [
     },
 
     //Demon Slayer
-    
+    {
+        id: 68,
+        name: "Inosuke Hashibira",
+        tagName: ["Anime", "Hành động"],
+        status: "available",
+        thumbImg: require('./productImage/Anime/Kimetsu/Inosuke Hashibira/inosuke-hashibira_demon-slayer_silo_sm.png'),
+        price: 375000,
+        categoryID: 5,
+        stock: 10,
+        details:
+        {
+            description: " Bản chất hoang dã của Inosuke được ghi lại một cách hoàn hảo khi anh ta thể hiện một tư thế hung hãn sẵn sàng tham gia cuộc chiến với hai thanh kiếm Nichirin của mình. Hình vẽ có các chi tiết đáng kinh ngạc bao gồm vóc dáng cực kỳ cơ bắp của anh ấy và những lớp vỏ bọc bị phong hóa xung quanh chuôi kiếm của anh ấy"
+            ,
+            imageDescription: require('./productImage/Anime/Kimetsu/Inosuke Hashibira/inosuke-hashibira_demon-slayer_feature.jpg'),
+            company: "Aniplex",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Hành động"],
+            size: "16 cm",
+            otherImages:
+                [
+                    {
+                        id: 367,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Inosuke Hashibira/inosuke-hashibira_demon-slayer_gallery_1.jpg'),
+                    },
+                    {
+                        id: 368,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Inosuke Hashibira/inosuke-hashibira_demon-slayer_gallery_2.jpg'),
+                    },
+                    {
+                        id: 369,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Inosuke Hashibira/inosuke-hashibira_demon-slayer_gallery_3.jpg'),
+                    },
+                    {
+                        id: 370,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Inosuke Hashibira/inosuke-hashibira_demon-slayer_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 69,
+        name: "Kamado Nezuko",
+        tagName: ["Anime", "Hành động"],
+        status: "available",
+        thumbImg: require('./productImage/Anime/Kimetsu/Kamado Nezuko/kamado-nezuko_demon-slayer_silo_sm.png'),
+        price: 115000,
+        categoryID: 5,
+        stock: 15,
+        details:
+        {
+            description: "Từ Demon Slayer: Kimetsu no Yaiba, Kamado Nezuko tham gia Figuarts ZERO! Được thiết kế để gợi nhớ cô ấy chạy trốn khi còn là một cô bé, nhân vật anime này thể hiện tất cả sự năng động trong ngoại hình của cô ấy với các phần hiệu ứng và các chi tiết đẹp từ mái tóc đến chân của cô ấy. Bộ sưu tập Nezuko Kamado cũng bao gồm các phần biểu cảm ấn tượng!"
+            ,
+            imageDescription: require('./productImage/Anime/Kimetsu/Kamado Nezuko/kamado-nezuko_demon-slayer_feature.jpg'),
+            company: "Bandai",
+            material: "PVC",
+            tagName: ["Anime", "Hành động"],
+            size: "11 cm",
+            otherImages:
+                [
+                    {
+                        id: 371,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Kamado Nezuko/kamado-nezuko_demon-slayer_gallery_1.jpg'),
+                    },
+                    {
+                        id: 372,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Kamado Nezuko/kamado-nezuko_demon-slayer_gallery_2.jpg'),
+                    },
+                    {
+                        id: 373,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Kamado Nezuko/kamado-nezuko_demon-slayer_gallery_3.jpg'),
+                    },
+                    {
+                        id: 374,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Kamado Nezuko/kamado-nezuko_demon-slayer_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 70,
+        name: "Kamado Tanjiro (Hinokami Kagura)",
+        tagName: ["Anime", "Hành động"],
+        status: "available",
+        thumbImg: require('./productImage/Anime/Kimetsu/Kamado Tanjiro (Hinokami Kagura)/kamado-tanjiro-hinokami-kagura_demon-slayer_silo_sm.png'),
+        price: 752800,
+        categoryID: 5,
+        stock: 15,
+        details:
+        {
+            description: "Từ Demon Slayer: Kimetsu no Yaiba, Kamado Tanjiro nhảy Hinokami Kagura, Vũ điệu của Thần lửa, tham gia Figuarts ZERO! Các bộ phận hiệu ứng ấn tượng được sử dụng để tái tạo vũ điệu động trong không gian ba chiều, đến từng chi tiết nhỏ nhất để gợi lên một lượng cảm giác đáng kinh ngạc!"
+            ,
+            imageDescription: require('./productImage/Anime/Kimetsu/Kamado Tanjiro (Hinokami Kagura)/kamado-tanjiro-hinokami-kagura_demon-slayer_feature.jpg'),
+            company: "Bandai",
+            material: "PVC",
+            tagName: ["Anime", "Hành động"],
+            size: "21 cm",
+            otherImages:
+                [
+                    {
+                        id: 375,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Kamado Tanjiro (Hinokami Kagura)/kamado-tanjiro-hinokami-kagura_demon-slayer_gallery_1.jpg'),
+                    },
+                    {
+                        id: 376,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Kamado Tanjiro (Hinokami Kagura)/kamado-tanjiro-hinokami-kagura_demon-slayer_gallery_2.jpg'),
+                    },
+                    {
+                        id: 377,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Kamado Tanjiro (Hinokami Kagura)/kamado-tanjiro-hinokami-kagura_demon-slayer_gallery_3.jpg'),
+                    },
+                    {
+                        id: 378,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Kamado Tanjiro (Hinokami Kagura)/kamado-tanjiro-hinokami-kagura_demon-slayer_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 71,
+        name: "Kyojuro Rengoku",
+        tagName: ["Anime", "Hành động"],
+        status: "available",
+        thumbImg: require('./productImage/Anime/Kimetsu/Kyojuro Rengoku/kyojuro-rengoku_demon-slayer_silo_sm.png'),
+        price: 752800,
+        categoryID: 5,
+        stock: 7,
+        details:
+        {
+            description: "Từ anime, Sát quỷ kiếm: Kimetsu no Yaiba, Ngọn lửa Hashira, Kyojuro Rengoku, trở nên sống động khi anh ta hạ kiếm của mình trong một cuộc tấn công năng động." +
+                "Tác phẩm điêu khắc của haori cuồn cuộn mà anh ta mặc dường như sống động với chuyển động khi người ta chăm chút nhiều vào độ rung của vải cho mỗi ngọn lửa trên viền áo haori. Cùng với những ngọn lửa được điêu khắc trên đế, đây là một vật phẩm chứa đầy nhiệt độ bùng cháy"
+            ,
+            imageDescription: require('./productImage/Anime/Kimetsu/Kyojuro Rengoku/kyojuro-rengoku_demon-slayer_feature.jpg'),
+            company: "Kotobukiya",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Hành động"],
+            size: "22.5 cm",
+            otherImages:
+                [
+                    {
+                        id: 379,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Kyojuro Rengoku/kyojuro-rengoku_demon-slayer_gallery_1.jpg'),
+                    },
+                    {
+                        id: 380,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Kyojuro Rengoku/kyojuro-rengoku_demon-slayer_gallery_2.jpg'),
+                    },
+                    {
+                        id: 381,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Kyojuro Rengoku/kyojuro-rengoku_demon-slayer_gallery_3.jpg'),
+                    },
+                    {
+                        id: 382,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Kyojuro Rengoku/kyojuro-rengoku_demon-slayer_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 72,
+        name: "Kyojuro Rengoku Deluxe Version",
+        tagName: ["Anime", "Hành động"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Anime/Kimetsu/Kyojuro Rengoku Deluxe Version/kyojuro-rengoku-deluxe-version_demon-slayer_silo_sm.png'),
+        price: 958000,
+        depositPrice: 250000,
+        categoryID: 5,
+        stock: 0,
+        details:
+        {
+            description: "Hình vẽ được ba chiều hóa với vẻ ngoài sống động, tưởng tượng hình ảnh một con quỷ đang đối mặt với một con quỷ khi đang cầm Nichirin Blades. Chúng tôi rất đặc biệt chú trọng đến việc tạo mẫu để sức mạnh của Kyojuro Rengoku có thể được tăng cường toàn diện, chẳng hạn như kiểu tóc đặc trưng, ​​áo choàng bay bổng và các mạch máu nổi lên trên trán và mu bàn tay"
+            ,
+            imageDescription: require('./productImage/Anime/Kimetsu/Kyojuro Rengoku Deluxe Version/kyojuro-rengoku-deluxe-version_demon-slayer_feature.jpg'),
+            company: "Bellfine",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Hành động"],
+            size: "35 cm",
+            otherImages:
+                [
+                    {
+                        id: 383,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Kyojuro Rengoku Deluxe Version/kyojuro-rengoku-deluxe-version_demon-slayer_gallery_1.jpg'),
+                    },
+                    {
+                        id: 384,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Kyojuro Rengoku Deluxe Version/kyojuro-rengoku-deluxe-version_demon-slayer_gallery_2.jpg'),
+                    },
+                    {
+                        id: 385,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Kyojuro Rengoku Deluxe Version/kyojuro-rengoku-deluxe-version_demon-slayer_gallery_3.jpg'),
+                    },
+                    {
+                        id: 386,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Kyojuro Rengoku Deluxe Version/kyojuro-rengoku-deluxe-version_demon-slayer_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 73,
+        name: "Shinobu Kocho",
+        tagName: ["Anime", "Hành động"],
+        status: "new",
+        thumbImg: require('./productImage/Anime/Kimetsu/Shinobu Kocho/shinobu-kocho_demon-slayer_silo_sm.png'),
+        price: 452600,
+        categoryID: 5,
+        stock: 6,
+        details:
+        {
+            description: "Những đầu ngón tay thon gọn của Shinobu và haori thổi trong gió được điêu khắc tinh xảo. Tượng đứng trên đỉnh động có họa tiết hình con bướm nổi. Từ phụ kiện tóc đến chuôi kiếm Nichirin Blade, từng chi tiết trong thiết kế của Shinobu đều được tái tạo một cách chân thực. Bức tượng này thể hiện hoàn hảo vẻ đẹp và phong thái vui vẻ của Shinobu Kocho"
+            ,
+            imageDescription: require('./productImage/Anime/Kimetsu/Shinobu Kocho/shinobu-kocho_demon-slayer_feature.jpg'),
+            company: "Kotobukiya",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Hành động"],
+            size: "25.2 cm",
+            otherImages:
+                [
+                    {
+                        id: 387,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Shinobu Kocho/shinobu-kocho_demon-slayer_gallery_1.jpg'),
+                    },
+                    {
+                        id: 388,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Shinobu Kocho/shinobu-kocho_demon-slayer_gallery_2.jpg'),
+                    },
+                    {
+                        id: 389,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Shinobu Kocho/shinobu-kocho_demon-slayer_gallery_3.jpg'),
+                    },
+                    {
+                        id: 390,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Shinobu Kocho/shinobu-kocho_demon-slayer_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 74,
+        name: "Shinobu Kocho",
+        tagName: ["Anime", "Hành động"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Anime/Kimetsu/Shinobu Kochov2/shinobu-kocho_demon-slayer_silo_sm.png'),
+        price: 625000,
+        depositPrice: 350000,
+        categoryID: 5,
+        stock: 0,
+        details:
+        {
+            description: "Từ loạt phim đình đám Demon Slayer: Kimetsu No Yaiba, Shinobu Kocho duyên dáng đã ra mắt Aniplex + của cô ấy! Hình tỷ lệ 1: 8 tuyệt đẹp này có hình ảnh Shinobu trong tư thế bất chấp trọng lực khi những con bướm dường như đang mang cô ấy. Các chi tiết trên hiệu ứng con bướm trong suốt kết hợp với nụ cười tuyệt đẹp trên khuôn mặt của cô ấy mang đến cho các nhà sưu tập hình ảnh thanh lịch thể hiện bản chất của Shinobu!"
+            ,
+            imageDescription: require('./productImage/Anime/Kimetsu/Shinobu Kochov2/shinobu-kocho_demon-slayer_feature.jpg'),
+            company: "Kotobukiya",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Hành động"],
+            size: "25.2 cm",
+            otherImages:
+                [
+                    {
+                        id: 391,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Shinobu Kochov2/shinobu-kocho_demon-slayer_gallery_1.jpg'),
+                    },
+                    {
+                        id: 392,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Shinobu Kochov2/shinobu-kocho_demon-slayer_gallery_2.jpg'),
+                    },
+                    {
+                        id: 393,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Shinobu Kochov2/shinobu-kocho_demon-slayer_gallery_3.jpg'),
+                    },
+                    {
+                        id: 394,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Shinobu Kochov2/shinobu-kocho_demon-slayer_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 75,
+        name: "Tengen Uzui",
+        tagName: ["Anime", "Hành động"],
+        status: "new",
+        thumbImg: require('./productImage/Anime/Kimetsu/Tengen Uzui/tengen-uzui_demon-slayer_silo_sm.png'),
+        price: 550000,
+        categoryID: 5,
+        stock: 6,
+        details:
+        {
+            description: "Tengen Uzui từ series anime nổi tiếng Kimetsu no Yaiba: Demon Slayer tham gia FiguartsZERO. Anh ấy đang tạo dáng trong một cảnh động với những thanh kiếm được xích đặc trưng của anh ấy."
+            ,
+            imageDescription: require('./productImage/Anime/Kimetsu/Tengen Uzui/tengen-uzui_demon-slayer_feature.jpg'),
+            company: "Bandai",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Hành động"],
+            size: "14 cm",
+            otherImages:
+                [
+                    {
+                        id: 395,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Tengen Uzui/tengen-uzui_demon-slayer_gallery_1.jpg'),
+                    },
+                    {
+                        id: 396,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Tengen Uzui/tengen-uzui_demon-slayer_gallery_2.jpg'),
+                    },
+                    {
+                        id: 397,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Tengen Uzui/tengen-uzui_demon-slayer_gallery_3.jpg'),
+                    },
+                    {
+                        id: 398,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Tengen Uzui/tengen-uzui_demon-slayer_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 76,
+        name: "Tomioka Giyu - Water Breathing",
+        tagName: ["Anime", "Hành động"],
+        status: "new",
+        thumbImg: require('./productImage/Anime/Kimetsu/Tomioka Giyu - Water Breathing/tomioka-giyu-water-breathing_demon-slayer_silo_sm.png'),
+        price: 550000,
+        categoryID: 5,
+        stock: 6,
+        details:
+        {
+            description: "Các phần hiệu ứng trong mờ tạo nên sự thể hiện ba chiều động của kỹ thuật Thở bằng nước của Tomioka Giyu. Bao gồm các chi tiết trung thực như quần áo có hoa văn chân thực và chữ khắc trên thanh kiếm"
+            ,
+            imageDescription: require('./productImage/Anime/Kimetsu/Tomioka Giyu - Water Breathing/tomioka-giyu-water-breathing_demon-slayer_feature.jpg'),
+            company: "Bandai",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Hành động"],
+            size: "16 cm",
+            otherImages:
+                [
+                    {
+                        id: 399,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Tomioka Giyu - Water Breathing/tomioka-giyu-water-breathing_demon-slayer_gallery_1.jpg'),
+                    },
+                    {
+                        id: 400,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Tomioka Giyu - Water Breathing/tomioka-giyu-water-breathing_demon-slayer_gallery_2.jpg'),
+                    },
+                    {
+                        id: 401,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Tomioka Giyu - Water Breathing/tomioka-giyu-water-breathing_demon-slayer_gallery_3.jpg'),
+                    },
+                    {
+                        id: 402,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Tomioka Giyu - Water Breathing/tomioka-giyu-water-breathing_demon-slayer_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 77,
+        name: "Zenitsu Agatsuma Thunderclap and Flash",
+        tagName: ["Anime", "Hành động"],
+        status: "available",
+        thumbImg: require('./productImage/Anime/Kimetsu/Zenitsu Agatsuma Thunderclap and Flash/zenitsu-agatsuma-thunderclap-and-flash_dc-comics_silo_sm.png'),
+        price: 550000,
+        categoryID: 5,
+        stock: 6,
+        details:
+        {
+            description: "From the smash hit Demon Slayer: Kimetsu no Yaiba, Zenitsu Agatsuma joins FiguartsZERO releasing his Thunderclap and Flash attack! Standing at 5.9 inches, the anime figure uses translucent effect parts to highlight the drama of his flashy finishing move."
+            ,
+            imageDescription: require('./productImage/Anime/Kimetsu/Zenitsu Agatsuma Thunderclap and Flash/zenitsu-agatsuma-thunderclap-and-flash_dc-comics_feature.jpg'),
+            company: "Bandai",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Hành động"],
+            size: "15 cm",
+            otherImages:
+                [
+                    {
+                        id: 403,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Zenitsu Agatsuma Thunderclap and Flash/zenitsu-agatsuma-thunderclap-and-flash_dc-comics_gallery_1.jpg'),
+                    },
+                    {
+                        id: 404,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Zenitsu Agatsuma Thunderclap and Flash/zenitsu-agatsuma-thunderclap-and-flash_dc-comics_gallery_2.jpg'),
+                    },
+                    {
+                        id: 405,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Zenitsu Agatsuma Thunderclap and Flash/zenitsu-agatsuma-thunderclap-and-flash_dc-comics_gallery_3.jpg'),
+                    },
+                    {
+                        id: 406,
+                        imgUrl: require('./productImage/Anime/Kimetsu/Zenitsu Agatsuma Thunderclap and Flash/zenitsu-agatsuma-thunderclap-and-flash_dc-comics_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+
+    //Genshin
+    {
+        id: 78,
+        name: "Astral Reflection Mona",
+        tagName: ["Anime", "Game"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Genshin/Astral Reflection Mona/astral-reflection-mona_genshin-impact_silo_sm.png'),
+        price: 752000,
+        depositPrice: 342000,
+        categoryID: 11,
+        stock: 0,
+        details:
+        {
+            description: "Từ trò chơi RPG thế giới mở Genshin Impact, nhân vật tỷ lệ 1/7 của Nhà chiêm tinh vĩ đại Mona! Với Mona xuất hiện từ chiếc áo choàng của Illusory Torrent, phong cách chiến đấu độc đáo của cô ấy đã được ghi lại một cách trung thực trong hình dạng nhân vật. " +
+
+                "Tư thế uyển chuyển của Mona, các kết cấu khác nhau của bộ trang phục độc đáo, phụ kiện theo chủ đề ngôi sao và hiệu ứng nước dưới chân cô ấy đều được tái tạo một cách cẩn thận từng chi tiết, tạo nên một sự tái hiện quyến rũ về người bí ẩn, kiêu hãnh, thông minh, chu đáo và cũng nhà chiêm tinh hơi kém (?)! Hãy chắc chắn thêm cô ấy vào bộ sưu tập của bạn!"
+            ,
+            imageDescription: require('./productImage/Genshin/Astral Reflection Mona/astral-reflection-mona_genshin-impact_feature.jpg'),
+            company: "Wonderful Works",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Game"],
+            size: "24.7 cm",
+            otherImages:
+                [
+                    {
+                        id: 407,
+                        imgUrl: require('./productImage/Genshin/Astral Reflection Mona/astral-reflection-mona_genshin-impact_gallery_1.jpg'),
+                    },
+                    {
+                        id: 408,
+                        imgUrl: require('./productImage/Genshin/Astral Reflection Mona/astral-reflection-mona_genshin-impact_gallery_2.jpg'),
+                    },
+                    {
+                        id: 409,
+                        imgUrl: require('./productImage/Genshin/Astral Reflection Mona/astral-reflection-mona_genshin-impact_gallery_3.jpg'),
+                    },
+                    {
+                        id: 410,
+                        imgUrl: require('./productImage/Genshin/Astral Reflection Mona/astral-reflection-mona_genshin-impact_gallery_4.jpg'),
+                    },
+                    {
+                        id: 411,
+                        imgUrl: require('./productImage/Genshin/Astral Reflection Mona/astral-reflection-mona_genshin-impact_gallery_5.jpg'),
+                    },
+                    {
+                        id: 412,
+                        imgUrl: require('./productImage/Genshin/Astral Reflection Mona/astral-reflection-mona_genshin-impact_gallery_6.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 79,
+        name: "Barbara",
+        tagName: ["Anime", "Game"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Genshin/Barbara/barbara_genshin-impact_silo_sm.png'),
+        price: 650000,
+        depositPrice: 320000,
+        categoryID: 11,
+        stock: 0,
+        details:
+        {
+            description: "Từ game nhập vai thế giới mở Genshin Impact thế hệ tiếp theo, Kotobukiya tự hào giới thiệu Tượng Barbara đáng yêu!" +
+
+                " Barbara, Nữ phó tế của Nhà thờ Favonius và thần tượng của Mondstadt, trở nên sống động trong một bức tượng tỷ lệ 1: 7 năng động. Vẻ quyến rũ không thể phủ nhận của cô đã được tái hiện đầy đủ và ấn tượng, hoàn chỉnh với biểu cảm đáng yêu và chiếc váy bồng bềnh. Cô ấy cũng đi kèm với các hiệu ứng ca hát đã được sản xuất với các bộ phận rõ ràng và có thể được loại bỏ để có nhiều tùy chọn hiển thị!"
+            ,
+            imageDescription: require('./productImage/Genshin/Barbara/barbara_genshin-impact_feature.jpg'),
+            company: "Kotobukiya",
+            material: "PVC, ABS, Sắt",
+            tagName: ["Anime", "Game"],
+            size: "27 cm",
+            otherImages:
+                [
+                    {
+                        id: 413,
+                        imgUrl: require('./productImage/Genshin/Barbara/barbara_genshin-impact_gallery_1.jpg'),
+                    },
+                    {
+                        id: 414,
+                        imgUrl: require('./productImage/Genshin/Barbara/barbara_genshin-impact_gallery_2.jpg'),
+                    },
+                    {
+                        id: 415,
+                        imgUrl: require('./productImage/Genshin/Barbara/barbara_genshin-impact_gallery_3.jpg'),
+                    },
+                    {
+                        id: 416,
+                        imgUrl: require('./productImage/Genshin/Barbara/barbara_genshin-impact_gallery_4.jpg'),
+                    },
+                    {
+                        id: 417,
+                        imgUrl: require('./productImage/Genshin/Barbara/barbara_genshin-impact_gallery_5.jpg'),
+                    },
+                    {
+                        id: 418,
+                        imgUrl: require('./productImage/Genshin/Barbara/barbara_genshin-impact_gallery_6.jpg'),
+                    },
+                    {
+                        id: 419,
+                        imgUrl: require('./productImage/Genshin/Barbara/barbara_genshin-impact_gallery_7.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 80,
+        name: "Ganyu Frostdew Trail Version",
+        tagName: ["Anime", "Game"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Genshin/Ganyu Frostdew Trail Version/ganyu-frostdew-trail-version__silo_sm.png'),
+        price: 755260,
+        depositPrice: 352000,
+        categoryID: 11,
+        stock: 0,
+        details:
+        {
+            description: "Ganyu từ Genshin Impact với dáng pose không thể nào tuyệt vời hơn. Còn chần chờ gì nữa mà không mua ngay!"
+            ,
+            imageDescription: require('./productImage/Genshin/Ganyu Frostdew Trail Version/ganyu-frostdew-trail-version__feature.jpg'),
+            company: "APEX",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Game"],
+            size: "22 cm",
+            otherImages:
+                [
+                    {
+                        id: 420,
+                        imgUrl: require('./productImage/Genshin/Ganyu Frostdew Trail Version/ganyu-frostdew-trail-version__gallery_1.jpg'),
+                    },
+                    {
+                        id: 421,
+                        imgUrl: require('./productImage/Genshin/Ganyu Frostdew Trail Version/ganyu-frostdew-trail-version__gallery_2.jpg'),
+                    },
+                    {
+                        id: 422,
+                        imgUrl: require('./productImage/Genshin/Ganyu Frostdew Trail Version/ganyu-frostdew-trail-version__gallery_3.jpg'),
+                    },
+                    {
+                        id: 423,
+                        imgUrl: require('./productImage/Genshin/Ganyu Frostdew Trail Version/ganyu-frostdew-trail-version__gallery_4.jpg'),
+                    },
+                    {
+                        id: 424,
+                        imgUrl: require('./productImage/Genshin/Ganyu Frostdew Trail Version/ganyu-frostdew-trail-version__gallery_5.jpg'),
+                    },
+                    {
+                        id: 425,
+                        imgUrl: require('./productImage/Genshin/Ganyu Frostdew Trail Version/ganyu-frostdew-trail-version__gallery_6.jpg'),
+                    },
+                    {
+                        id: 426,
+                        imgUrl: require('./productImage/Genshin/Ganyu Frostdew Trail Version/ganyu-frostdew-trail-version__gallery_7.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 81,
+        name: "Keqing Piercing Thunderbolt Version",
+        tagName: ["Anime", "Game"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Genshin/Keqing Piercing Thunderbolt Version/keqing-piercing-thunderbolt-version_genshin-impact_silo_sm.png'),
+        price: 755260,
+        depositPrice: 352000,
+        categoryID: 11,
+        stock: 0,
+        details:
+        {
+            description: "Keqing từ Genshin Impact với dáng pose không thể nào tuyệt vời hơn. Còn chần chờ gì nữa mà không mua ngay!"
+            ,
+            imageDescription: require('./productImage/Genshin/Keqing Piercing Thunderbolt Version/keqing-piercing-thunderbolt-version_genshin-impact_feature.jpg'),
+            company: "APEX",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Game"],
+            size: "22 cm",
+            otherImages:
+                [
+                    {
+                        id: 427,
+                        imgUrl: require('./productImage/Genshin/Keqing Piercing Thunderbolt Version/keqing-piercing-thunderbolt-version_genshin-impact_gallery_1.jpg'),
+                    },
+                    {
+                        id: 428,
+                        imgUrl: require('./productImage/Genshin/Keqing Piercing Thunderbolt Version/keqing-piercing-thunderbolt-version_genshin-impact_gallery_2.jpg'),
+                    },
+                    {
+                        id: 429,
+                        imgUrl: require('./productImage/Genshin/Keqing Piercing Thunderbolt Version/keqing-piercing-thunderbolt-version_genshin-impact_gallery_3.jpg'),
+                    },
+                    {
+                        id: 430,
+                        imgUrl: require('./productImage/Genshin/Keqing Piercing Thunderbolt Version/keqing-piercing-thunderbolt-version_genshin-impact_gallery_4.jpg'),
+                    },
+                    {
+                        id: 431,
+                        imgUrl: require('./productImage/Genshin/Keqing Piercing Thunderbolt Version/keqing-piercing-thunderbolt-version_genshin-impact_gallery_5.jpg'),
+                    },
+                    {
+                        id: 432,
+                        imgUrl: require('./productImage/Genshin/Keqing Piercing Thunderbolt Version/keqing-piercing-thunderbolt-version_genshin-impact_gallery_6.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 82,
+        name: "Klee the Spark Knight",
+        tagName: ["Anime", "Game"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Genshin/Klee the Spark Knight/klee-the-spark-knight_genshin-impact_silo_sm.png'),
+        price: 652000,
+        depositPrice: 320000,
+        categoryID: 11,
+        stock: 0,
+        details:
+        {
+            description: "Từ trò chơi nhập vai hành động ăn khách do miHoYo phát triển và xuất bản, Genshin Impact, đến nhân vật cô gái mặc đồ đỏ đáng yêu Klee đang ngồi trên người bạn của mình, Jumpy Dumpy, sẵn sàng cho một cuộc phiêu lưu." +
+
+                " Đừng bỏ lỡ cơ hội bổ sung em ấy vào bộ sưu tập của bạn!"
+            ,
+            imageDescription: require('./productImage/Genshin/Klee the Spark Knight/klee-the-spark-knight_genshin-impact_feature.jpg'),
+            company: "miHoYo",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Game"],
+            size: "17.5 cm",
+            otherImages:
+                [
+                    {
+                        id: 433,
+                        imgUrl: require('./productImage/Genshin/Klee the Spark Knight/klee-the-spark-knight_genshin-impact_gallery_1.jpg'),
+                    },
+                    {
+                        id: 434,
+                        imgUrl: require('./productImage/Genshin/Klee the Spark Knight/klee-the-spark-knight_genshin-impact_gallery_2.jpg'),
+                    },
+                    {
+                        id: 435,
+                        imgUrl: require('./productImage/Genshin/Klee the Spark Knight/klee-the-spark-knight_genshin-impact_gallery_3.jpg'),
+                    },
+                    {
+                        id: 436,
+                        imgUrl: require('./productImage/Genshin/Klee the Spark Knight/klee-the-spark-knight_genshin-impact_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 83,
+        name: "Mona Figma (Mirror Reflection of Doom Ver.)",
+        tagName: ["Anime", "Game"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Genshin/Mona Figma (Mirror Reflection of Doom Ver.)/mona-figma-mirror-reflection-of-doom-ver_genshin-impact_silo_sm.png'),
+        price: 350250,
+        depositPrice: 150000,
+        categoryID: 11,
+        stock: 0,
+        details:
+        {
+            description: "Với các phụ kiện đi kèm và các khớp nối trơn tru nhưng có thể điều chỉnh được đặc trưng của loạt nhân vật hành động Figma, bạn có thể tạo lại nhiều tư thế hành động đa dạng từ trò chơi điện tử nổi tiếng"
+            ,
+            imageDescription: require('./productImage/Genshin/Mona Figma (Mirror Reflection of Doom Ver.)/mona-figma-mirror-reflection-of-doom-ver_genshin-impact_feature.jpg'),
+            company: "Max Factory",
+            material: "PVC, ABS, PET",
+            tagName: ["Anime", "Game"],
+            size: "15 cm",
+            otherImages:
+                [
+                    {
+                        id: 437,
+                        imgUrl: require('./productImage/Genshin/Mona Figma (Mirror Reflection of Doom Ver.)/mona-figma-mirror-reflection-of-doom-ver_genshin-impact_gallery_1.jpg'),
+                    },
+                    {
+                        id: 438,
+                        imgUrl: require('./productImage/Genshin/Mona Figma (Mirror Reflection of Doom Ver.)/mona-figma-mirror-reflection-of-doom-ver_genshin-impact_gallery_2.jpg'),
+                    },
+                    {
+                        id: 439,
+                        imgUrl: require('./productImage/Genshin/Mona Figma (Mirror Reflection of Doom Ver.)/mona-figma-mirror-reflection-of-doom-ver_genshin-impact_gallery_3.jpg'),
+                    },
+                    {
+                        id: 440,
+                        imgUrl: require('./productImage/Genshin/Mona Figma (Mirror Reflection of Doom Ver.)/mona-figma-mirror-reflection-of-doom-ver_genshin-impact_gallery_4.jpg'),
+                    },
+                    {
+                        id: 441,
+                        imgUrl: require('./productImage/Genshin/Mona Figma (Mirror Reflection of Doom Ver.)/mona-figma-mirror-reflection-of-doom-ver_genshin-impact_gallery_5.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 84,
+        name: "Ningguang",
+        tagName: ["Anime", "Game"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Genshin/Ningguang/ningguang_genshin-impact_silo_sm.png'),
+        price: 1265000,
+        depositPrice: 450000,
+        categoryID: 11,
+        stock: 0,
+        details:
+        {
+            description: "Mô hình sưu tập này cao hơn 27cm và Ninggquang, doanh nhân chuyên nghiệp rất giàu có đang ngồi trên một chiếc ghế giống như gỗ, khoe những hình xăm màu đỏ và mái tóc dài trắng búi nửa đầu nổi tiếng. Bộ sưu tập này cũng bao gồm nền và phụ kiện lấy cảm hứng từ Nhật Bản cho thiết lập hoàn hảo"
+            ,
+            imageDescription: require('./productImage/Genshin/Ningguang/ningguang_genshin-impact_feature.jpg'),
+            company: "miHoYo",
+            material: "PVC",
+            tagName: ["Anime", "Game"],
+            size: "27 cm",
+            otherImages:
+                [
+                    {
+                        id: 442,
+                        imgUrl: require('./productImage/Genshin/Ningguang/ningguang_genshin-impact_gallery_1.jpg'),
+                    },
+                    {
+                        id: 443,
+                        imgUrl: require('./productImage/Genshin/Ningguang/ningguang_genshin-impact_gallery_2.jpg'),
+                    },
+                    {
+                        id: 444,
+                        imgUrl: require('./productImage/Genshin/Ningguang/ningguang_genshin-impact_gallery_3.jpg'),
+                    },
+                    {
+                        id: 445,
+                        imgUrl: require('./productImage/Genshin/Ningguang/ningguang_genshin-impact_gallery_4.jpg'),
+                    },
+                    {
+                        id: 446,
+                        imgUrl: require('./productImage/Genshin/Ningguang/ningguang_genshin-impact_gallery_5.jpg'),
+                    },
+                    {
+                        id: 447,
+                        imgUrl: require('./productImage/Genshin/Ningguang/ningguang_genshin-impact_gallery_6.jpg'),
+                    },
+                    {
+                        id: 448,
+                        imgUrl: require('./productImage/Genshin/Ningguang/ningguang_genshin-impact_gallery_7.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 85,
+        name: "Venti Nendoroid",
+        tagName: ["Anime", "Game"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Genshin/Venti Nendoroid/venti-nendoroid_genshin-impact_silo_sm.png'),
+        price: 350000,
+        depositPrice: 150000,
+        categoryID: 11,
+        stock: 0,
+        details:
+        {
+            description: "Từ trò chơi nổi tiếng, Genshin Impact là Nendoroid của Windborne Bard, Venti! " +
+
+                "Anh ấy có ba biểu cảm khuôn mặt bao gồm khuôn mặt nháy mắt, khuôn mặt thoải mái với đôi mắt nhắm và một khuôn mặt đang cười. Các phần tùy chọn bao gồm đàn lia bằng gỗ của anh ấy, Der Frühling, cũng như cây cung Skyward Harp, cho phép bạn tạo lại các cảnh chiến đấu từ trò chơi."
+            ,
+            imageDescription: require('./productImage/Genshin/Venti Nendoroid/venti-nendoroid_genshin-impact_feature.jpg'),
+            company: "Good Smile Company",
+            material: "PVC",
+            tagName: ["Anime", "Game"],
+            size: "10 cm",
+            otherImages:
+                [
+                    {
+                        id: 449,
+                        imgUrl: require('./productImage/Genshin/Venti Nendoroid/venti-nendoroid_genshin-impact_gallery_1.jpg'),
+                    },
+                    {
+                        id: 450,
+                        imgUrl: require('./productImage/Genshin/Venti Nendoroid/venti-nendoroid_genshin-impact_gallery_2.jpg'),
+                    },
+                    {
+                        id: 451,
+                        imgUrl: require('./productImage/Genshin/Venti Nendoroid/venti-nendoroid_genshin-impact_gallery_3.jpg'),
+                    },
+                    {
+                        id: 452,
+                        imgUrl: require('./productImage/Genshin/Venti Nendoroid/venti-nendoroid_genshin-impact_gallery_4.jpg'),
+                    },
+                    {
+                        id: 453,
+                        imgUrl: require('./productImage/Genshin/Venti Nendoroid/venti-nendoroid_genshin-impact_gallery_5.jpg'),
+                    },
+                ],
+
+        }
+    },
+
+    //Nendoroid
+    {
+        id: 86,
+        name: "Giyu Tomioka Nendoroid",
+        tagName: ["Anime", "Nendoroid"],
+        status: "available",
+        thumbImg: require('./productImage/Nendoroid/Giyu Tomioka Nendoroid/giyu-tomioka-nendoroid_demon-slayer_silo_sm.png'),
+        price: 355000,
+        categoryID: 10,
+        stock: 10,
+        details:
+        {
+            description: "Giyu Tomioka từ Demon Slayer: Kimetsu no Yaiba sẽ tham gia Nendoroid Swacchao mới! hàng loạt!" +
+                " Nendoroid Swacchao! figure có Nendoroid đang ngồi trên ghế, giúp bạn dễ dàng trưng bày chúng trên bàn, kệ hoặc những khu vực chật hẹp về không gian. Các số liệu thậm chí có thể được hiển thị trên các cạnh của bàn hoặc kệ của bạn, vì vậy hãy tận hưởng thu thập và trưng bày chúng ở mọi nơi."
+            ,
+            imageDescription: require('./productImage/Nendoroid/Giyu Tomioka Nendoroid/giyu-tomioka-nendoroid_demon-slayer_feature.jpg'),
+            company: "Good Smile Company",
+            material: "PVC",
+            tagName: ["Anime", "Nendoroid"],
+            size: "9 cm",
+            otherImages:
+                [
+                    {
+                        id: 454,
+                        imgUrl: require('./productImage/Nendoroid/Giyu Tomioka Nendoroid/giyu-tomioka-nendoroid_demon-slayer_gallery_1.jpg'),
+                    },
+                    {
+                        id: 455,
+                        imgUrl: require('./productImage/Nendoroid/Giyu Tomioka Nendoroid/giyu-tomioka-nendoroid_demon-slayer_gallery_2.jpg'),
+                    },
+                    {
+                        id: 456,
+                        imgUrl: require('./productImage/Nendoroid/Giyu Tomioka Nendoroid/giyu-tomioka-nendoroid_demon-slayer_gallery_3.jpg'),
+                    },
+                    {
+                        id: 457,
+                        imgUrl: require('./productImage/Nendoroid/Giyu Tomioka Nendoroid/giyu-tomioka-nendoroid_demon-slayer_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 87,
+        name: "Kakashi Hatake: Anbu Black Ops Version Nendoroid",
+        tagName: ["Anime", "Nendoroid"],
+        status: "available",
+        thumbImg: require('./productImage/Nendoroid/Kakashi Hatake Anbu Black Ops Version Nendoroid/kakashi-hatake-anbu-black-ops-version-nendoroid_naruto-shippuden_silo_sm.png'),
+        price: 425000,
+        categoryID: 10,
+        stock: 10,
+        details:
+        {
+            description: "Từ loạt phim hoạt hình nổi tiếng Naruto Shippuden, Nendoroid của Kakashi Hatake từ thời của anh ấy trong Anbu Black Ops! Anh ấy đi kèm với hai tấm che mặt có thể hoán đổi cho nhau, một tấm che mặt tiêu chuẩn và một tấm che mặt lóa. Mặt nạ cáo của anh ấy cũng có thể tháo rời."
+            ,
+            imageDescription: require('./productImage/Nendoroid/Kakashi Hatake Anbu Black Ops Version Nendoroid/kakashi-hatake-anbu-black-ops-version-nendoroid_naruto-shippuden_feature.jpg'),
+            company: "Good Smile Company",
+            material: "PVC",
+            tagName: ["Anime", "Nendoroid"],
+            size: "10 cm",
+            otherImages:
+                [
+                    {
+                        id: 458,
+                        imgUrl: require('./productImage/Nendoroid/Kakashi Hatake Anbu Black Ops Version Nendoroid/kakashi-hatake-anbu-black-ops-version-nendoroid_naruto-shippuden_gallery_1.jpg'),
+                    },
+                    {
+                        id: 459,
+                        imgUrl: require('./productImage/Nendoroid/Kakashi Hatake Anbu Black Ops Version Nendoroid/kakashi-hatake-anbu-black-ops-version-nendoroid_naruto-shippuden_gallery_2.jpg'),
+                    },
+                    {
+                        id: 460,
+                        imgUrl: require('./productImage/Nendoroid/Kakashi Hatake Anbu Black Ops Version Nendoroid/kakashi-hatake-anbu-black-ops-version-nendoroid_naruto-shippuden_gallery_3.jpg'),
+                    },
+                    {
+                        id: 461,
+                        imgUrl: require('./productImage/Nendoroid/Kakashi Hatake Anbu Black Ops Version Nendoroid/kakashi-hatake-anbu-black-ops-version-nendoroid_naruto-shippuden_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 88,
+        name: "Katsuki Bakugo Nendoroid",
+        tagName: ["Anime", "Nendoroid"],
+        status: "available",
+        thumbImg: require('./productImage/Nendoroid/Katsuki Bakugo Nendoroid/katsuki-bakugo-nendoroid_my-hero-academia_silo_sm.png'),
+        price: 520000,
+        categoryID: 10,
+        stock: 10,
+        details:
+        {
+            description: "Từ loạt phim hoạt hình nổi tiếng My Hero Academia, Nendoroid của nhân vật chính là bạn thời thơ ấu của Deku và là đối thủ của Katsuki Bakugo trong trang phục mùa đông của anh ấy! Anh ấy có ba biểu cảm khuôn mặt bao gồm biểu cảm cười toe toét, biểu cảm chiến đấu và biểu cảm sửng sốt! Các bộ phận hiệu ứng để tái hiện Cú cười bùng nổ của anh ấy cùng với bảng chữ BOOOM cũng được bao gồm để tạo ra các tư thế hành động ấn tượng hơn nữa! Thích tạo tất cả các loại cảnh khác nhau từ bộ truyện!"
+            ,
+            imageDescription: require('./productImage/Nendoroid/Katsuki Bakugo Nendoroid/katsuki-bakugo-nendoroid_my-hero-academia_feature.jpg'),
+            company: "Takara Tomy",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Nendoroid"],
+            size: "10 cm",
+            otherImages:
+                [
+                    {
+                        id: 462,
+                        imgUrl: require('./productImage/Nendoroid/Katsuki Bakugo Nendoroid/katsuki-bakugo-nendoroid_my-hero-academia_gallery_1.jpg'),
+                    },
+                    {
+                        id: 463,
+                        imgUrl: require('./productImage/Nendoroid/Katsuki Bakugo Nendoroid/katsuki-bakugo-nendoroid_my-hero-academia_gallery_2.jpg'),
+                    },
+                    {
+                        id: 464,
+                        imgUrl: require('./productImage/Nendoroid/Katsuki Bakugo Nendoroid/katsuki-bakugo-nendoroid_my-hero-academia_gallery_3.jpg'),
+                    },
+                    {
+                        id: 465,
+                        imgUrl: require('./productImage/Nendoroid/Katsuki Bakugo Nendoroid/katsuki-bakugo-nendoroid_my-hero-academia_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 89,
+        name: "Kyojuro Rengoku Nendoroid",
+        tagName: ["Anime", "Nendoroid"],
+        status: "available",
+        thumbImg: require('./productImage/Nendoroid/Kyojuro Rengoku Nendoroid/kyojuro-rengoku-nendoroid_demon-slayer_silo_sm.png'),
+        price: 325000,
+        categoryID: 10,
+        stock: 10,
+        details:
+        {
+            description: "Kyojuro Rengoku từ Demon Slayer: Kimetsu no Yaiba sẽ gia nhập Nendoroid Swacchao mới! hàng loạt!" +
+                " Nendoroid Swacchao! figure có Nendoroid đang ngồi trên ghế, giúp bạn dễ dàng trưng bày chúng trên bàn, kệ hoặc những khu vực chật hẹp về không gian. Các số liệu thậm chí có thể được hiển thị trên các cạnh của bàn hoặc kệ của bạn, vì vậy hãy tận hưởng thu thập và trưng bày chúng ở mọi nơi."
+            ,
+            imageDescription: require('./productImage/Nendoroid/Kyojuro Rengoku Nendoroid/kyojuro-rengoku-nendoroid_demon-slayer_feature.jpg'),
+            company: "Good Smile Company",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Nendoroid"],
+            size: "9 cm",
+            otherImages:
+                [
+                    {
+                        id: 466,
+                        imgUrl: require('./productImage/Nendoroid/Kyojuro Rengoku Nendoroid/kyojuro-rengoku-nendoroid_demon-slayer_gallery_1.jpg'),
+                    },
+                    {
+                        id: 467,
+                        imgUrl: require('./productImage/Nendoroid/Kyojuro Rengoku Nendoroid/kyojuro-rengoku-nendoroid_demon-slayer_gallery_2.jpg'),
+                    },
+                    {
+                        id: 468,
+                        imgUrl: require('./productImage/Nendoroid/Kyojuro Rengoku Nendoroid/kyojuro-rengoku-nendoroid_demon-slayer_gallery_3.jpg'),
+                    },
+                    {
+                        id: 469,
+                        imgUrl: require('./productImage/Nendoroid/Kyojuro Rengoku Nendoroid/kyojuro-rengoku-nendoroid_demon-slayer_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 90,
+        name: "Megumi Fushiguro Nendoroid Swacchao!",
+        tagName: ["Anime", "Nendoroid"],
+        status: "available",
+        thumbImg: require('./productImage/Nendoroid/Megumi Fushiguro Nendoroid Swacchao/megumi-fushiguro-nendoroid-swacchao_jujutsu-kaisen_silo_sm.png'),
+        price: 325000,
+        categoryID: 10,
+        stock: 10,
+        details:
+        {
+            description: "Megumi Fushiguro từ Jujutsi Kaisen sẽ gia nhập Nendoroid Swacchao mới! hàng loạt!" +
+                " Nendoroid Swacchao! figure có Nendoroid đang ngồi trên ghế, giúp bạn dễ dàng trưng bày chúng trên bàn, kệ hoặc những khu vực chật hẹp về không gian. Các số liệu thậm chí có thể được hiển thị trên các cạnh của bàn hoặc kệ của bạn, vì vậy hãy tận hưởng thu thập và trưng bày chúng ở mọi nơi."
+            ,
+            imageDescription: require('./productImage/Nendoroid/Megumi Fushiguro Nendoroid Swacchao/megumi-fushiguro-nendoroid-swacchao_jujutsu-kaisen_feature.jpg'),
+            company: "Good Smile Company",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Nendoroid"],
+            size: "9 cm",
+            otherImages:
+                [
+                    {
+                        id: 470,
+                        imgUrl: require('./productImage/Nendoroid/Megumi Fushiguro Nendoroid Swacchao/megumi-fushiguro-nendoroid-swacchao_jujutsu-kaisen_gallery_1.jpg'),
+                    },
+                    {
+                        id: 471,
+                        imgUrl: require('./productImage/Nendoroid/Megumi Fushiguro Nendoroid Swacchao/megumi-fushiguro-nendoroid-swacchao_jujutsu-kaisen_gallery_2.jpg'),
+                    },
+                    {
+                        id: 472,
+                        imgUrl: require('./productImage/Nendoroid/Megumi Fushiguro Nendoroid Swacchao/megumi-fushiguro-nendoroid-swacchao_jujutsu-kaisen_gallery_3.jpg'),
+                    },
+                    {
+                        id: 473,
+                        imgUrl: require('./productImage/Nendoroid/Megumi Fushiguro Nendoroid Swacchao/megumi-fushiguro-nendoroid-swacchao_jujutsu-kaisen_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 91,
+        name: "Nobara Kugisaki Nendoroid Swacchao!",
+        tagName: ["Anime", "Nendoroid"],
+        status: "available",
+        thumbImg: require('./productImage/Nendoroid/Nobara Kugisaki Nendoroid Swacchao/nobara-kugisaki-nendoroid-swacchao_jujutsu-kaisen_silo_sm.png'),
+        price: 325000,
+        categoryID: 10,
+        stock: 10,
+        details:
+        {
+            description: "Nobara Kugisaki từ Jujutsi Kaisen sẽ gia nhập Nendoroid Swacchao mới! hàng loạt!" +
+                " Nendoroid Swacchao! figure có Nendoroid đang ngồi trên ghế, giúp bạn dễ dàng trưng bày chúng trên bàn, kệ hoặc những khu vực chật hẹp về không gian. Các số liệu thậm chí có thể được hiển thị trên các cạnh của bàn hoặc kệ của bạn, vì vậy hãy tận hưởng thu thập và trưng bày chúng ở mọi nơi."
+            ,
+            imageDescription: require('./productImage/Nendoroid/Nobara Kugisaki Nendoroid Swacchao/nobara-kugisaki-nendoroid-swacchao_jujutsu-kaisen_feature.jpg'),
+            company: "Good Smile Company",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Nendoroid"],
+            size: "9 cm",
+            otherImages:
+                [
+                    {
+                        id: 474,
+                        imgUrl: require('./productImage/Nendoroid/Nobara Kugisaki Nendoroid Swacchao/nobara-kugisaki-nendoroid-swacchao_jujutsu-kaisen_gallery_1.jpg'),
+                    },
+                    {
+                        id: 475,
+                        imgUrl: require('./productImage/Nendoroid/Nobara Kugisaki Nendoroid Swacchao/nobara-kugisaki-nendoroid-swacchao_jujutsu-kaisen_gallery_2.jpg'),
+                    },
+                    {
+                        id: 476,
+                        imgUrl: require('./productImage/Nendoroid/Nobara Kugisaki Nendoroid Swacchao/nobara-kugisaki-nendoroid-swacchao_jujutsu-kaisen_gallery_3.jpg'),
+                    },
+                    {
+                        id: 477,
+                        imgUrl: require('./productImage/Nendoroid/Nobara Kugisaki Nendoroid Swacchao/nobara-kugisaki-nendoroid-swacchao_jujutsu-kaisen_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 92,
+        name: "Satoru Gojo Nendoroid Swacchao!",
+        tagName: ["Anime", "Nendoroid"],
+        status: "available",
+        thumbImg: require('./productImage/Nendoroid/Satoru Gojo Nendoroid Swacchao/satoru-gojo-nendoroid-swacchao_jujutsu-kaisen_silo_sm.png'),
+        price: 325000,
+        categoryID: 10,
+        stock: 10,
+        details:
+        {
+            description: "Satoru Gojo từ Jujutsi Kaisen sẽ gia nhập Nendoroid Swacchao mới! hàng loạt!" +
+                " Nendoroid Swacchao! figure có Nendoroid đang ngồi trên ghế, giúp bạn dễ dàng trưng bày chúng trên bàn, kệ hoặc những khu vực chật hẹp về không gian. Các số liệu thậm chí có thể được hiển thị trên các cạnh của bàn hoặc kệ của bạn, vì vậy hãy tận hưởng thu thập và trưng bày chúng ở mọi nơi."
+            ,
+            imageDescription: require('./productImage/Nendoroid/Satoru Gojo Nendoroid Swacchao/satoru-gojo-nendoroid-swacchao_jujutsu-kaisen_feature.jpg'),
+            company: "Good Smile Company",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Nendoroid"],
+            size: "9 cm",
+            otherImages:
+                [
+                    {
+                        id: 478,
+                        imgUrl: require('./productImage/Nendoroid/Satoru Gojo Nendoroid Swacchao/satoru-gojo-nendoroid-swacchao_jujutsu-kaisen_gallery_1.jpg'),
+                    },
+                    {
+                        id: 479,
+                        imgUrl: require('./productImage/Nendoroid/Satoru Gojo Nendoroid Swacchao/satoru-gojo-nendoroid-swacchao_jujutsu-kaisen_gallery_1.jpg'),
+                    },
+                    {
+                        id: 480,
+                        imgUrl: require('./productImage/Nendoroid/Satoru Gojo Nendoroid Swacchao/satoru-gojo-nendoroid-swacchao_jujutsu-kaisen_gallery_3.jpg'),
+                    },
+                    {
+                        id: 481,
+                        imgUrl: require('./productImage/Nendoroid/Satoru Gojo Nendoroid Swacchao/satoru-gojo-nendoroid-swacchao_jujutsu-kaisen_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 93,
+        name: "Shinobu Kocho Nendoroid",
+        tagName: ["Anime", "Nendoroid"],
+        status: "available",
+        thumbImg: require('./productImage/Nendoroid/Shinobu Kocho Nendoroid/shinobu-kocho-nendoroid_demon-slayer_silo_sm.png'),
+        price: 350000,
+        categoryID: 10,
+        stock: 10,
+        details:
+        {
+            description: "Shinobu Kocho từ Demon Slayer: Kimetsu no Yaiba sẽ gia nhập Nendoroid Swacchao mới! hàng loạt!" +
+                " Nendoroid Swacchao! figure có Nendoroid đang ngồi trên ghế, giúp bạn dễ dàng trưng bày chúng trên bàn, kệ hoặc những khu vực chật hẹp về không gian. Các số liệu thậm chí có thể được hiển thị trên các cạnh của bàn hoặc kệ của bạn, vì vậy hãy tận hưởng thu thập và trưng bày chúng ở mọi nơi."
+            ,
+            imageDescription: require('./productImage/Nendoroid/Shinobu Kocho Nendoroid/shinobu-kocho-nendoroid_demon-slayer_feature.jpg'),
+            company: "Good Smile Company",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Nendoroid"],
+            size: "9 cm",
+            otherImages:
+                [
+                    {
+                        id: 482,
+                        imgUrl: require('./productImage/Nendoroid/Shinobu Kocho Nendoroid/shinobu-kocho-nendoroid_demon-slayer_gallery_1.jpg'),
+                    },
+                    {
+                        id: 483,
+                        imgUrl: require('./productImage/Nendoroid/Shinobu Kocho Nendoroid/shinobu-kocho-nendoroid_demon-slayer_gallery_2.jpg'),
+                    },
+                    {
+                        id: 484,
+                        imgUrl: require('./productImage/Nendoroid/Shinobu Kocho Nendoroid/shinobu-kocho-nendoroid_demon-slayer_gallery_3.jpg'),
+                    },
+                    {
+                        id: 485,
+                        imgUrl: require('./productImage/Nendoroid/Shinobu Kocho Nendoroid/shinobu-kocho-nendoroid_demon-slayer_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 94,
+        name: "Sukuna Nendoroid",
+        tagName: ["Anime", "Nendoroid"],
+        status: "available",
+        thumbImg: require('./productImage/Nendoroid/Sukuna Nendoroid/sukuna-nendoroid__silo_sm.png'),
+        price: 350000,
+        categoryID: 10,
+        stock: 10,
+        details:
+        {
+            description: "Sukuna từ Jujutsu Kaisen sẽ gia nhập Nendoroid Swacchao mới! hàng loạt!" +
+                " Nendoroid Swacchao! figure có Nendoroid đang ngồi trên ghế, giúp bạn dễ dàng trưng bày chúng trên bàn, kệ hoặc những khu vực chật hẹp về không gian. Các số liệu thậm chí có thể được hiển thị trên các cạnh của bàn hoặc kệ của bạn, vì vậy hãy tận hưởng thu thập và trưng bày chúng ở mọi nơi."
+            ,
+            imageDescription: require('./productImage/Nendoroid/Sukuna Nendoroid/sukuna-nendoroid__feature.jpg'),
+            company: "Good Smile Company",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Nendoroid"],
+            size: "10 cm",
+            otherImages:
+                [
+                    {
+                        id: 486,
+                        imgUrl: require('./productImage/Nendoroid/Sukuna Nendoroid/sukuna-nendoroid__gallery_1.jpg'),
+                    },
+                    {
+                        id: 487,
+                        imgUrl: require('./productImage/Nendoroid/Sukuna Nendoroid/sukuna-nendoroid__gallery_2.jpg'),
+                    },
+                    {
+                        id: 488,
+                        imgUrl: require('./productImage/Nendoroid/Sukuna Nendoroid/sukuna-nendoroid__gallery_3.jpg'),
+                    },
+                    {
+                        id: 489,
+                        imgUrl: require('./productImage/Nendoroid/Sukuna Nendoroid/sukuna-nendoroid__gallery_4.jpg'),
+                    },
+                    {
+                        id: 490,
+                        imgUrl: require('./productImage/Nendoroid/Sukuna Nendoroid/sukuna-nendoroid__gallery_5.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 95,
+        name: "Venti Nendoroid",
+        tagName: ["Anime", "Nendoroid", "Game"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Nendoroid/Venti Nendoroid/venti-nendoroid_genshin-impact_silo_sm.png'),
+        price: 350000,
+        depositPrice: 150000,
+        categoryID: 10,
+        stock: 0,
+        details:
+        {
+            description: "Từ trò chơi nổi tiếng, Genshin Impact là Nendoroid của Windborne Bard, Venti! " +
+
+                "Anh ấy có ba biểu cảm khuôn mặt bao gồm khuôn mặt nháy mắt, khuôn mặt thoải mái với đôi mắt nhắm và một khuôn mặt đang cười. Các phần tùy chọn bao gồm đàn lia bằng gỗ của anh ấy, Der Frühling, cũng như cây cung Skyward Harp, cho phép bạn tạo lại các cảnh chiến đấu từ trò chơi."
+            ,
+            imageDescription: require('./productImage/Nendoroid/Venti Nendoroid/venti-nendoroid_genshin-impact_feature.jpg'),
+            company: "Good Smile Company",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Nendoroid", "Game"],
+            size: "10 cm",
+            otherImages:
+                [
+                    {
+                        id: 491,
+                        imgUrl: require('./productImage/Nendoroid/Venti Nendoroid/venti-nendoroid_genshin-impact_gallery_1.jpg'),
+                    },
+                    {
+                        id: 492,
+                        imgUrl: require('./productImage/Nendoroid/Venti Nendoroid/venti-nendoroid_genshin-impact_gallery_2.jpg'),
+                    },
+                    {
+                        id: 493,
+                        imgUrl: require('./productImage/Nendoroid/Venti Nendoroid/venti-nendoroid_genshin-impact_gallery_3.jpg'),
+                    },
+                    {
+                        id: 494,
+                        imgUrl: require('./productImage/Nendoroid/Venti Nendoroid/venti-nendoroid_genshin-impact_gallery_4.jpg'),
+                    },
+                    {
+                        id: 495,
+                        imgUrl: require('./productImage/Nendoroid/Venti Nendoroid/venti-nendoroid_genshin-impact_gallery_5.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 96,
+        name: "Yuji Itadori Nendoroid Swacchao!",
+        tagName: ["Anime", "Nendoroid"],
+        status: "available",
+        thumbImg: require('./productImage/Nendoroid/Yuji Itadori Nendoroid Swacchao/yuji-itadori-nendoroid-swacchao_jujutsu-kaisen_silo_sm.png'),
+        price: 350000,
+        categoryID: 10,
+        stock: 10,
+        details:
+        {
+            description: "Yuji Itadori từ Jujutsu Kaisen sẽ gia nhập Nendoroid Swacchao mới! hàng loạt!" +
+                " Nendoroid Swacchao! figure có Nendoroid đang ngồi trên ghế, giúp bạn dễ dàng trưng bày chúng trên bàn, kệ hoặc những khu vực chật hẹp về không gian. Các số liệu thậm chí có thể được hiển thị trên các cạnh của bàn hoặc kệ của bạn, vì vậy hãy tận hưởng thu thập và trưng bày chúng ở mọi nơi."
+            ,
+            imageDescription: require('./productImage/Nendoroid/Yuji Itadori Nendoroid Swacchao/yuji-itadori-nendoroid-swacchao_jujutsu-kaisen_feature.jpg'),
+            company: "Good Smile Company",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Nendoroid"],
+            size: "10 cm",
+            otherImages:
+                [
+                    {
+                        id: 496,
+                        imgUrl: require('./productImage/Nendoroid/Yuji Itadori Nendoroid Swacchao/yuji-itadori-nendoroid-swacchao_jujutsu-kaisen_gallery_1.jpg'),
+                    },
+                    {
+                        id: 497,
+                        imgUrl: require('./productImage/Nendoroid/Yuji Itadori Nendoroid Swacchao/yuji-itadori-nendoroid-swacchao_jujutsu-kaisen_gallery_2.jpg'),
+                    },
+                    {
+                        id: 498,
+                        imgUrl: require('./productImage/Nendoroid/Yuji Itadori Nendoroid Swacchao/yuji-itadori-nendoroid-swacchao_jujutsu-kaisen_gallery_3.jpg'),
+                    },
+                    {
+                        id: 499,
+                        imgUrl: require('./productImage/Nendoroid/Yuji Itadori Nendoroid Swacchao/yuji-itadori-nendoroid-swacchao_jujutsu-kaisen_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 97,
+        name: "Zenitsu Agatsuma Nendoroid",
+        tagName: ["Anime", "Nendoroid"],
+        status: "available",
+        thumbImg: require('./productImage/Nendoroid/Zenitsu Agatsuma Nendoroid/zenitsu-agatsuma-nendoroid_demon-slayer_silo_sm.png'),
+        price: 350000,
+        categoryID: 10,
+        stock: 10,
+        details:
+        {
+            description: "Từ loạt phim hoạt hình Demon Slayer: Kimetsu no Yaiba, Nendoroid đã thành thạo Hơi thở Sấm sét, Zenitsu Agatsuma!" +
+                " Anh ấy có 4 biểu cảm khuôn mặt bao gồm biểu cảm chuẩn, biểu cảm đang ngủ, biểu cảm đỏ mặt và biểu cảm giật mình. Các phần tùy chọn bao gồm một nhân vật thu nhỏ của Chuntaro và Nichirin Blade của anh ta, cùng với các bộ phận chân cong có thể hoán đổi cho nhau và các bộ phận hiệu ứng để tái tạo những khoảnh khắc ngay lập tức trước và sau khi tung ra đòn tấn công Nhanh như chớp của Thunder Breathing First Form: Thunderclap và Flash."
+            ,
+            imageDescription: require('./productImage/Nendoroid/Zenitsu Agatsuma Nendoroid/zenitsu-agatsuma-nendoroid_demon-slayer_feature.jpg'),
+            company: "Good Smile Company",
+            material: "PVC, ABS",
+            tagName: ["Anime", "Nendoroid"],
+            size: "10 cm",
+            otherImages:
+                [
+                    {
+                        id: 500,
+                        imgUrl: require('./productImage/Nendoroid/Zenitsu Agatsuma Nendoroid/zenitsu-agatsuma-nendoroid_demon-slayer_gallery_1.jpg'),
+                    },
+                    {
+                        id: 501,
+                        imgUrl: require('./productImage/Nendoroid/Zenitsu Agatsuma Nendoroid/zenitsu-agatsuma-nendoroid_demon-slayer_gallery_2.jpg'),
+                    },
+                    {
+                        id: 502,
+                        imgUrl: require('./productImage/Nendoroid/Zenitsu Agatsuma Nendoroid/zenitsu-agatsuma-nendoroid_demon-slayer_gallery_3.jpg'),
+                    },
+                    {
+                        id: 503,
+                        imgUrl: require('./productImage/Nendoroid/Zenitsu Agatsuma Nendoroid/zenitsu-agatsuma-nendoroid_demon-slayer_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+
+    //Transformer
+    {
+        id: 98,
+        name: "Bumblebee DLX",
+        tagName: ["Hành Động", "Robot"],
+        status: "new",
+        thumbImg: require('./productImage/Transformer/Bumblebee DLX/bumblebee-dlx_transformers_silo_sm.png'),
+        price: 455000,
+        categoryID: 1,
+        stock: 10,
+        details:
+        {
+            description: "DLX Sưu tầm Hình thể hiện các thiết kế hình Transformers phức tạp ở quy mô nhỏ hơn với giá trị sản xuất có độ trung thực cao. Với thiết kế khung kim loại đúc độc đáo, DLX không chỉ cung cấp một loạt các khớp nối tiên tiến mà còn nâng cao đáng kể trọng lượng và độ bền"
+            ,
+            imageDescription: require('./productImage/Transformer/Bumblebee DLX/bumblebee-dlx_transformers_feature.jpg'),
+            company: "Threezero",
+            material: "ABS, PC, POM, PVC, Diecast zinc alloy",
+            tagName: ["Hành Động", "Robot"],
+            size: "21.6 cm",
+            otherImages:
+                [
+                    {
+                        id: 504,
+                        imgUrl: require('./productImage/Transformer/Bumblebee DLX/bumblebee-dlx_transformers_gallery_1.jpg'),
+                    },
+                    {
+                        id: 505,
+                        imgUrl: require('./productImage/Transformer/Bumblebee DLX/bumblebee-dlx_transformers_gallery_2.jpg'),
+                    },
+                    {
+                        id: 506,
+                        imgUrl: require('./productImage/Transformer/Bumblebee DLX/bumblebee-dlx_transformers_gallery_3.jpg'),
+                    },
+                    {
+                        id: 507,
+                        imgUrl: require('./productImage/Transformer/Bumblebee DLX/bumblebee-dlx_transformers_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 99,
+        name: "Bumblebee",
+        tagName: ["Hành Động", "Robot"],
+        status: "available",
+        thumbImg: require('./productImage/Transformer/Bumblebee movie/bumblebee_transformers_silo_sm.png'),
+        price: 455000,
+        categoryID: 1,
+        stock: 10,
+        details:
+        {
+            description: "Con số DLX Scale Collectible này có tác phẩm điêu khắc chi tiết phức tạp, một loạt các khớp nối cao, các chi tiết được chiếu sáng bằng đèn LED, các bộ phận kim loại đúc và lớp sơn chuyên nghiệp mà 3A & 3Zero nổi tiếng."
+            ,
+            imageDescription: require('./productImage/Transformer/Bumblebee movie/bumblebee_transformers_feature.jpg'),
+            company: "Threezero",
+            material: "ABS",
+            tagName: ["Hành Động", "Robot"],
+            size: "20.3 cm",
+            otherImages:
+                [
+                    {
+                        id: 508,
+                        imgUrl: require('./productImage/Transformer/Bumblebee movie/bumblebee_transformers_gallery_1.jpg'),
+                    },
+                    {
+                        id: 509,
+                        imgUrl: require('./productImage/Transformer/Bumblebee movie/bumblebee_transformers_gallery_2.jpg'),
+                    },
+                    {
+                        id: 510,
+                        imgUrl: require('./productImage/Transformer/Bumblebee movie/bumblebee_transformers_gallery_3.jpg'),
+                    },
+                    {
+                        id: 511,
+                        imgUrl: require('./productImage/Transformer/Bumblebee movie/bumblebee_transformers_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 100,
+        name: "Bumblebee Nendoroid",
+        tagName: ["Hành Động", "Robot"],
+        status: "available",
+        thumbImg: require('./productImage/Transformer/Bumblebee Nendoroid/bumblebee-nendoroid_transformers_silo_sm.png'),
+        price: 405000,
+        categoryID: 1,
+        stock: 10,
+        details:
+        {
+            description: "Từ bộ phim mới nhất trong loạt phim Người vận chuyển người thật, Bumblebee, là Nendoroid Bumblebee! Nendoroid được hoàn thiện đầy đủ các khớp nối, cho phép bạn tạo lại tất cả các loại tình huống, từ các tình huống hàng ngày đến các cảnh chiến đấu"
+            ,
+            imageDescription: require('./productImage/Transformer/Bumblebee Nendoroid/bumblebee-nendoroid_transformers_feature.jpg'),
+            company: "Sentinel",
+            material: "ABS, PVC",
+            tagName: ["Hành Động", "Robot"],
+            size: "9.9 cm",
+            otherImages:
+                [
+                    {
+                        id: 508,
+                        imgUrl: require('./productImage/Transformer/Bumblebee Nendoroid/bumblebee-nendoroid_transformers_gallery_1.jpg'),
+                    },
+                    {
+                        id: 509,
+                        imgUrl: require('./productImage/Transformer/Bumblebee Nendoroid/bumblebee-nendoroid_transformers_gallery_2.jpg'),
+                    },
+                    {
+                        id: 510,
+                        imgUrl: require('./productImage/Transformer/Bumblebee Nendoroid/bumblebee-nendoroid_transformers_gallery_3.jpg'),
+                    },
+                    {
+                        id: 511,
+                        imgUrl: require('./productImage/Transformer/Bumblebee Nendoroid/bumblebee-nendoroid_transformers_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 101,
+        name: "Bumblebee",
+        tagName: ["Hành Động", "Robot"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Transformer/Bumblebee stand/bumblebee_transformers_silo_sm (2).png'),
+        price: 758000,
+        depositPrice: 250000,
+        categoryID: 1,
+        stock: 0,
+        details:
+        {
+            description: "Tượng Bumblebee dựa trên bộ phim đi kèm với 2 bức chân dung thay thế. Chọn cách hiển thị Bumblebee của bạn giữa Chân dung mặt nạ chiến đấu hoặc Chân dung không mặt nạ hiển thị khuôn mặt dễ thương nhất trong số các Autobot!" +
+                " Bumblebee này bao gồm hai tùy chọn Cánh tay phải có thể hoán đổi cho nhau. Mắt, đèn pha trước ngực và đèn pha có đèn LED trợ sáng. Vũ khí mạnh mẽ của anh ta, Bumblebee Stinger Sword chỉ có sẵn cho phiên bản độc quyền. Loại vũ khí nguy hiểm có thể khiến Decepticon chết. Sẵn sàng đưa vào màn hình của bạn với đế mang thương hiệu Autobots đặc biệt, đừng bỏ lỡ cơ hội thêm Bumblebee vào bộ sưu tập Transformers của bạn!"
+            ,
+            imageDescription: require('./productImage/Transformer/Bumblebee stand/bumblebee_transformers_feature.jpg'),
+            company: "Prime 1 Studio",
+            material: "Polystone",
+            tagName: ["Hành Động", "Robot"],
+            size: "67.4 cm",
+            otherImages:
+                [
+                    {
+                        id: 508,
+                        imgUrl: require('./productImage/Transformer/Bumblebee stand/bumblebee_transformers_gallery_1.jpg'),
+                    },
+                    {
+                        id: 509,
+                        imgUrl: require('./productImage/Transformer/Bumblebee stand/bumblebee_transformers_gallery_2.jpg'),
+                    },
+                    {
+                        id: 510,
+                        imgUrl: require('./productImage/Transformer/Bumblebee stand/bumblebee_transformers_gallery_3.jpg'),
+                    },
+                    {
+                        id: 511,
+                        imgUrl: require('./productImage/Transformer/Bumblebee stand/bumblebee_transformers_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 102,
+        name: "Grimlock",
+        tagName: ["Hành Động", "Robot"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Transformer/Grimlock/grimlock_transformers_silo_sm.png'),
+        price: 758000,
+        depositPrice: 250000,
+        categoryID: 1,
+        stock: 0,
+        details:
+        {
+            description: "Theo sau bức tượng cổ điển của chúng tôi được hiển thị lần đầu tiên vào năm 2014, cao khoảng 38 cm. Prime 1 Studio tự hào giới thiệu chiếc điện thoại cao 15 inch với tất cả vẻ đẹp lộng lẫy của nó: GRIMLOCK!" +
+                " Grimlock chiếm vị trí trung tâm trong bộ phim Transformers năm 2014, Transformers: Age of Extinction. Anh hùng Dinobot đã đưa Optimus Prime đi kiểm tra, để xem liệu anh ta có thể chứng minh được mình là người lãnh đạo mà các Transformers xứng đáng hay không. Hợp tác với Optimus Prime và các Autobots khác, Grimlock đã lật ngược tình thế với Decepticons!"
+            ,
+            imageDescription: require('./productImage/Transformer/Grimlock/grimlock_transformers_feature.jpg'),
+            company: "Prime 1 Studio",
+            material: "Polystone",
+            tagName: ["Hành Động", "Robot"],
+            size: "38 cm",
+            otherImages:
+                [
+                    {
+                        id: 512,
+                        imgUrl: require('./productImage/Transformer/Grimlock/grimlock_transformers_gallery_1.jpg'),
+                    },
+                    {
+                        id: 513,
+                        imgUrl: require('./productImage/Transformer/Grimlock/grimlock_transformers_gallery_2.jpg'),
+                    },
+                    {
+                        id: 514,
+                        imgUrl: require('./productImage/Transformer/Grimlock/grimlock_transformers_gallery_3.jpg'),
+                    },
+                    {
+                        id: 515,
+                        imgUrl: require('./productImage/Transformer/Grimlock/grimlock_transformers_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 103,
+        name: "Jetfire",
+        tagName: ["Hành Động", "Robot"],
+        status: "available",
+        thumbImg: require('./productImage/Transformer/Jetfire/jetfire_transformers_silo_sm.png'),
+        price: 450000,
+        categoryID: 1,
+        stock: 7,
+        details:
+        {
+            description: "Decepticon Seeker cổ đại, người đã chọn sát cánh với Autobots và hy sinh tia lửa của mình cho Optimus Prime để hỗ trợ đánh bại The Fallen! Hasbro và Threezero tự hào giới thiệu Jetfire được mong đợi từ lâu từ Transformers: Revenge of the Fallen như là nhân vật tiếp theo trong Transformers DLX Collectible Figure Series!"
+            ,
+            imageDescription: require('./productImage/Transformer/Jetfire/jetfire_transformers_feature.jpg'),
+            company: "Threezero",
+            material: "ABS, POM, PVC, Diecast zinc alloy",
+            tagName: ["Hành Động", "Robot"],
+            size: "38 cm",
+            otherImages:
+                [
+                    {
+                        id: 516,
+                        imgUrl: require('./productImage/Transformer/Jetfire/jetfire_transformers_gallery_1.jpg'),
+                    },
+                    {
+                        id: 517,
+                        imgUrl: require('./productImage/Transformer/Jetfire/jetfire_transformers_gallery_2.jpg'),
+                    },
+                    {
+                        id: 518,
+                        imgUrl: require('./productImage/Transformer/Jetfire/jetfire_transformers_gallery_3.jpg'),
+                    },
+                    {
+                        id: 519,
+                        imgUrl: require('./productImage/Transformer/Jetfire/jetfire_transformers_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 104,
+        name: "Megatron",
+        tagName: ["Hành Động", "Robot"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Transformer/Megatron/megatron_transformers_silo_sm.png'),
+        price: 850000,
+        depositPrice: 350000,
+        categoryID: 1,
+        stock: 0,
+        details:
+        {
+            description: "Được đạo diễn năm 2011 bởi Michael Bay, Transformers: Dark of the Moon đã công phá các phòng vé vào năm 2011 và là một trong những bộ phim Transformers có doanh thu cao nhất mọi thời đại. Dark of the Moon tìm thấy Megatron, thủ lĩnh của Decepticons và là nhân vật phản diện chính của loạt phim Transformers; ba năm sau các sự kiện của Chiến dịch: Bão lửa lưu vong ở Châu Phi. Anh ta đang bị tổn hại nghiêm trọng trong trận chiến và đang âm mưu cho kế hoạch mới của mình."
+            ,
+            imageDescription: require('./productImage/Transformer/Megatron/megatron_transformers_feature.jpg'),
+            company: "Prime 1 Studio",
+            material: "Polystoney",
+            tagName: ["Hành Động", "Robot"],
+            size: "92.3 cm",
+            otherImages:
+                [
+                    {
+                        id: 520,
+                        imgUrl: require('./productImage/Transformer/Megatron/megatron_transformers_gallery_1.jpg'),
+                    },
+                    {
+                        id: 521,
+                        imgUrl: require('./productImage/Transformer/Megatron/megatron_transformers_gallery_2.jpg'),
+                    },
+                    {
+                        id: 522,
+                        imgUrl: require('./productImage/Transformer/Megatron/megatron_transformers_gallery_3.jpg'),
+                    },
+                    {
+                        id: 523,
+                        imgUrl: require('./productImage/Transformer/Megatron/megatron_transformers_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 105,
+        name: "Megatron Deluxe Version",
+        tagName: ["Hành Động", "Robot"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Transformer/Megatron Deluxe Version/megatron-deluxe-version_transformers_silo_sm.png'),
+        price: 725000,
+        depositPrice: 250000,
+        categoryID: 1,
+        stock: 0,
+        details:
+        {
+            description: "Hasbro và ThreeA tự hào giới thiệu Hình ảnh Sưu tập Quy mô Cao cấp Megatron (Phiên bản Deluxe) từ Transformers: The Last Knight! Megatron đã được điều chỉnh và thiết kế một cách tỉ mỉ thành một nhân vật sưu tầm có tính khớp nối cao bằng cách sử dụng mô hình phim làm cơ sở. Hình thang đo cao cấp Megatron (Phiên bản Deluxe) có các chi tiết được chiếu sáng bằng đèn LED, nhiều loại phụ kiện và lớp sơn phủ ngoài thời tiết cực kỳ chi tiết."
+            ,
+            imageDescription: require('./productImage/Transformer/Megatron Deluxe Version/megatron-deluxe-version_transformers_feature.jpg'),
+            company: "ThreeA Toys",
+            material: "ABS",
+            tagName: ["Hành Động", "Robot"],
+            size: "48.3 cm",
+            otherImages:
+                [
+                    {
+                        id: 524,
+                        imgUrl: require('./productImage/Transformer/Megatron Deluxe Version/megatron-deluxe-version_transformers_gallery_1.jpg'),
+                    },
+                    {
+                        id: 525,
+                        imgUrl: require('./productImage/Transformer/Megatron Deluxe Version/megatron-deluxe-version_transformers_gallery_2.jpg'),
+                    },
+                    {
+                        id: 526,
+                        imgUrl: require('./productImage/Transformer/Megatron Deluxe Version/megatron-deluxe-version_transformers_gallery_3.jpg'),
+                    },
+                    {
+                        id: 527,
+                        imgUrl: require('./productImage/Transformer/Megatron Deluxe Version/megatron-deluxe-version_transformers_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 106,
+        name: "Optimus Prime",
+        tagName: ["Hành Động", "Robot"],
+        status: "available",
+        thumbImg: require('./productImage/Transformer/Optimus Prime/optimus-prime_transformers_silo_sm (1).png'),
+        price: 650000,
+        categoryID: 1,
+        stock: 10,
+        details:
+        {
+            description: "Transformers: Revenge of the Fallen - DLX Optimus Prime được thiết kế để tích hợp với DLX Jetfire của cùng một bộ phim (dự kiến ​​phát hành vào quý 1 năm 2021). Cùng với nhau, hai nhân vật Transformers tạo thành DLX Jetpower Optimus Prime ấn tượng"
+            ,
+            imageDescription: require('./productImage/Transformer/Optimus Prime/optimus-prime_transformers_feature.jpg'),
+            company: "ThreeA Toys",
+            material: "ABS, POM, PVC, Diecast zinc alloy",
+            tagName: ["Hành Động", "Robot"],
+            size: "28.4 cm",
+            otherImages:
+                [
+                    {
+                        id: 528,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime/optimus-prime_transformers_gallery_1.jpg'),
+                    },
+                    {
+                        id: 529,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime/optimus-prime_transformers_gallery_2.jpg'),
+                    },
+                    {
+                        id: 530,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime/optimus-prime_transformers_gallery_3.jpg'),
+                    },
+                    {
+                        id: 531,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime/optimus-prime_transformers_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 106,
+        name: "Optimus Prime DLX",
+        tagName: ["Hành Động", "Robot"],
+        status: "available",
+        thumbImg: require('./productImage/Transformer/Optimus Prime DLX/optimus-prime-dlx_transformers_silo_sm.png'),
+        price: 750000,
+        categoryID: 1,
+        stock: 10,
+        details:
+        {
+            description: "Các phụ kiện bao gồm một Blaster Shield, một Balde đeo tay có thể tháo rời, một thanh kiếm Cybertronian, một mặt nạ chiến đấu có thể hoán đổi cho nhau, tổng cộng bốn cặp tay có thể hoán đổi cho nhau và một Chân đế hành động DLX cho nhiều tư thế biểu cảm khác nhau"
+            ,
+            imageDescription: require('./productImage/Transformer/Optimus Prime DLX/optimus-prime-dlx_transformers_feature.jpg'),
+            company: "Threezero",
+            material: "ABS, POM, PVC, Diecast zinc alloy",
+            tagName: ["Hành Động", "Robot"],
+            size: "28.4 cm",
+            otherImages:
+                [
+                    {
+                        id: 532,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime DLX/optimus-prime-dlx_transformers_gallery_1.jpg'),
+                    },
+                    {
+                        id: 533,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime DLX/optimus-prime-dlx_transformers_gallery_2.jpg'),
+                    },
+                    {
+                        id: 534,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime DLX/optimus-prime-dlx_transformers_gallery_3.jpg'),
+                    },
+                    {
+                        id: 535,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime DLX/optimus-prime-dlx_transformers_gallery_4.jpg'),
+                    },
+                    {
+                        id: 536,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime DLX/optimus-prime-dlx_transformers_gallery_5.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 107,
+        name: "Optimus Prime Nendoroid",
+        tagName: ["Hành Động", "Robot"],
+        status: "available",
+        thumbImg: require('./productImage/Transformer/Optimus Prime Nendoroid/optimus-prime-nendoroid_transformers_silo_sm.png'),
+        price: 405000,
+        categoryID: 1,
+        stock: 10,
+        details:
+        {
+            description: "Từ bộ phim mới nhất trong loạt phim Transformer, Optimus, là Nendoroid của thủ lĩnh Autobot, Optimus Prime! Nendoroid được hoàn thiện khớp nối, cho phép bạn tạo lại cảnh anh ta chỉ huy quân đội Autobot tại Cybertron."
+            ,
+            imageDescription: require('./productImage/Transformer/Optimus Prime Nendoroid/optimus-prime-nendoroid_transformers_feature.jpg'),
+            company: "Sentinel",
+            material: "ABS, PVC",
+            tagName: ["Hành Động", "Robot"],
+            size: "9.9 cm",
+            otherImages:
+                [
+                    {
+                        id: 537,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime Nendoroid/optimus-prime-nendoroid_transformers_gallery_1.jpg'),
+                    },
+                    {
+                        id: 538,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime Nendoroid/optimus-prime-nendoroid_transformers_gallery_2.jpg'),
+                    },
+                    {
+                        id: 539,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime Nendoroid/optimus-prime-nendoroid_transformers_gallery_3.jpg'),
+                    },
+                    {
+                        id: 540,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime Nendoroid/optimus-prime-nendoroid_transformers_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 108,
+        name: "Optimus Prime",
+        tagName: ["Hành Động", "Robot"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Transformer/Optimus Prime v2/optimus-prime_transformers_silo_sm.png'),
+        price: 750000,
+        depositPrice: 250000,
+        categoryID: 1,
+        stock: 0,
+        details:
+        {
+            description: "Optimus Prime được chế tác với sự chú ý ấn tượng đến các chi tiết và có đèn LED chiếu sáng trên các bộ phận khác nhau của bức tượng. Đầu có thể hoán đổi để lựa chọn đeo mặt nạ chiến đấu hoặc không đeo mặt nạ. Cánh tay phải có thể hoán đổi cho nhau để có thể lựa chọn giữa tư thế chỉ tay hoặc tư thế cầm nhiều loại vũ khí có thể hoán đổi."
+            ,
+            imageDescription: require('./productImage/Transformer/Optimus Prime v2/optimus-prime_transformers_feature.jpg'),
+            company: "Prime 1 Studio",
+            material: "Polystone",
+            tagName: ["Hành Động", "Robot"],
+            size: "73.3 cm",
+            otherImages:
+                [
+                    {
+                        id: 541,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime v2/optimus-prime_transformers_gallery_1.jpg'),
+                    },
+                    {
+                        id: 542,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime v2/optimus-prime_transformers_gallery_2.jpg'),
+                    },
+                    {
+                        id: 543,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime v2/optimus-prime_transformers_gallery_3.jpg'),
+                    },
+                    {
+                        id: 544,
+                        imgUrl: require('./productImage/Transformer/Optimus Prime v2/optimus-prime_transformers_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+
+    //DC Comics
+    {
+        id: 109,
+        name: "Aquaman",
+        tagName: ["Hành Động", "DC"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Marvel DC/DC Comics/Aquaman/aquaman_dc-comics_silo_sm.png'),
+        price: 2560000,
+        depositPrice: 750000,
+        categoryID: 9,
+        stock: 0,
+        details:
+        {
+            description: "Sinh ra với cái tên Orin của người Atlantis, Arthur Curry là thái tử của Atlantis, còn được gọi là siêu anh hùng, Aquaman. Bức tượng chân dung này được điêu khắc cẩn thận dựa trên chân dung của Jason Momoa trong phim. Arthur Curry đang cầm trên tay phải di vật của người Atlantis cổ đại, còn được gọi là Cây đinh ba của Atlantis, được nắm giữ bởi vị vua Atlan cổ đại của Atlantis."
+            ,
+            imageDescription: require('./productImage/Marvel DC/DC Comics/Aquaman/aquaman_dc-comics_feature.jpg'),
+            company: "Prime 1 Studio",
+            material: "Polystone",
+            tagName: ["Hành Động", "DC"],
+            size: "88.9 cm",
+            otherImages:
+                [
+                    {
+                        id: 545,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Aquaman/aquaman_dc-comics_gallery_1.jpg'),
+                    },
+                    {
+                        id: 546,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Aquaman/aquaman_dc-comics_gallery_2.jpg'),
+                    },
+                    {
+                        id: 547,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Aquaman/aquaman_dc-comics_gallery_3.jpg'),
+                    },
+                    {
+                        id: 548,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Aquaman/aquaman_dc-comics_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 110,
+        name: "Batman",
+        tagName: ["Hành Động", "DC"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Marvel DC/DC Comics/Batman/batman_dc-comics_silo_sm.png'),
+        price: 2460000,
+        depositPrice: 750000,
+        categoryID: 9,
+        stock: 0,
+        details:
+        {
+            description: "Hình nhân Batman Premium Format ™ sẵn sàng mang lại công lý cho thành phố của anh ấy, mặc một phiên bản cập nhật của bộ trang phục mang tính biểu tượng của anh ấy. Hình nhân vật polyresin có bộ bodysuit chiến thuật màu đen và xám được điêu khắc với một chiếc thắt lưng tiện ích bằng vàng. Ngực, găng tay và ủng của Người Dơi có kết cấu với các yếu tố sát thương trong trận chiến."
+            ,
+            imageDescription: require('./productImage/Marvel DC/DC Comics/Batman/batman_dc-comics_feature.jpg'),
+            company: "Sideshow Collectibles",
+            material: "Polyresin",
+            tagName: ["Hành Động", "DC"],
+            size: "59.7 cm",
+            otherImages:
+                [
+                    {
+                        id: 549,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Batman/batman_dc-comics_gallery_1.jpg'),
+                    },
+                    {
+                        id: 550,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Batman/batman_dc-comics_gallery_2.jpg'),
+                    },
+                    {
+                        id: 551,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Batman/batman_dc-comics_gallery_3.jpg'),
+                    },
+                    {
+                        id: 552,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Batman/batman_dc-comics_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 111,
+        name: "Batman and Bat-Signal",
+        tagName: ["Hành Động", "DC"],
+        status: "new",
+        thumbImg: require('./productImage/Marvel DC/DC Comics/Batman and Bat-Signal/batman-and-bat-signal_dc-comics_silo_sm.png'),
+        price: 1760000,
+        categoryID: 9,
+        stock: 5,
+        details:
+        {
+            description: "Caped Crusader đang trở lại màn bạc! Trong bộ phim Người dơi của DC, Robert Pattinson trở thành thám tử cảnh giác của Thành phố Gotham và bản ngã thay thế của anh ta, tỷ phú ẩn dật Bruce Wayne. Người anh hùng phải tạo dựng các mối quan hệ mới, vạch mặt thủ phạm và mang lại công lý cho việc lạm dụng quyền lực và tham nhũng đã gây ra từ lâu cho thành phố Gotham."
+            ,
+            imageDescription: require('./productImage/Marvel DC/DC Comics/Batman and Bat-Signal/batman-and-bat-signal_dc-comics_feature.jpg'),
+            company: "Hot Toys",
+            material: "PVC, ABS",
+            tagName: ["Hành Động", "DC"],
+            size: "31 cm",
+            otherImages:
+                [
+                    {
+                        id: 553,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Batman and Bat-Signal/batman-and-bat-signal_dc-comics_gallery_1.jpg'),
+                    },
+                    {
+                        id: 554,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Batman and Bat-Signal/batman-and-bat-signal_dc-comics_gallery_2.jpg'),
+                    },
+                    {
+                        id: 555,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Batman and Bat-Signal/batman-and-bat-signal_dc-comics_gallery_3.jpg'),
+                    },
+                    {
+                        id: 556,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Batman and Bat-Signal/batman-and-bat-signal_dc-comics_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 112,
+        name: "Knightmare Batman",
+        tagName: ["Hành Động", "DC"],
+        status: "new",
+        thumbImg: require('./productImage/Marvel DC/DC Comics/Batman Knightmare/batman-knightmare_dc-comics_silo_sm.png'),
+        price: 956000,
+        categoryID: 9,
+        stock: 5,
+        details:
+        {
+            description: "Knightmare Batman của DC Comics và Justice League của Zack Snyder! Dựa trên các tài liệu tham khảo ban đầu, bức tượng polystone này được vẽ bằng tay và là phiên bản giới hạn."
+            ,
+            imageDescription: require('./productImage/Marvel DC/DC Comics/Batman Knightmare/batman-knightmare_dc-comics_feature.jpg'),
+            company: "Iron Studios",
+            material: "Polystone",
+            tagName: ["Hành Động", "DC"],
+            size: "21.8 cm",
+            otherImages:
+                [
+                    {
+                        id: 557,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Batman Knightmare/batman-knightmare_dc-comics_gallery_1.jpg'),
+                    },
+                    {
+                        id: 558,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Batman Knightmare/batman-knightmare_dc-comics_gallery_2.jpg'),
+                    },
+                    {
+                        id: 559,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Batman Knightmare/batman-knightmare_dc-comics_gallery_3.jpg'),
+                    },
+                    {
+                        id: 560,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Batman Knightmare/batman-knightmare_dc-comics_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 113,
+        name: "Catwoman",
+        tagName: ["Hành Động", "DC"],
+        status: "available",
+        thumbImg: require('./productImage/Marvel DC/DC Comics/Catwoman/catwoman_dc-comics_silo_sm.png'),
+        price: 877000,
+        categoryID: 9,
+        stock: 5,
+        details:
+        {
+            description: "Tay cầm roi, nhân vật đeo mặt nạ đen bí ẩn, mặc đồng phục được may bằng những mảnh nhựa vinyl dính, thể hiện những móng vuốt kim loại ở các đầu ngón tay trái của mình một cách thách thức, được chống đỡ trên một chân đế lấy cảm hứng từ các tòa nhà lịch sử và lạnh lẽo của Gotham u ám City, với một con mèo đen ngồi trên bậc cầu thang bên cạnh cô ấy, giả làm linh vật và đồng minh của cô ấy. Cô ấy là Selina Kyle, hay còn được biết đến với cái tên Catwoman, do Michelle Pfeiffer thủ vai một cách thuần thục trong bộ phim kinh điển Batman Returns của đạo diễn Tim Burton."
+            ,
+            imageDescription: require('./productImage/Marvel DC/DC Comics/Catwoman/catwoman_dc-comics_feature.jpg'),
+            company: "Iron Studios",
+            material: "Polystone",
+            tagName: ["Hành Động", "DC"],
+            size: "19.8 cm",
+            otherImages:
+                [
+                    {
+                        id: 561,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Catwoman/catwoman_dc-comics_gallery_1.jpg'),
+                    },
+                    {
+                        id: 562,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Catwoman/catwoman_dc-comics_gallery_2.jpg'),
+                    },
+                    {
+                        id: 563,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Catwoman/catwoman_dc-comics_gallery_3.jpg'),
+                    },
+                    {
+                        id: 564,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Catwoman/catwoman_dc-comics_gallery_4.jpg'),
+                    },
+                    {
+                        id: 565,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Catwoman/catwoman_dc-comics_gallery_5.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 114,
+        name: "Clark Kent Deluxe",
+        tagName: ["Hành Động", "DC"],
+        status: "available",
+        thumbImg: require('./productImage/Marvel DC/DC Comics/Clark Kent Deluxe/clark-kent-deluxe_dc-comics_silo_sm.png'),
+        price: 877000,
+        categoryID: 9,
+        stock: 6,
+        details:
+        {
+            description: "Trên đỉnh một tòa nhà ở thành phố lớn Metrópolis, Clark Kent, phóng viên nhút nhát của tờ Daily Planet, nhìn thoáng qua bầu trời với vẻ mặt nghiêm túc và trầm ngâm, tập trung vào một mục tiêu ở xa, trong khi mở áo sơ mi để lộ màu đỏ và vàng không thể nhầm lẫn của mình. huy hiệu hình chữ S trên bộ đồ màu xanh lam rất phổ biến của anh ấy. Sẵn sàng cất cánh, với một số chú chim bồ câu, biểu tượng cao quý của hòa bình, và bên cạnh lá cờ của Hoa Kỳ, quốc gia nơi anh đã lớn lên và trở thành quê hương của anh, siêu nhân này được Iron Studios giới thiệu trong Clark Kent Deluxe hoành tráng Tượng - DC Comics - Art Scale 1:10 - Iron Studios , với hình ảnh anh hùng của các anh hùng trong phiên bản không kém phần quan trọng của anh ấy, của một dân thường"
+            ,
+            imageDescription: require('./productImage/Marvel DC/DC Comics/Clark Kent Deluxe/clark-kent-deluxe_dc-comics_feature.jpg'),
+            company: "Iron Studios",
+            material: "Polystone",
+            tagName: ["Hành Động", "DC"],
+            size: "29 cm",
+            otherImages:
+                [
+                    {
+                        id: 566,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Clark Kent Deluxe/clark-kent-deluxe_dc-comics_gallery_1.jpg'),
+                    },
+                    {
+                        id: 567,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Clark Kent Deluxe/clark-kent-deluxe_dc-comics_gallery_2.jpg'),
+                    },
+                    {
+                        id: 568,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Clark Kent Deluxe/clark-kent-deluxe_dc-comics_gallery_3.jpg'),
+                    },
+                    {
+                        id: 569,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Clark Kent Deluxe/clark-kent-deluxe_dc-comics_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 115,
+        name: "Green Lantern",
+        tagName: ["Hành Động", "DC"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Marvel DC/DC Comics/Green Lantern/green-lantern_dc-comics_silo_sm.png'),
+        price: 678500,
+        depositPrice: 356000,
+        categoryID: 9,
+        stock: 0,
+        details:
+        {
+            description: "Green Lantern là một nhân viên thực thi pháp luật liên ngân hà và là thành viên của Green Lantern Corps. Anh được chọn bởi những Người Bảo vệ Vũ trụ nhờ khả năng vượt qua những trở ngại lớn bằng cách sử dụng một chiếc nhẫn sức mạnh được điều khiển bởi suy nghĩ của anh. Với chiều cao ấn tượng 16 inch, thành viên sáng lập Liên minh Công lý này được vẽ bằng tay trên nền động."
+            ,
+            imageDescription: require('./productImage/Marvel DC/DC Comics/Green Lantern/green-lantern_dc-comics_feature.jpg'),
+            company: "Tweeterhead",
+            material: "PVC, Resin",
+            tagName: ["Hành Động", "DC"],
+            size: "40 cm",
+            otherImages:
+                [
+                    {
+                        id: 570,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Green Lantern/green-lantern_dc-comics_gallery_1.jpg'),
+                    },
+                    {
+                        id: 571,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Green Lantern/green-lantern_dc-comics_gallery_2.jpg'),
+                    },
+                    {
+                        id: 572,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Green Lantern/green-lantern_dc-comics_gallery_3.jpg'),
+                    },
+                    {
+                        id: 573,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Green Lantern/green-lantern_dc-comics_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 116,
+        name: "Harley Quinn (Caution Tape Jacket Version)",
+        tagName: ["Hành Động", "DC"],
+        status: "available",
+        thumbImg: require('./productImage/Marvel DC/DC Comics/Harley Quinn (Caution Tape Jacket Version/harley-quinn-caution-tape-jacket-version_dc-comics_silo_sm.png'),
+        price: 858500,
+        categoryID: 9,
+        stock: 10,
+        details:
+        {
+            description: "Hình ảnh sưu tập quy mô thứ sáu của Hot Toys 'Harley Quinn (Phiên bản áo khoác Caution Tape) không chỉ bao gồm trang phục mới nhất của Harley Quinn, Áo khoác Wings Caution Tape với các họa tiết tua rua đầy màu sắc, mà còn có một bộ trang phục biểu tượng tinh tế khác được thấy khi cô ấy xông vào đồn cảnh sát, cho phép người hâm mộ trổ tài với tủ quần áo độc đáo của Harley."
+            ,
+            imageDescription: require('./productImage/Marvel DC/DC Comics/Harley Quinn (Caution Tape Jacket Version/harley-quinn-caution-tape-jacket-version_dc-comics_feature.jpg'),
+            company: "Hot Toys",
+            material: "PVC, ABS",
+            tagName: ["Hành Động", "DC"],
+            size: "29 cm",
+            otherImages:
+                [
+                    {
+                        id: 574,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Harley Quinn (Caution Tape Jacket Version/harley-quinn-caution-tape-jacket-version_dc-comics_gallery_1.jpg'),
+                    },
+                    {
+                        id: 575,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Harley Quinn (Caution Tape Jacket Version/harley-quinn-caution-tape-jacket-version_dc-comics_gallery_2.jpg'),
+                    },
+                    {
+                        id: 576,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Harley Quinn (Caution Tape Jacket Version/harley-quinn-caution-tape-jacket-version_dc-comics_gallery_3.jpg'),
+                    },
+                    {
+                        id: 577,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/Harley Quinn (Caution Tape Jacket Version/harley-quinn-caution-tape-jacket-version_dc-comics_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 117,
+        name: "The Flash",
+        tagName: ["Hành Động", "DC"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Marvel DC/DC Comics/The Flash/the-flash_dc-comics_silo_sm.png'),
+        price: 2750000,
+        depositPrice: 350000,
+        categoryID: 9,
+        stock: 0,
+        details:
+        {
+            description: "Hình Flash Premium Format ™ được kết xuất bằng polyresin và có một bộ đồ được điêu khắc hoàn toàn để ghi lại cơ bắp chi tiết của vóc dáng thể thao của Barry Allen. Bộ trang phục màu đỏ thẫm có đường ống điêu khắc và đường khâu được thiết kế để bắt chước vẻ ngoài của vải khi người đàn ông còn sống chạy nước rút nhanh nhất về phía kẻ thù tiếp theo của mình. Trang phục của Flash cũng có các điểm nhấn màu vàng với họa tiết tia chớp của anh ấy trên cánh tay, ngực, thắt lưng và ủng của bức tượng, cũng như đôi cánh màu vàng trên chiếc áo bò màu đỏ của Barry."
+            ,
+            imageDescription: require('./productImage/Marvel DC/DC Comics/The Flash/the-flash_dc-comics_feature.jpg'),
+            company: "Sideshow Collectibles",
+            material: "Polyresin",
+            tagName: ["Hành Động", "DC"],
+            size: "43.2 cm",
+            otherImages:
+                [
+                    {
+                        id: 578,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/The Flash/the-flash_dc-comics_gallery_1.jpg'),
+                    },
+                    {
+                        id: 579,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/The Flash/the-flash_dc-comics_gallery_2.jpg'),
+                    },
+                    {
+                        id: 580,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/The Flash/the-flash_dc-comics_gallery_3.jpg'),
+                    },
+                    {
+                        id: 581,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/The Flash/the-flash_dc-comics_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 118,
+        name: "The Joker",
+        tagName: ["Hành Động", "DC"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Marvel DC/DC Comics/The Joker/the-joker_dc-comics_silo_sm.png'),
+        price: 5550000,
+        depositPrice: 750000,
+        categoryID: 9,
+        stock: 0,
+        details:
+        {
+            description: "Để kỷ niệm 80 năm The Joker: The Clown Prince of Crime, Blitzway và Prime 1 Studio tự hào công bố tác phẩm hợp tác thứ hai về siêu phẩm The Joker Tỉ lệ 1: 3 dựa trên bộ phim miêu tả sự ra đời của Joker, với sự tham gia của Joaquin. Phượng Hoàng. Trong khi chia sẻ mục tiêu chung là tạo ra Joker hay nhất mọi thời đại thông qua dự án này, chúng tôi đã có thể tạo ra kiệt tác tốt nhất thông qua hợp tác chặt chẽ và trao đổi phát triển trong toàn bộ quá trình sản xuất, từ thiết kế ý tưởng, sản xuất, quay phim và công bố dự định."
+            ,
+            imageDescription: require('./productImage/Marvel DC/DC Comics/The Joker/the-joker_dc-comics_feature.jpg'),
+            company: "Prime 1 Studio",
+            material: "Polystone",
+            tagName: ["Hành Động", "DC"],
+            size: "71 cm",
+            otherImages:
+                [
+                    {
+                        id: 582,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/The Joker/the-joker_dc-comics_gallery_1.jpg'),
+                    },
+                    {
+                        id: 583,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/The Joker/the-joker_dc-comics_gallery_2.jpg'),
+                    },
+                    {
+                        id: 584,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/The Joker/the-joker_dc-comics_gallery_3.jpg'),
+                    },
+                    {
+                        id: 585,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/The Joker/the-joker_dc-comics_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 119,
+        name: "The Joker Deluxe",
+        tagName: ["Hành Động", "DC"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Marvel DC/DC Comics/The Joker Deluxe/the-joker-deluxe_dc-comics_silo_sm.png'),
+        price: 2450000,
+        depositPrice: 650000,
+        categoryID: 9,
+        stock: 0,
+        details:
+        {
+            description: "Trên đỉnh của một cột vật tổ bằng bê tông, được trang trí bằng các tác phẩm điêu khắc của những con trâu thời trung cổ xung quanh anh ta, đó là biểu tượng của thẻ chơi đã truyền cảm hứng cho tên của anh ta, nhân vật phản diện đáng sợ nhất của Gotham đặt ra trên cơ sở đó mặc bộ trang phục màu tím trang trọng và đưa một trong những bàn tay của anh ta. thẻ trình bày dưới dạng thẻ chơi nói tên của mình. Iron Studios tự hào mang đến một trong những nhân vật được người hâm mộ và những người sưu tập yêu cầu nhiều nhất về tên hề phản diện hỗn loạn, Tượng Joker - Hiệp sĩ bóng đêm - Tỷ lệ nghệ thuật 1:10 - Iron Studios, ở một trong những hình ảnh đại diện nổi bật và mang tính biểu tượng nhất của hãng."
+            ,
+            imageDescription: require('./productImage/Marvel DC/DC Comics/The Joker Deluxe/the-joker-deluxe_dc-comics_feature.jpg'),
+            company: "Iron Studios",
+            material: "Polystone",
+            tagName: ["Hành Động", "DC"],
+            size: "30 cm",
+            otherImages:
+                [
+                    {
+                        id: 586,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/The Joker Deluxe/the-joker-deluxe_dc-comics_gallery_1.jpg'),
+                    },
+                    {
+                        id: 587,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/The Joker Deluxe/the-joker-deluxe_dc-comics_gallery_2.jpg'),
+                    },
+                    {
+                        id: 588,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/The Joker Deluxe/the-joker-deluxe_dc-comics_gallery_3.jpg'),
+                    },
+                    {
+                        id: 589,
+                        imgUrl: require('./productImage/Marvel DC/DC Comics/The Joker Deluxe/the-joker-deluxe_dc-comics_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+
+    //Marvel
+    {
+        id: 120,
+        name: "Black Panther",
+        tagName: ["Hành Động", "Marvel"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Marvel DC/Marvel/Black Panther/black-panther-premium-format-figure_marvel_silo_sm.png'),
+        price: 6520000,
+        depositPrice: 950000,
+        categoryID: 8,
+        stock: 0,
+        details:
+        {
+            description: "Tượng tỷ lệ Black Panther 1: 4 bằng polystone được điêu khắc hoàn toàn để mang lại vẻ ngoài mang tính biểu tượng cho sự xuất hiện trên màn ảnh của nhân vật trong Vũ trụ Điện ảnh Marvel. Bộ đồ của T’Challa có cả ứng dụng sơn đen mờ và đen bóng cũng như các điểm nhấn màu bạc Vibranium để nhấn mạnh các họa tiết chi tiết. Thiết kế kiểu dáng đẹp của Wakandan làm nổi bật vóc dáng vạm vỡ của nhà vua và bức tượng Marvel này có hai bức chân dung riêng biệt - mặt nạ Black Panther đặc trưng của ông và một cái đầu không che mặt. Chọn cách Black Panther đáp ứng bộ sưu tập Marvel của bạn với các tùy chọn hiển thị thay thế này."
+            ,
+            imageDescription: require('./productImage/Marvel DC/Marvel/Black Panther/black-panther-premium-format-figure_marvel_feature.jpg'),
+            company: "Sideshow Collectibles",
+            material: "Polystone",
+            tagName: ["Hành Động", "Marvel"],
+            size: "67.3 cm",
+            otherImages:
+                [
+                    {
+                        id: 590,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Black Panther/black-panther_marvel_gallery_1.jpg'),
+                    },
+                    {
+                        id: 591,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Black Panther/black-panther_marvel_gallery_2.jpg'),
+                    },
+                    {
+                        id: 592,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Black Panther/black-panther_marvel_gallery_3.jpg'),
+                    },
+                    {
+                        id: 593,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Black Panther/black-panther_marvel_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 121,
+        name: "Captain America",
+        tagName: ["Hành Động", "Marvel"],
+        status: "available",
+        thumbImg: require('./productImage/Marvel DC/Marvel/Captain America/captain-america__silo_sm.png'),
+        price: 756000,
+        categoryID: 8,
+        stock: 6,
+        details:
+        {
+            description: "Nhân vật sưu tập Captain America có độ chính xác cao được chế tạo một cách chuyên nghiệp dựa trên sự xuất hiện của Chris Evans trong vai Captain America / Steve Rogers trong Avengers: Endgame. Nổi bật với tác phẩm điêu khắc đầu đội mũ bảo hiểm mới được sơn với ba khuôn mặt dưới có thể hoán đổi cho nhau ghi lại nét mặt của Chris Evan và tác phẩm điêu khắc đầu không đội mũ bảo hiểm, thân hình vạm vỡ khắc họa tự nhiên thân hình săn chắc vạm vỡ của Captain America, bộ trang phục được may đo tỉ mỉ với biểu tượng ngôi sao trên ngực, Cap's lá chắn có hình ngôi sao, la bàn tinh xảo, mũ bảo hiểm đặc trưng và giá đỡ nhân vật theo chủ đề phim được thiết kế đặc biệt."
+            ,
+            imageDescription: require('./productImage/Marvel DC/Marvel/Captain America/captain-america_marvel_feature.jpg'),
+            company: "Hot Toys",
+            material: "PVC, ABS",
+            tagName: ["Hành Động", "Marvel"],
+            size: "31 cm",
+            otherImages:
+                [
+                    {
+                        id: 594,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Captain America/captain-america_marvel_gallery_1.jpg'),
+                    },
+                    {
+                        id: 595,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Captain America/captain-america_marvel_gallery_2.jpg'),
+                    },
+                    {
+                        id: 596,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Captain America/captain-america_marvel_gallery_3.jpg'),
+                    },
+                    {
+                        id: 597,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Captain America/captain-america_marvel_gallery_4.jpg'),
+                    },
+                    {
+                        id: 598,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Captain America/captain-america_marvel_gallery_5.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 122,
+        name: "Hulkbuster Deluxe Version",
+        tagName: ["Hành Động", "Marvel"],
+        status: "available",
+        thumbImg: require('./productImage/Marvel DC/Marvel/Hulkbuster Deluxe Version/hulkbuster-deluxe-version_marvel_silo_sm.png'),
+        price: 7850600,
+        categoryID: 8,
+        stock: 3,
+        details:
+        {
+            description: "Được chế tác tinh xảo dựa trên sự xuất hiện của Hulkbuster trong Avengers: Age of Ultron, tượng khổng lồ chính xác trong phim cao khoảng 55 cm (21 inch) và bao gồm tượng bán thân Mark XLIII với đôi mắt phát sáng LED và lò phản ứng hồ quang trên ngực. có thể được đặt bên trong cỗ máy khổng lồ. Bộ giáp mang tính biểu tượng này được làm nổi bật với màu đỏ kim loại, sơn vàng và bạc và hiệu ứng thời tiết với hơn 20 vùng sáng LED nằm ở mắt, ngực, lòng bàn tay đẩy lùi, lưng và chân, một chiếc áo giáp ngực bị hư hại có thể hoán đổi cho nhau, cũng là chiếc rương được thiết kế đẹp mắt và áo khoác vai làm nổi bật các chi tiết cơ khí."
+            ,
+            imageDescription: require('./productImage/Marvel DC/Marvel/Hulkbuster Deluxe Version/hulkbuster-deluxe-version_marvel_feature.jpg'),
+            company: "Hot Toys",
+            material: "PVC, ABS",
+            tagName: ["Hành Động", "Marvel"],
+            size: "53.3 cm",
+            otherImages:
+                [
+                    {
+                        id: 599,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Hulkbuster Deluxe Version/hulkbuster-deluxe-version_marvel_gallery_1.jpg'),
+                    },
+                    {
+                        id: 560,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Hulkbuster Deluxe Version/hulkbuster-deluxe-version_marvel_gallery_2.jpg'),
+                    },
+                    {
+                        id: 561,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Hulkbuster Deluxe Version/hulkbuster-deluxe-version_marvel_gallery_3.jpg'),
+                    },
+                    {
+                        id: 562,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Hulkbuster Deluxe Version/hulkbuster-deluxe-version_marvel_gallery_4.jpg'),
+                    },
+                    {
+                        id: 563,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Hulkbuster Deluxe Version/hulkbuster-deluxe-version_marvel_gallery_5.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 123,
+        name: "Iron Man Mark VII",
+        tagName: ["Hành Động", "Marvel"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Marvel DC/Marvel/Iron Man Mark VII/iron-man-mark-vii_marvel_silo_sm.png'),
+        price: 6520000,
+        depositPrice: 750000,
+        categoryID: 8,
+        stock: 0,
+        details:
+        {
+            description: "Iron Man Mark VII Maquette có lò phản ứng hồ quang sáng lên, mắt và bộ phản lực để biến Avenger bọc thép trở nên sống động trong bộ sưu tập của bạn. Đế nổ cũng sáng lên để chiếu sáng đám mây khói, ngọn lửa xả ra từ giày của Iron Man và tên lửa phóng từ cánh tay trái của anh ấy, tạo ra một cảnh ly kỳ trong bất kỳ màn hình nào của Marvel Cinematic Universe."
+            ,
+            imageDescription: require('./productImage/Marvel DC/Marvel/Iron Man Mark VII/iron-man-mark-vii_marvel_feature.jpg'),
+            company: "Sideshow Collectibles",
+            material: "Polystone , Resin",
+            tagName: ["Hành Động", "Marvel"],
+            size: "55.9 cm",
+            otherImages:
+                [
+                    {
+                        id: 564,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Iron Man Mark VII/iron-man-mark-vii_marvel_gallery_1.jpg'),
+                    },
+                    {
+                        id: 565,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Iron Man Mark VII/iron-man-mark-vii_marvel_gallery_2.jpg'),
+                    },
+                    {
+                        id: 566,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Iron Man Mark VII/iron-man-mark-vii_marvel_gallery_3.jpg'),
+                    },
+                    {
+                        id: 567,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Iron Man Mark VII/iron-man-mark-vii_marvel_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 124,
+        name: "Iron Man Neon Tech 4.0",
+        tagName: ["Hành Động", "Marvel"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Marvel DC/Marvel/Iron Man Neon Tech 4.0/iron-man-neon-tech-40__silo_sm.png'),
+        price: 2560000,
+        depositPrice: 650000,
+        categoryID: 8,
+        stock: 0,
+        details:
+        {
+            description: "Đứng cao khoảng 32cm, hình tượng diecast hoàn toàn mới lấy cảm hứng từ sự xuất hiện của Iron Man Mark L trong Avengers: Infinity War có bộ giáp được sắp xếp hợp lý với các hoa văn bất đối xứng; được đánh bóng đẹp mắt với màu đen, xám và cam neon sáng bóng với các hoa văn phản chiếu phát sáng xuất hiện dưới ánh sáng LED chuyên dụng, cũng là một lựa chọn các bộ phận áo giáp tốt được làm bằng vật liệu mờ trong suốt nâng cao vẻ ngoài tổng thể; Chức năng bật sáng đèn LED rải rác khắp áo giáp; Các vũ khí đặc trưng của Iron Man bao gồm Pháo phản lực LED có thể hoán đổi cho nhau, Pháo tay, Bộ tăng tốc Nano, Lưỡi dao năng lượng, Khiên Holo và giá đỡ hình nhân được thiết kế đặc biệt."
+            ,
+            imageDescription: require('./productImage/Marvel DC/Marvel/Iron Man Neon Tech 4.0/iron-man-neon-tech-40__feature.jpg'),
+            company: "Hot Toys",
+            material: "PVC",
+            tagName: ["Hành Động", "Marvel"],
+            size: "32 cm",
+            otherImages:
+                [
+                    {
+                        id: 568,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Iron Man Neon Tech 4.0/iron-man-neon-tech-40__gallery_1.jpg'),
+                    },
+                    {
+                        id: 569,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Iron Man Neon Tech 4.0/iron-man-neon-tech-40__gallery_2.jpg'),
+                    },
+                    {
+                        id: 570,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Iron Man Neon Tech 4.0/iron-man-neon-tech-40__gallery_3.jpg'),
+                    },
+                    {
+                        id: 571,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Iron Man Neon Tech 4.0/iron-man-neon-tech-40__gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 125,
+        name: "Iron Patriot",
+        tagName: ["Hành Động", "Marvel"],
+        status: "new",
+        thumbImg: require('./productImage/Marvel DC/Marvel/Iron Patriot/iron-patriot-sixth-scale-figure_marvel_silo_sm.png'),
+        price: 3650450,
+        categoryID: 8,
+        stock: 7,
+        details:
+        {
+            description: "Con số sưu tập diecast có độ chính xác cao này được chế tạo đặc biệt dựa trên sự xuất hiện của Don Cheadle trong vai James Rhodes / Iron Patriot trong Avengers: Endgame. Hình này có hai phần đầu có thể hoán đổi cho nhau, bao gồm phần đầu điêu khắc mới được phát triển với vẻ đẹp đáng chú ý cũng như phần đầu đội mũ có chức năng chiếu sáng bằng đèn LED. Iron Patriot có bộ giáp sơn màu xanh lam kim loại và màu cam đỏ với thiết kế áo giáp hợp lý, lò phản ứng Arc và pháo phản lực đẩy sáng bằng đèn LED ở ngực, vũ khí có khớp nối với đại bác gắn phía sau và bệ phóng tên lửa vác vai, và nhân vật theo chủ đề Avengers: Endgame được thiết kế đặc biệt căn cứ."
+            ,
+            imageDescription: require('./productImage/Marvel DC/Marvel/Iron Patriot/iron-patriot-sixth-scale-figure_marvel_feature.jpg'),
+            company: "Hot Toys",
+            material: "Diecast zinc alloy",
+            tagName: ["Hành Động", "Marvel"],
+            size: "32.5 cm",
+            otherImages:
+                [
+                    {
+                        id: 572,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Iron Patriot/iron-patriot-sixth-scale-figure_marvel_gallery_1.jpg'),
+                    },
+                    {
+                        id: 573,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Iron Patriot/iron-patriot-sixth-scale-figure_marvel_gallery_2.jpg'),
+                    },
+                    {
+                        id: 574,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Iron Patriot/iron-patriot-sixth-scale-figure_marvel_gallery_3.jpg'),
+                    },
+                    {
+                        id: 575,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Iron Patriot/iron-patriot-sixth-scale-figure_marvel_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 126,
+        name: "Moon Knight",
+        tagName: ["Hành Động", "Marvel"],
+        status: "new",
+        thumbImg: require('./productImage/Marvel DC/Marvel/Moon Knight/moon-knight_marvel_silo_sm.png'),
+        price: 3650450,
+        categoryID: 8,
+        stock: 15,
+        details:
+        {
+            description: "Lấy cảm hứng từ sự xuất hiện mang tính biểu tượng của anh ấy trong series Moon Knight, hình tượng Moon Knight thứ sáu có hình điêu khắc đầu mới được phát triển với chức năng bật sáng bằng đèn LED; băng quấn được điêu khắc hoàn toàn để thể hiện vẻ ngoài thần bí của anh ta; một bộ trang phục Moon Knight được thiết kế tinh xảo bao gồm các bộ phận áo giáp cũng được bao phủ bởi các biểu tượng và hoa văn cổ, thắt lưng vải ngoài đôi ủng chạm trổ; những lưỡi liềm đặc trưng của anh ấy có nhiều kích cỡ khác nhau, phông nền hình trăng lưỡi liềm và chân đế hình người."
+            ,
+            imageDescription: require('./productImage/Marvel DC/Marvel/Moon Knight/moon-knight_marvel_feature.jpg'),
+            company: "Hot Toys",
+            material: "PVC, ABS",
+            tagName: ["Hành Động", "Marvel"],
+            size: "29 cm",
+            otherImages:
+                [
+                    {
+                        id: 576,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Moon Knight/moon-knight_marvel_gallery_1.jpg'),
+                    },
+                    {
+                        id: 577,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Moon Knight/moon-knight_marvel_gallery_2.jpg'),
+                    },
+                    {
+                        id: 578,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Moon Knight/moon-knight_marvel_gallery_3.jpg'),
+                    },
+                    {
+                        id: 579,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Moon Knight/moon-knight_marvel_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 127,
+        name: "Moon Knight",
+        tagName: ["Hành Động", "Marvel"],
+        status: "new",
+        thumbImg: require('./productImage/Marvel DC/Marvel/Moon Knight statue/moon-knight_dc-comics_silo_sm.png'),
+        price: 4600450,
+        categoryID: 8,
+        stock: 15,
+        details:
+        {
+            description: "Lấy cảm hứng từ sự xuất hiện mang tính biểu tượng của anh ấy trong series Moon Knight, hình tượng Moon Knight thứ sáu có hình điêu khắc đầu mới được phát triển với chức năng bật sáng bằng đèn LED; băng quấn được điêu khắc hoàn toàn để thể hiện vẻ ngoài thần bí của anh ta; một bộ trang phục Moon Knight được thiết kế tinh xảo bao gồm các bộ phận áo giáp cũng được bao phủ bởi các biểu tượng và hoa văn cổ, thắt lưng vải ngoài đôi ủng chạm trổ; những lưỡi liềm đặc trưng của anh ấy có nhiều kích cỡ khác nhau, phông nền hình trăng lưỡi liềm và chân đế hình người."
+            ,
+            imageDescription: require('./productImage/Marvel DC/Marvel/Moon Knight statue/moon-knight_dc-comics_feature.jpg'),
+            company: "Iron Studios",
+            material: "Polystone",
+            tagName: ["Hành Động", "Marvel"],
+            size: "30 cm",
+            otherImages:
+                [
+                    {
+                        id: 580,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Moon Knight statue/moon-knight_dc-comics_gallery_1.jpg'),
+                    },
+                    {
+                        id: 581,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Moon Knight statue/moon-knight_dc-comics_gallery_2.jpg'),
+                    },
+                    {
+                        id: 582,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Moon Knight statue/moon-knight_dc-comics_gallery_3.jpg'),
+                    },
+                    {
+                        id: 583,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Moon Knight statue/moon-knight_dc-comics_gallery_4.jpg'),
+                    },
+                    {
+                        id: 584,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Moon Knight statue/moon-knight_dc-comics_gallery_5.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 128,
+        name: "Nano Gauntlet",
+        tagName: ["Hành Động", "Marvel"],
+        status: "new",
+        thumbImg: require('./productImage/Marvel DC/Marvel/Nano Gauntlet/nano-gauntlet_marvel_silo_sm.png'),
+        price: 4600450,
+        categoryID: 8,
+        stock: 9,
+        details:
+        {
+            description: "Bản sao Kích thước Thực của Găng tay Nano này là sự tái tạo trung thực của chiếc găng tay mang tính biểu tượng mà Người Sắt đã đeo trong màn cuối cùng của Avengers: Endgame. Với chiều cao tổng thể khoảng 52cm, nó có màu sơn chính xác với màu đỏ và vàng cổ điển của bộ giáp Iron Man, thiết kế phần cứng tinh vi, sáu Viên đá Vô cực phát sáng bằng đèn LED với hai chế độ chiếu sáng hoàn hảo để hiển thị, hoàn thiện với một đế tùy chỉnh giữ cho găng tay ở tư thế thẳng đứng."
+            ,
+            imageDescription: require('./productImage/Marvel DC/Marvel/Nano Gauntlet/nano-gauntlet_marvel_feature.jpg'),
+            company: "Hot Toys",
+            material: "PVC",
+            tagName: ["Hành Động", "Marvel"],
+            size: "52.1 cm",
+            otherImages:
+                [
+                    {
+                        id: 585,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Nano Gauntlet/nano-gauntlet_marvel_gallery_1.jpg'),
+                    },
+                    {
+                        id: 586,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Nano Gauntlet/nano-gauntlet_marvel_gallery_2.jpg'),
+                    },
+                    {
+                        id: 587,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Nano Gauntlet/nano-gauntlet_marvel_gallery_3.jpg'),
+                    },
+                    {
+                        id: 588,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Nano Gauntlet/nano-gauntlet_marvel_gallery_4.jpg'),
+                    },
+                    {
+                        id: 589,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Nano Gauntlet/nano-gauntlet_marvel_gallery_5.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 129,
+        name: "Rescue",
+        tagName: ["Hành Động", "Marvel"],
+        status: "new",
+        thumbImg: require('./productImage/Marvel DC/Marvel/Rescue/rescue_marvel_silo_sm.png'),
+        price: 3600450,
+        categoryID: 8,
+        stock: 9,
+        details:
+        {
+            description: "Được thiết kế đẹp mắt với các chi tiết tuyệt đẹp, nhân vật có độ chính xác cao được chế tác dựa trên sự xuất hiện trên màn ảnh rộng của Gwyneth Paltrow trong vai Pepper Potts / Giải cứu từ bộ phim MCU. Nổi bật với hai tác phẩm điêu khắc trên đầu có thể hoán đổi cho nhau bao gồm một tác phẩm điêu khắc trên đầu được sơn mới với mặt nạ có thể tháo rời và một đầu có mũ bảo hiểm có thể hoán đổi cho nhau với chức năng bật sáng đèn LED. Bộ sưu tập quy mô thứ sáu này có tính năng áp dụng khéo léo màu xanh hoa oải hương bằng kim loại, vàng sâm panh và áo giáp màu bạc. Đèn LED chiếu sáng qua các khu vực khác nhau của áo giáp, vũ khí mang tính biểu tượng bao gồm một máy bay không người lái dài và một máy bay không người lái ngắn để tái hiện cảnh chiến đấu cùng với Iron Man và The Avengers, nhiều cặp tay có thể hoán đổi cho nhau cho các cử chỉ khác nhau và một giá đỡ nhân vật năng động theo chủ đề."
+            ,
+            imageDescription: require('./productImage/Marvel DC/Marvel/Rescue/rescue_marvel_feature.jpg'),
+            company: "Hot Toys",
+            material: "PVC",
+            tagName: ["Hành Động", "Marvel"],
+            size: "31 cm",
+            otherImages:
+                [
+                    {
+                        id: 590,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Rescue/rescue_marvel_gallery_1.jpg'),
+                    },
+                    {
+                        id: 591,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Rescue/rescue_marvel_gallery_2.jpg'),
+                    },
+                    {
+                        id: 592,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Rescue/rescue_marvel_gallery_3.jpg'),
+                    },
+                    {
+                        id: 593,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Rescue/rescue_marvel_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 130,
+        name: "Spider-Man (Deluxe Version) Special Edition",
+        tagName: ["Hành Động", "Marvel"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Marvel DC/Marvel/Spider-Man (Deluxe Version) Special Edition/spider-man-deluxe-version-special-edition_marvel_silo_sm.png'),
+        price: 7560000,
+        depositPrice: 1500000,
+        categoryID: 8,
+        stock: 0,
+        details:
+        {
+            description: "Hình ảnh sưu tập Người Nhện theo tỷ lệ một phần tư chính xác trên màn hình được chế tác dựa trên bộ đồ chiến đấu do Người Sắt tặng cho Peter Parker và có tác phẩm điêu khắc đầu đeo mặt nạ mới được phát triển với năm cặp thị kính hoán đổi cho nhau để tạo ra nhiều sự kết hợp biểu cảm của Người Nhện. Tác phẩm điêu khắc đầu có thể hoán đổi mới được phát triển có một nét giống Tom Holland đáng chú ý. Con số này tự hào có một cơ thể chuyên dụng mới được phát triển cao khoảng 43,5cm, một bộ trang phục được thiết kế riêng và rất chi tiết, một cặp cánh web có thể gắn từ tính, một loạt các phụ kiện bao gồm một Spider Drone, một bản đồ chiếu, một điện thoại thông minh, một ba lô , mặt nạ Người Nhện, một loạt các bộ phận hiệu ứng bắn mạng nhện và đế hình đèn LED chiếu sáng diorama với hai chế độ chiếu sáng để hiển thị thay thế lấy cảm hứng từ cảnh chiến đấu cuối cùng giữa Người Nhện và Kền kền."
+            ,
+            imageDescription: require('./productImage/Marvel DC/Marvel/Spider-Man (Deluxe Version) Special Edition/spider-man-deluxe-version-special-edition_marvel_feature.jpg'),
+            company: "Hot Toys",
+            material: "PVC",
+            tagName: ["Hành Động", "Marvel"],
+            size: "43.5 cm",
+            otherImages:
+                [
+                    {
+                        id: 594,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Spider-Man (Deluxe Version) Special Edition/spider-man-deluxe-version-special-edition_marvel_gallery_1.jpg'),
+                    },
+                    {
+                        id: 595,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Spider-Man (Deluxe Version) Special Edition/spider-man-deluxe-version-special-edition_marvel_gallery_2.jpg'),
+                    },
+                    {
+                        id: 596,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Spider-Man (Deluxe Version) Special Edition/spider-man-deluxe-version-special-edition_marvel_gallery_3.jpg'),
+                    },
+                    {
+                        id: 597,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Spider-Man (Deluxe Version) Special Edition/spider-man-deluxe-version-special-edition_marvel_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+    {
+        id: 131,
+        name: "Spider-Man (Spider-Man 2099 Black Suit)",
+        tagName: ["Hành Động", "Marvel"],
+        status: "preOrder",
+        thumbImg: require('./productImage/Marvel DC/Marvel/Spider-Man (Spider-Man 2099 Black Suit)/spider-man-spider-man-2099-black-suit_marvel_silo_sm.png'),
+        price: 7560000,
+        depositPrice: 1500000,
+        categoryID: 8,
+        stock: 0,
+        details:
+        {
+            description: "Hình ảnh sưu tập Người Nhện theo tỷ lệ một phần tư chính xác trên màn hình được chế tác dựa trên bộ đồ chiến đấu do Người Sắt tặng cho Peter Parker và có tác phẩm điêu khắc đầu đeo mặt nạ mới được phát triển với năm cặp thị kính hoán đổi cho nhau để tạo ra nhiều sự kết hợp biểu cảm của Người Nhện. Tác phẩm điêu khắc đầu có thể hoán đổi mới được phát triển có một nét giống Tom Holland đáng chú ý. Con số này tự hào có một cơ thể chuyên dụng mới được phát triển cao khoảng 43,5cm, một bộ trang phục được thiết kế riêng và rất chi tiết, một cặp cánh web có thể gắn từ tính, một loạt các phụ kiện bao gồm một Spider Drone, một bản đồ chiếu, một điện thoại thông minh, một ba lô , mặt nạ Người Nhện, một loạt các bộ phận hiệu ứng bắn mạng nhện và đế hình đèn LED chiếu sáng diorama với hai chế độ chiếu sáng để hiển thị thay thế lấy cảm hứng từ cảnh chiến đấu cuối cùng giữa Người Nhện và Kền kền."
+            ,
+            imageDescription: require('./productImage/Marvel DC/Marvel/Spider-Man (Spider-Man 2099 Black Suit)/spider-man-spider-man-2099-black-suit_marvel_feature.jpg'),
+            company: "Hot Toys",
+            material: "PVC",
+            tagName: ["Hành Động", "Marvel"],
+            size: "43.5 cm",
+            otherImages:
+                [
+                    {
+                        id: 598,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Spider-Man (Spider-Man 2099 Black Suit)/spider-man-spider-man-2099-black-suit_marvel_gallery_1.jpg'),
+                    },
+                    {
+                        id: 599,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Spider-Man (Spider-Man 2099 Black Suit)/spider-man-spider-man-2099-black-suit_marvel_gallery_2.jpg'),
+                    },
+                    {
+                        id: 600,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Spider-Man (Spider-Man 2099 Black Suit)/spider-man-spider-man-2099-black-suit_marvel_gallery_3.jpg'),
+                    },
+                    {
+                        id: 601,
+                        imgUrl: require('./productImage/Marvel DC/Marvel/Spider-Man (Spider-Man 2099 Black Suit)/spider-man-spider-man-2099-black-suit_marvel_gallery_4.jpg'),
+                    },
+                ],
+
+        }
+    },
+
+
+
 ]
