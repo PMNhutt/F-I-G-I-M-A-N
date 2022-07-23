@@ -28,7 +28,7 @@ function Nav() {
     });
 
     return () => {
-      window.removeEventListener('scroll')
+      window.removeEventListener('scroll', null)
     }
   }, [])
 
@@ -54,7 +54,7 @@ function Nav() {
     });
 
     return () => {
-      window.removeEventListener('resize')
+      window.removeEventListener('resize', null)
     }
   }, [])
 

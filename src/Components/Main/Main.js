@@ -1,5 +1,7 @@
 import React from 'react'
 import Homepage from '../../Pages/Homepage'
+import Login from '../../Pages/Login/Login'
+import Register from '../../Pages/Register/Register'
 import CartModal from '../../Components/CartModal/CartModal'
 import FigurePeekModal from '../../Components/FigurePeekModal/FigurePeekModal'
 import ScrollToTop from '../../Components/ScrollToTop'
@@ -18,6 +20,14 @@ function Main() {
 
         <Route path="/" element={
           <Homepage />
+        } />
+
+        <Route path="/login" element={
+          <Login />
+        } />
+
+        <Route path="/register" element={
+          <Register />
         } />
 
       </Routes>

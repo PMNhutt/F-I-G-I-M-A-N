@@ -16,6 +16,7 @@ function ModalProvider({ children }) {
         id: 0,
         amountAdded: 0,
     })
+    const [forgetPassClick, setForgetPassClick] = useState(false)
     
 
     const values = {
@@ -28,6 +29,7 @@ function ModalProvider({ children }) {
         addedProduct, setAddedProduct,
         addedAnouncement, setAddedAnouncement,
         cartPosition, setCartPosition,
+        forgetPassClick, setForgetPassClick,
     }
 
     return (
