@@ -3,7 +3,8 @@ import React from 'react';
 function ProductList() {
     return (
         <div className="products-lists">
-            Product Lits
+            <div className="layout-paging"></div>
+            <div className="list-wrapper"></div>
         </div>
     );
 }

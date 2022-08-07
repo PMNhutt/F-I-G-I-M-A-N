@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ModalContext } from '../../Context/ModalContext'
 import { Player } from '@lottiefiles/react-lottie-player';
 import CloseIcon from '@mui/icons-material/Close';
+import { Link } from 'react-router-dom';
 
 function CartModal() {
 
@@ -192,18 +193,20 @@ function CartModal() {
                                 </div>
                             )}
 
-                            <a href="/products" className="view-cart-btn">
+                            <Link to={cartMenu.cartEmpty === true ? "/products" : "/"}
+                                className="view-cart-btn"
+                                onClick={() => handleCloseCart()}>
                                 <div className="view-cart">
                                     {cartMenu.cartEmpty === true ? "Ghé Shop Ngay" : "Xem Giỏ Hàng"}
                                 </div>
-                            </a>
+                            </Link>
 
                             {cartMenu.cartEmpty === false && (
-                                <a href="/" className="checkout-btn">
+                                <Link to="/" className="checkout-btn">
                                     <div className="checkout">
                                         Thanh Toán
                                     </div>
-                                </a>
+                                </Link>
                             )}
                         </div>
 

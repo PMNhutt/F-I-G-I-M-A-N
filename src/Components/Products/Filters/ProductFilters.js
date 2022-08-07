@@ -52,31 +52,30 @@ function ProductFilters() {
     /**
      * *price
      */
-    const [price, setPrice] = useState([150, 700]);
     const [min, setMin] = useState(100000);
     const [max, setMax] = useState(10000000);
 
-    const handleChangePrice2 = (event, newValue, activeThumb) => {
-        if (!Array.isArray(newValue)) {
-            return;
-        }
+    // const handleChangePrice2 = (event, newValue, activeThumb) => {
+    //     if (!Array.isArray(newValue)) {
+    //         return;
+    //     }
 
-        if (activeThumb === 0) {
-            setPrice([Math.min(newValue[0], price[1] - minDistance), price[1]]);
-        } else {
-            setPrice([price[0], Math.max(newValue[1], price[0] + minDistance)]);
-        }
-    };
+    //     if (activeThumb === 0) {
+    //         setPrice([Math.min(newValue[0], price[1] - minDistance), price[1]]);
+    //     } else {
+    //         setPrice([price[0], Math.max(newValue[1], price[0] + minDistance)]);
+    //     }
+    // };
 
     const handleChangePrice = (event, newValue) => {
         setMin(newValue[0]);
         setMax(newValue[1]);
     };
 
-    function valuetext(value) {
-        return `${value}°C`;
-    }
-    const minDistance = 100000;
+    // function valuetext(value) {
+    //     return `${value}°C`;
+    // }
+    // const minDistance = 100000;
 
     function handleFilterPrice(minVal, maxVal) {
         console.log("min: ", minVal, "max: ", maxVal);
@@ -117,13 +116,28 @@ function ProductFilters() {
                     <FormGroup>
                         <FormControlLabel
                             control={
-                                <Checkbox checked={neww} onChange={handleChange} name="neww" />
+                                <Checkbox
+                                    sx={{
+                                        color: '#d0d2d4',
+                                        '&.Mui-checked': {
+                                            color: '#2c88cc',
+                                        },
+                                    }}
+                                    checked={neww}
+                                    onChange={handleChange}
+                                    name="neww" />
                             }
                             label="Mới"
                         />
                         <FormControlLabel
                             control={
-                                <Checkbox checked={preOrder} onChange={handleChange} name="preOrder" />
+                                <Checkbox sx={{
+                                    color: '#d0d2d4',
+                                    '&.Mui-checked': {
+                                        color: '#2c88cc',
+                                    },
+                                }} 
+                                checked={preOrder} onChange={handleChange} name="preOrder" />
                             }
                             label="Đặt trước"
                         />
@@ -136,25 +150,49 @@ function ProductFilters() {
                     <FormGroup>
                         <FormControlLabel
                             control={
-                                <Checkbox checked={dragonBall} onChange={handleChangeCategory} name="dragonBall" />
+                                <Checkbox sx={{
+                                    color: '#d0d2d4',
+                                    '&.Mui-checked': {
+                                        color: '#2c88cc',
+                                    },
+                                }} 
+                                checked={dragonBall} onChange={handleChangeCategory} name="dragonBall" />
                             }
                             label="Dragon Ball"
                         />
                         <FormControlLabel
                             control={
-                                <Checkbox checked={onePiece} onChange={handleChangeCategory} name="onePiece" />
+                                <Checkbox sx={{
+                                    color: '#d0d2d4',
+                                    '&.Mui-checked': {
+                                        color: '#2c88cc',
+                                    },
+                                }} 
+                                checked={onePiece} onChange={handleChangeCategory} name="onePiece" />
                             }
                             label="One Piece"
                         />
                         <FormControlLabel
                             control={
-                                <Checkbox checked={naruto} onChange={handleChangeCategory} name="naruto" />
+                                <Checkbox sx={{
+                                    color: '#d0d2d4',
+                                    '&.Mui-checked': {
+                                        color: '#2c88cc',
+                                    },
+                                }} 
+                                checked={naruto} onChange={handleChangeCategory} name="naruto" />
                             }
                             label="Naruto"
                         />
                         <FormControlLabel
                             control={
-                                <Checkbox checked={myHeroAcademy} onChange={handleChangeCategory} name="myHeroAcademy" />
+                                <Checkbox sx={{
+                                    color: '#d0d2d4',
+                                    '&.Mui-checked': {
+                                        color: '#2c88cc',
+                                    },
+                                }} 
+                                checked={myHeroAcademy} onChange={handleChangeCategory} name="myHeroAcademy" />
                             }
                             label="My Hero Academia"
                         />
@@ -168,43 +206,85 @@ function ProductFilters() {
                                 >
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={demonSlayer} onChange={handleChangeCategory} name="demonSlayer" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={demonSlayer} onChange={handleChangeCategory} name="demonSlayer" />
                                         }
                                         label="Demon Slayer"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={jujutsuKaisen} onChange={handleChangeCategory} name="jujutsuKaisen" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={jujutsuKaisen} onChange={handleChangeCategory} name="jujutsuKaisen" />
                                         }
                                         label="Jujutsu Kaisen"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={marvel} onChange={handleChangeCategory} name="marvel" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={marvel} onChange={handleChangeCategory} name="marvel" />
                                         }
                                         label="Marvel"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={dc} onChange={handleChangeCategory} name="dc" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={dc} onChange={handleChangeCategory} name="dc" />
                                         }
                                         label="DC Comics"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={genshin} onChange={handleChangeCategory} name="genshin" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={genshin} onChange={handleChangeCategory} name="genshin" />
                                         }
                                         label="Genshin Impact"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={nendoroid} onChange={handleChangeCategory} name="nendoroid" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={nendoroid} onChange={handleChangeCategory} name="nendoroid" />
                                         }
                                         label="Nendoroid"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={transformer} onChange={handleChangeCategory} name="transformer" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={transformer} onChange={handleChangeCategory} name="transformer" />
                                         }
                                         label="Transformer"
                                     />
@@ -247,25 +327,49 @@ function ProductFilters() {
                     <FormGroup>
                         <FormControlLabel
                             control={
-                                <Checkbox checked={bandai} onChange={handleChangeCompany} name="bandai" />
+                                <Checkbox sx={{
+                                    color: '#d0d2d4',
+                                    '&.Mui-checked': {
+                                        color: '#2c88cc',
+                                    },
+                                }} 
+                                checked={bandai} onChange={handleChangeCompany} name="bandai" />
                             }
                             label="Bandai"
                         />
                         <FormControlLabel
                             control={
-                                <Checkbox checked={taito} onChange={handleChangeCompany} name="taito" />
+                                <Checkbox sx={{
+                                    color: '#d0d2d4',
+                                    '&.Mui-checked': {
+                                        color: '#2c88cc',
+                                    },
+                                }} 
+                                checked={taito} onChange={handleChangeCompany} name="taito" />
                             }
                             label="Taito"
                         />
                         <FormControlLabel
                             control={
-                                <Checkbox checked={bellfine} onChange={handleChangeCompany} name="bellfine" />
+                                <Checkbox sx={{
+                                    color: '#d0d2d4',
+                                    '&.Mui-checked': {
+                                        color: '#2c88cc',
+                                    },
+                                }} 
+                                checked={bellfine} onChange={handleChangeCompany} name="bellfine" />
                             }
                             label="Bellfine"
                         />
                         <FormControlLabel
                             control={
-                                <Checkbox checked={kotobukiya} onChange={handleChangeCompany} name="kotobukiya" />
+                                <Checkbox sx={{
+                                    color: '#d0d2d4',
+                                    '&.Mui-checked': {
+                                        color: '#2c88cc',
+                                    },
+                                }} 
+                                checked={kotobukiya} onChange={handleChangeCompany} name="kotobukiya" />
                             }
                             label="Kotobukiya"
                         />
@@ -278,133 +382,265 @@ function ProductFilters() {
                                     exit={{ opacity: 0, y: -20 }}>
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={takaraTomy} onChange={handleChangeCompany} name="takaraTomy" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={takaraTomy} onChange={handleChangeCompany} name="takaraTomy" />
                                         }
                                         label="Takara Tomy"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={f4Figures} onChange={handleChangeCompany} name="f4Figures" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={f4Figures} onChange={handleChangeCompany} name="f4Figures" />
                                         }
                                         label="First 4 Figures"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={banpresto} onChange={handleChangeCompany} name="banpresto" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={banpresto} onChange={handleChangeCompany} name="banpresto" />
                                         }
                                         label="Banpresto"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={prime1Studio} onChange={handleChangeCompany} name="prime1Studio" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={prime1Studio} onChange={handleChangeCompany} name="prime1Studio" />
                                         }
                                         label="Prime 1 Studio"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={fURYUCorporation} onChange={handleChangeCompany} name="fURYUCorporation" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={fURYUCorporation} onChange={handleChangeCompany} name="fURYUCorporation" />
                                         }
                                         label="FURYU Corporation"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={estream} onChange={handleChangeCompany} name="estream" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={estream} onChange={handleChangeCompany} name="estream" />
                                         }
                                         label="Estream"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={gSCompany} onChange={handleChangeCompany} name="gSCompany" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={gSCompany} onChange={handleChangeCompany} name="gSCompany" />
                                         }
                                         label="Good Smile Company"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={hEXCollectibles} onChange={handleChangeCompany} name="hEXCollectibles" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={hEXCollectibles} onChange={handleChangeCompany} name="hEXCollectibles" />
                                         }
                                         label="HEX Collectibles"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={megaHouse} onChange={handleChangeCompany} name="megaHouse" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={megaHouse} onChange={handleChangeCompany} name="megaHouse" />
                                         }
                                         label="MegaHouse"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={jimeiPalace} onChange={handleChangeCompany} name="jimeiPalace" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={jimeiPalace} onChange={handleChangeCompany} name="jimeiPalace" />
                                         }
                                         label="Jimei Palace"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={aniplex} onChange={handleChangeCompany} name="aniplex" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={aniplex} onChange={handleChangeCompany} name="aniplex" />
                                         }
                                         label="Aniplex"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={wonderfulWorks} onChange={handleChangeCompany} name="wonderfulWorks" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={wonderfulWorks} onChange={handleChangeCompany} name="wonderfulWorks" />
                                         }
                                         label="Wonderful Works"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={aPEX} onChange={handleChangeCompany} name="aPEX" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={aPEX} onChange={handleChangeCompany} name="aPEX" />
                                         }
                                         label="APEX"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={miHoYo} onChange={handleChangeCompany} name="miHoYo" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={miHoYo} onChange={handleChangeCompany} name="miHoYo" />
                                         }
                                         label="miHoYo"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={maxFactory} onChange={handleChangeCompany} name="maxFactory" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={maxFactory} onChange={handleChangeCompany} name="maxFactory" />
                                         }
                                         label="Max Factory"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={threezero} onChange={handleChangeCompany} name="threezero" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={threezero} onChange={handleChangeCompany} name="threezero" />
                                         }
                                         label="Threezero"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={sentinel} onChange={handleChangeCompany} name="sentinel" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={sentinel} onChange={handleChangeCompany} name="sentinel" />
                                         }
                                         label="Sentinel"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={threeAToys} onChange={handleChangeCompany} name="threeAToys" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={threeAToys} onChange={handleChangeCompany} name="threeAToys" />
                                         }
                                         label="ThreeA Toys"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={sideshowCollectibles} onChange={handleChangeCompany} name="sideshowCollectibles" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={sideshowCollectibles} onChange={handleChangeCompany} name="sideshowCollectibles" />
                                         }
                                         label="Sideshow Collectibles"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={hotToys} onChange={handleChangeCompany} name="hotToys" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={hotToys} onChange={handleChangeCompany} name="hotToys" />
                                         }
                                         label="Hot Toys"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={ironStudios} onChange={handleChangeCompany} name="ironStudios" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={ironStudios} onChange={handleChangeCompany} name="ironStudios" />
                                         }
                                         label="Iron Studios"
                                     />
                                     <FormControlLabel
                                         control={
-                                            <Checkbox checked={tweeterhead} onChange={handleChangeCompany} name="tweeterhead" />
+                                            <Checkbox sx={{
+                                                color: '#d0d2d4',
+                                                '&.Mui-checked': {
+                                                    color: '#2c88cc',
+                                                },
+                                            }} 
+                                            checked={tweeterhead} onChange={handleChangeCompany} name="tweeterhead" />
                                         }
                                         label="Tweeterhead"
                                     />

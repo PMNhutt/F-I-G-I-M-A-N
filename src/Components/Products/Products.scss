@@ -1,6 +1,8 @@
 .products-container {
     // padding: 10vw 7vw 1vw 7vw;
     padding-top: 8vw;
+    background-image: url(../../data/steam.png);
+    background-size: cover;
 
 
     @keyframes press {
@@ -97,9 +99,9 @@
             padding: 15px;
             width: 22%;
             height: fit-content;
-            background-color: rgba(183, 218, 255, 0.25);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            border-radius: 5px;
+            // background-color: rgba(183, 218, 255, 0.25);
+            // border: 1px solid rgba(255, 255, 255, 0.18);
+            // border-radius: 5px;
             color: var(--text-color);
 
             .MuiFormControl-root {
@@ -115,6 +117,10 @@
                     color: var(--color-blue);
                 }
             }
+
+            // .MuiSvgIcon-root {
+            //     color: var(--text-color);
+            // }
 
             .category {
                 .sub-category {
