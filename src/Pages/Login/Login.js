@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import './Login.scss';
 import { Link } from "react-router-dom";
 import figiLogo from '../../data/figiman.png';
@@ -10,7 +10,11 @@ import PhoneForm from './PhoneForm';
 import { ModalContext } from '../../Context/ModalContext';
 
 
-function Login() {
+function Login({ title }) {
+
+  useEffect(() => {
+    document.title = title;
+  }, [title])
 
   const context = useContext(ModalContext);
 
@@ -38,7 +42,7 @@ function Login() {
               : <ChevronLeftIcon className="goBack" onClick={handleGoBackEmailForm} />
           )
           }
-          <Link to="/"><img src={figiLogo} alt="Trang Chủ" className="logo" onClick={handleGoBackEmailForm}/></Link>
+          <Link to="/"><img src={figiLogo} alt="Trang Chủ" className="logo" onClick={handleGoBackEmailForm} /></Link>
           <p className="login-welcome">{!context.forgetPassClick
             ? "Đăng nhập vào Figiman"
             : "Lấy lại mật khẩu"}</p>

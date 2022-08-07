@@ -1,9 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import './HomeInfo.css'
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import { Tooltip, tooltipClasses } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { products } from '../../data/products';
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import HelpIcon from '@mui/icons-material/Help';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
@@ -12,6 +13,7 @@ import RefreshIcon from '@mui/icons-material/Refresh';
 import Grid from '@mui/material/Grid';
 import FigurePoster from '../FigurePoster/FigurePoster';
 import PreviewIcon from '@mui/icons-material/Preview';
+import { Link } from "react-router-dom";
 
 
 
@@ -134,7 +136,7 @@ function HomeInfo() {
                             <a onClick={() => toggleTab(2)}><p className={tabValue === 2 ? "active" : ""}>One Piece</p></a>
                             <a onClick={() => toggleTab(3)}><p className={tabValue === 3 ? "active" : ""}>Jujutsu Kaisen</p></a>
                             <a onClick={() => toggleTab(4)}><p className={tabValue === 4 ? "active" : ""}>My Hero Academia</p></a>
-                            <a href="/product"><p>Xem thêm</p></a>
+                            <Link to="/products"><p>Xem thêm</p></Link>
                         </div>
                     </div>
 
@@ -271,14 +273,14 @@ function HomeInfo() {
                     <div className="content">
 
                         <div className="collection1">
-                            <img src={require('../../data/productImage/Marvel DC/Marvel/moon-knight_marvel_gallery_624dc18ca6187.jpg')}></img>
+                            <img alt='' src={require('../../data/productImage/Marvel DC/Marvel/moon-knight_marvel_gallery_624dc18ca6187.jpg')}></img>
                             <div className="check-collection">
                                 <div className="btn"><span><PreviewIcon className="preview-icon" /></span>Xem Chi Tiết</div>
                             </div>
                         </div>
 
                         <div className="collection2">
-                            <img src={require('../../data/productImage/Marvel DC/DC Comics/batman-and-bat-signal_dc-comics.jpg')}></img>
+                            <img alt='' src={require('../../data/productImage/Marvel DC/DC Comics/batman-and-bat-signal_dc-comics.jpg')}></img>
                             <div className="check-collection">
                                 <div className="btn"><span><PreviewIcon className="preview-icon" /></span>Xem Chi Tiết</div>
                             </div>
@@ -302,7 +304,7 @@ function HomeInfo() {
 
                         <div className="news-item">
                             <div className="thumbnail">
-                                <img src={require('../../data/News/news1-title (2).jpg')}></img>
+                                <img alt='' src={require('../../data/News/news1-title (2).jpg')}></img>
                             </div>
                             <div className="info">
                                 <div className="top-info">
@@ -317,7 +319,7 @@ function HomeInfo() {
 
                         <div className="news-item">
                             <div className="thumbnail">
-                                <img src={require('../../data/News/news2-title.jpg')}></img>
+                                <img alt="" src={require('../../data/News/news2-title.jpg')}></img>
                             </div>
                             <div className="info">
                                 <div className="top-info">
@@ -332,7 +334,7 @@ function HomeInfo() {
 
                         <div className="news-item">
                             <div className="thumbnail">
-                                <img src={require('../../data/News/news3-title.jpg')}></img>
+                                <img alt="" src={require('../../data/News/news3-title.jpg')}></img>
                             </div>
                             <div className="info">
                                 <div className="top-info">

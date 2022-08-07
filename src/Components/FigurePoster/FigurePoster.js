@@ -44,9 +44,9 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
             }
         }
 
-        if (checkValidAmount == true) {
+        if (checkValidAmount === true) {
             setStockAvailable(true)
-            if (added == undefined) {
+            if (added === undefined) {
                 cartMenu.setProductList(prev => [...prev, {
                     id: id,
                     name: name,
@@ -156,7 +156,7 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
             if (id === cartMenu.addedProduct.id) {
                 addedAmount = cartMenu.addedProduct.amountAdded
 
-                if (addedAmount == stock) {
+                if (addedAmount === stock) {
                     setStockAvailable(false)
                 } else {
                     setStockAvailable(true)
@@ -165,7 +165,7 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
                 if (id === added.id) {
                     addedAmount = added.amount
 
-                    if (addedAmount == stock) {
+                    if (addedAmount === stock) {
                         setStockAvailable(false)
                     } else {
                         setStockAvailable(true)

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import './Register.scss';
 import { Link } from "react-router-dom";
 import figiLogo from '../../data/figiman.png';
@@ -9,7 +9,12 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import RegisterForm from './RegisterForm';
 import { ModalContext } from '../../Context/ModalContext';
 
-function Register() {
+function Register({ title }) {
+
+    useEffect(() => {
+        document.title = title;
+    }, [title])
+
     const context = useContext(ModalContext);
 
     const [isClick, setIsClick] = useState(false)

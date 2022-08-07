@@ -6,7 +6,11 @@ import ServiceChat from '../Components/ServiceChat/ServiceChat'
 import { ModalContext } from '../Context/ModalContext';
 import { useEffect, useContext } from 'react';
 
-function Homepage() {
+function Homepage({ title }) {
+
+  useEffect(() => {
+    document.title = title;
+  }, [title])
 
   const modal = useContext(ModalContext)
 

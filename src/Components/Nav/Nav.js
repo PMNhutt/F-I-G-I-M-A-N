@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useContext } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { ModalContext } from '../../Context/ModalContext';
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion'
@@ -103,13 +103,13 @@ function Nav() {
 
 
   return (
-    <div className={`${scroll ? "nav_scroll" : "navigation"}`}>
+    <nav className={`${scroll ? "nav_scroll" : "navigation"}`}>
       <div className="container">
         <div className="logo">
           <Link to="/"><img src={figiLogo} alt="Trang Chủ" /></Link>
           <div className="nav-links-mid">
             <NavLink to="/" className={(navData) => navData.isActive ? "active" : "nav-child"}> Trang Chủ</NavLink>
-            <NavLink to="/product" className={(navData) => navData.isActive ? "active" : "nav-child"}> Sản Phẩm</NavLink>
+            <NavLink to="/products" className={(navData) => navData.isActive ? "active" : "nav-child"}> Sản Phẩm</NavLink>
             <NavLink to="/news" className={(navData) => navData.isActive ? "active" : "nav-child"}> Tin Tức</NavLink>
           </div>
 
@@ -118,7 +118,7 @@ function Nav() {
           </div>
 
           <AnimatePresence>
-            {openMenu == true && (
+            {openMenu === true && (
               <OutsideClickHandler onOutsideClick={() => { setOpenMenu(false) }}>
                 <motion.div
                   variants={resmenu}
@@ -128,7 +128,7 @@ function Nav() {
                   className="nav-links-res-modal"
                 >
                   <NavLink to="/" className={(navData) => navData.isActive ? "active" : "nav-child"}> Trang Chủ</NavLink>
-                  <NavLink to="/product" className={(navData) => navData.isActive ? "active" : "nav-child"}> Sản Phẩm</NavLink>
+                  <NavLink to="/products" className={(navData) => navData.isActive ? "active" : "nav-child"}> Sản Phẩm</NavLink>
                   <NavLink to="/news" className={(navData) => navData.isActive ? "active" : "nav-child"}> Tin Tức</NavLink>
                   <input type="text" placeholder="Tìm kiếm sản phẩm" />
 
@@ -155,7 +155,7 @@ function Nav() {
 
       </div>
 
-    </div>
+    </nav>
   )
 }
 

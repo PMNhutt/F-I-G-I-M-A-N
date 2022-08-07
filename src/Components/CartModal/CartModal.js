@@ -45,9 +45,9 @@ function CartModal() {
         })
 
         cartMenu.productList.map((pro, index) => {
-            if (pro.id == added.id) {
+            if (pro.id === added.id) {
 
-                if (pro.amount == 1) {
+                if (pro.amount === 1) {
                     cartMenu.productList.splice(index, 1)
 
                     cartMenu.setProductList(prev => [...prev])
@@ -96,7 +96,7 @@ function CartModal() {
 
     return (
         <AnimatePresence exitBeforeEnter>
-            {cartMenu.showModal == true && (
+            {cartMenu.showModal === true && (
                 <>
                     <motion.div
                         variants={cartModal}
@@ -112,7 +112,7 @@ function CartModal() {
                         <h2 style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.18)' }}>Giỏ hàng:</h2>
                         <div className="cart-items">
 
-                            {cartMenu.cartEmpty == true && (
+                            {cartMenu.cartEmpty === true && (
                                 <>
                                     <AnimatePresence >
                                         <motion.div className="cart-lottie-container"
@@ -136,7 +136,7 @@ function CartModal() {
 
                             )}
 
-                            {cartMenu.cartEmpty == false && (
+                            {cartMenu.cartEmpty === false && (
                                 <>
                                     <div className="lists">
                                         <AnimatePresence>
@@ -182,23 +182,23 @@ function CartModal() {
 
                         <div className="cart-bottom" style={{
                             borderTop:
-                                `${cartMenu.cartEmpty == false ? "1px solid rgba(255, 255, 255, 0.18)" : "0px"}`
+                                `${cartMenu.cartEmpty === false ? "1px solid rgba(255, 255, 255, 0.18)" : "0px"}`
                         }}>
 
-                            {cartMenu.cartEmpty == false && (
+                            {cartMenu.cartEmpty === false && (
                                 <div className="subTotal" style={{ marginTop: '10px' }}>
                                     <h3>Tổng cộng:</h3>
                                     <h3>{numberWithCommas(totalPrice)} ₫</h3>
                                 </div>
                             )}
 
-                            <a href="/product" className="view-cart-btn">
+                            <a href="/products" className="view-cart-btn">
                                 <div className="view-cart">
-                                    {cartMenu.cartEmpty == true ? "Ghé Shop Ngay" : "Xem Giỏ Hàng"}
+                                    {cartMenu.cartEmpty === true ? "Ghé Shop Ngay" : "Xem Giỏ Hàng"}
                                 </div>
                             </a>
 
-                            {cartMenu.cartEmpty == false && (
+                            {cartMenu.cartEmpty === false && (
                                 <a href="/" className="checkout-btn">
                                     <div className="checkout">
                                         Thanh Toán

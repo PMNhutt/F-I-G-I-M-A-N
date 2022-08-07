@@ -11,7 +11,7 @@ import SendIcon from '@mui/icons-material/Send';
 
 function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
 
       <div className="content">
         <div className="logo">
@@ -66,7 +66,7 @@ function Footer() {
       <div className="copy-right">
         Copyright © 2022 FIGIMAN | Built with React by NhutPM.
       </div>
-    </div>
+    </footer>
   )
 }
 
