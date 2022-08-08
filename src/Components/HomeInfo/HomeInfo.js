@@ -296,7 +296,7 @@ function HomeInfo() {
                     <div className="heading">
                         <h1>Tin Tức</h1>
                         <div className="heading-left">
-                            <a href="/news"><p>Xem thêm</p></a>
+                            <Link to="/news"><p>Xem thêm</p></Link>
                         </div>
                     </div>
 

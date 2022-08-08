@@ -142,7 +142,7 @@
             }
 
             .company {
-                .sub-company{
+                .sub-company {
                     display: inline-grid;
                 }
             }
@@ -182,9 +182,69 @@
             flex-grow: 1;
             height: fit-content;
             color: var(--text-color);
-            background-color: rgba(183, 218, 255, 0.25);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            border-radius: 5px;
+
+            .view-options {
+                padding: 12px 20px;
+                // background-color: rgba(183, 218, 255, 0.25);
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .mySelect {
+                    padding: 2px 8px;
+                    border-radius: 5px;
+                    background-color: rgba(183, 218, 255, 0.25);
+                }
+
+                .view {
+                    display: flex;
+                    gap: 10px;
+
+                    .icon {
+                        cursor: pointer;
+                        color: var(--text-color);
+                        font-size: 30px;
+                    }
+
+                    .icon-active {
+                        cursor: pointer;
+                        color: var(--color-blue);
+                        font-size: 30px;
+                    }
+                }
+
+                .other-view {
+                    display: flex;
+                    
+                    .sort-by, .view-by {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+    
+                        .MuiSvgIcon-root {
+                            color: var(--color-blue);
+                        }
+    
+                        .label {
+                            margin-left: 30px;
+                            font-weight: 600;
+                            color: var(--text-color);
+                        }
+    
+                        .menu-item,
+                        .item-label {
+                            font-size: 14px;
+                            color: var(--text-color);
+                        }
+                    }
+                }
+
+                
+            }
+
+            .list-wrapper {}
         }
     }
 

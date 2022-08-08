@@ -6,7 +6,8 @@ import { products } from '../../data/products';
 import './FigurePoster.css'
 import CachedIcon from '@mui/icons-material/Cached';
 import ZoomOutMapRoundedIcon from '@mui/icons-material/ZoomOutMapRounded';
-import Image from '../FigurePeekModal/Image'
+import Image from '../FigurePeekModal/Image';
+import * as sharedFunction from '../../share/_shared';
 
 function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
 
@@ -92,10 +93,6 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
         return () => clearTimeout(delay);
     }, [loadingBtn])
 
-    function numberWithCommas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    }
-
 
     const CustomToolTip = styled(({ className, ...props }) => (
         <Tooltip {...props} classes={{ popper: className }} />
@@ -114,7 +111,7 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
     const handleOpenPeek = () => {
         cartMenu.setShowPeekModal(true)
         let newProduct
-        newProduct = products.find(product => product.id == id)
+        newProduct = products.find(product => product.id === id)
         if (newProduct !== undefined) {
             cartMenu.setProduct(newProduct)
         }
@@ -192,7 +189,7 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
 
                     <div className="figure-info">
                         <h3>{truncate(name, 25)}</h3>
-                        <p>{numberWithCommas(price)} ₫</p>
+                        <p>{sharedFunction.numberWithCommas(price)} ₫</p>
                     </div>
 
                     {status === "new" && (
@@ -218,7 +215,7 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
 
                     <div className="figure-info-hover">
                         <h3>{name}</h3>
-                        <p>{numberWithCommas(price)} ₫</p>
+                        <p>{sharedFunction.numberWithCommas(price)} ₫</p>
                         <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                             {status !== "preOrder" && (<div className={loadingBtn == false ? (stockAvailable == true ? "add-to-cart-btn" : "add-to-cart-btn disable-click") : "loading-btn"} onClick={() => handleAddToCart()}>
                                 {loadingBtn == false ? (stockAvailable == true ? "Thêm Vào Giỏ" : "Đã thêm") : "Đang thêm..."}
