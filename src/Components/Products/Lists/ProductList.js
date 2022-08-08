@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import ViewListIcon from '@mui/icons-material/ViewList';
 import ViewModuleIcon from '@mui/icons-material/ViewModule';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import Grid from '@mui/material/Grid';
+import Pagination from '@mui/material/Pagination';
 import { makeStyles } from '@mui/styles';
 import { motion } from 'framer-motion';
 import { products } from '../../../data/products';
@@ -21,9 +23,20 @@ function ProductList() {
     const [sortType, setSortType] = useState(1)
     const handleChangeView = () => setIsGrid(prev => !prev);
     const useStyles = makeStyles((theme) => ({
+        root: {
+            '& .Mui-selected': {
+                backgroundColor: '#2c88cc',
+                color: '#d0d2d4',
+                fontSize: '18px',
+            },
+            '& .MuiPaginationItem-text': {
+                color: '#d0d2d4',
+                fontSize: '18px',
+            }
+        },
         paper: {
-            background: "rgba(183, 218, 255, 0.45)",
-            color: "#d0d2d4",
+            background: "rgba(183, 218, 255, 0.75)",
+            color: "#141414",
         },
     }));
 
@@ -67,18 +80,32 @@ function ProductList() {
         setRandomItem(sharedFunction.getRandom(products, 18));
     }, [])
 
+    /**
+     * *Pagination
+     */
+
+    const handlePaginationChange = (e) => {
+        console.log(e.target.textContent);
+    }
+
     return (
         <div className="products-lists">
             <div className="view-options">
-                <div className="view">
-                    <ViewModuleIcon
-                        className={isGrid ? "icon-active" : "icon"}
-                        onClick={handleChangeView}
-                    />
-                    <ViewListIcon
-                        className={!isGrid ? "icon-active" : "icon"}
-                        onClick={handleChangeView}
-                    />
+                <div className="view-mobile">
+                    <div className="view">
+                        <ViewModuleIcon
+                            className={isGrid ? "icon-active" : "icon"}
+                            onClick={handleChangeView}
+                        />
+                        <ViewListIcon
+                            className={!isGrid ? "icon-active" : "icon"}
+                            onClick={handleChangeView}
+                        />
+                    </div>
+                    <div className="filter-btn">
+                        <FilterAltIcon />
+                        <p>Bộ lọc</p>
+                    </div>
                 </div>
                 <div className="other-view">
                     <div className="sort-by">
@@ -151,6 +178,7 @@ function ProductList() {
                 </div>
 
             </div>
+
             <div className="list-wrapper">
                 <div className="list-container">
                     <motion.div
@@ -180,6 +208,16 @@ function ProductList() {
                             ))}
                         </Grid>
                     </motion.div>
+                    <div className="pagination">
+                        <Pagination
+                            className={classes.root}
+                            count={10}
+                            color="primary"
+                            onChange={handlePaginationChange}
+                            hideNextButton={true}
+                            hidePrevButton={true}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 .footer {
     /* height: 50vh; */
     padding: 0 7vw;
-    padding-top: 200px;
+    padding-top: 100px;
     color: var(--text-light-color);
     position: relative;
     background-image: url('../../data/steam.png');

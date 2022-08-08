@@ -1,3 +1,5 @@
+@import '../../share/mixins';
+
 .products-container {
     // padding: 10vw 7vw 1vw 7vw;
     padding-top: 8vw;
@@ -104,6 +106,10 @@
             // border-radius: 5px;
             color: var(--text-color);
 
+            @include mobile {
+                display: none;
+            }
+
             .MuiFormControl-root {
                 margin: 0 !important;
             }
@@ -155,6 +161,11 @@
                     color: var(--color-blue);
                     font-size: 18px;
                     font-weight: 600;
+
+                    @include tablet {
+                        flex-direction: column;
+                    }
+            
                 }
 
                 .price-filter-btn {
@@ -179,9 +190,13 @@
 
         .products-lists {
             padding: 15px;
-            flex-grow: 1;
+            width: 78%;
             height: fit-content;
             color: var(--text-color);
+
+            @include mobile {
+                width: 100%;
+            }
 
             .view-options {
                 padding: 12px 20px;
@@ -191,6 +206,11 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+
+                @include mobile {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
 
                 .mySelect {
                     padding: 2px 8px;
@@ -215,24 +235,63 @@
                     }
                 }
 
+                .view-mobile {
+                    display: flex;
+                    align-items: center;
+                    gap: 2rem;
+
+                    .filter-btn {
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 10px;
+                        background-color: var(--color-blue);
+                        color: var(--text-color);
+                        border-radius: 5px;
+                        font-weight: 600;
+
+                        @include tablet {
+                            display: none;
+                        }
+
+                        @include desktop {
+                            display: none;
+                        }
+                    }
+                }
+
                 .other-view {
                     display: flex;
-                    
-                    .sort-by, .view-by {
+
+                    @include mobile {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+
+                    .sort-by,
+                    .view-by {
                         display: flex;
                         align-items: center;
                         gap: 15px;
-    
+
+                        @include mobile {
+                            margin-top: 15px;
+                        }
+
                         .MuiSvgIcon-root {
                             color: var(--color-blue);
                         }
-    
+
                         .label {
                             margin-left: 30px;
                             font-weight: 600;
                             color: var(--text-color);
+
+                            @include mobile {
+                                margin: 0;
+                            }
                         }
-    
+
                         .menu-item,
                         .item-label {
                             font-size: 14px;
@@ -241,10 +300,27 @@
                     }
                 }
 
-                
+
             }
 
-            .list-wrapper {}
+            .list-wrapper {
+
+                .list-container {
+                    position: relative;
+
+                    .pagination {
+                        width: 100%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        position: absolute;
+                        z-index: 10;
+                        display: flex;
+                        justify-content: center;
+                        // background-color: white;
+                        padding: 30px 20px 80px 20px;
+                    }
+                }
+            }
         }
     }
 
