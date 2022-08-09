@@ -210,7 +210,7 @@ function FigurePosterFlex({ ImgSrc, name, price, status, id, stock, description 
 
 
                     <div className="figure-description">
-                        <p>{description}</p>
+                        <p>{sharedFunction.truncate(description, 200)}</p>
                     </div>
                     <div className="figure-btns">
                         <div style={{ width: '100%' }}>

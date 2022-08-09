@@ -9,6 +9,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ErrorIcon from '@mui/icons-material/Error';
 import ReportIcon from '@mui/icons-material/Report';
 import Image from '../FigurePeekModal/Image'
+import * as sharedFunction from '../../share/_shared';
 
 function FigurePeekModal() {
 
@@ -52,14 +53,6 @@ function FigurePeekModal() {
         window.addEventListener('keydown', close)
         return () => window.removeEventListener('keydown', close)
     }, [])
-
-    function numberWithCommas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    }
-
-    function truncate(str, n) {
-        return str?.length > n ? str.substr(0, n - 1) + " ..." : str;
-    }
 
     //handle add to cart 
     const [loadingBtn, setLoadingBtn] = useState(false)
@@ -342,16 +335,16 @@ function FigurePeekModal() {
                             </div>
 
                             <div className="product-price mb">
-                                <h2>{numberWithCommas(context.product.price)} ₫</h2>
+                                <h2>{sharedFunction.numberWithCommas(context.product.price)} ₫</h2>
                                 {context.product.status === "preOrder" &&
                                     (<p style={{ marginTop: '10px' }}>
                                         <span style={{ color: '#fff', fontWeight: 600 }}>Đặt cọc: </span>
-                                        {numberWithCommas(context.product.depositPrice)} ₫
+                                        {sharedFunction.numberWithCommas(context.product.depositPrice)} ₫
                                     </p>)}
                             </div>
 
                             <div className="product-description mb">
-                                <p>{truncate(context.product.details.description, 200)}</p>
+                                <p>{sharedFunction.truncate(context.product.details.description, 200)}</p>
                             </div>
 
                             <div className="product-quantity mb">
