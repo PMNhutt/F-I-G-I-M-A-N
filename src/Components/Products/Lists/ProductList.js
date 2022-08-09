@@ -10,9 +10,13 @@ import { makeStyles } from '@mui/styles';
 import { motion } from 'framer-motion';
 import { products } from '../../../data/products';
 import { ModalContext } from '../../../Context/ModalContext';
+import { styled } from '@mui/material/styles';
+import { Tooltip, tooltipClasses } from '@mui/material';
 import FigurePoster from '../../FigurePoster/FigurePoster';
+import FigurePosterFlex from '../../FigurePoster/FigurePosterFlex';
 import '../../HomeInfo/HomeInfo.css';
 import * as sharedFunction from '../../../share/_shared';
+
 
 
 function ProductList() {
@@ -20,9 +24,12 @@ function ProductList() {
      * *choose view layout
      */
 
-    const [isGrid, setIsGrid] = useState(true);
+    const [layoutType, setLayoutType] = useState(1);
     const [sortType, setSortType] = useState(1)
-    const handleChangeView = () => setIsGrid(prev => !prev);
+    const handleChangeView = (type) => {
+        setLayoutType(type);
+    }
+
     const useStyles = makeStyles((theme) => ({
         root: {
             '& .Mui-selected': {
@@ -98,20 +105,38 @@ function ProductList() {
         context.setIsOpenFilter(prev => !prev)
     }
 
+    const CustomToolTip = styled(({ className, ...props }) => (
+        <Tooltip {...props} classes={{ popper: className }} />
+    ))(() => ({
+        [`& .${tooltipClasses.tooltip}`]: {
+            backgroundColor: '#d0d2d4',
+            color: '#141414',
+            width: 'fit-content',
+            padding: '10px',
+            fontSize: 15,
+            fontFamily: 'Work Sans, sans-serif',
+        },
+    }));
+
 
     return (
         <div className="products-lists">
             <div className="view-options">
                 <div className="view-mobile">
                     <div className="view">
-                        <ViewModuleIcon
-                            className={isGrid ? "icon-active" : "icon"}
-                            onClick={handleChangeView}
-                        />
-                        <ViewListIcon
-                            className={!isGrid ? "icon-active" : "icon"}
-                            onClick={handleChangeView}
-                        />
+                        <CustomToolTip placement="top" title="Dạng lưới">
+                            <ViewModuleIcon
+                                className={layoutType === 1 ? "icon-active" : "icon"}
+                                onClick={() => handleChangeView(1)}
+                            />
+                        </CustomToolTip>
+                        <CustomToolTip placement="top" title="Dạng danh sách">
+                            <ViewListIcon
+                                className={layoutType === 2 ? "icon-active" : "icon"}
+                                onClick={() => handleChangeView(2)}
+                            />
+                        </CustomToolTip>
+
                     </div>
                     <div
                         onClick={handleOpenFilter}
@@ -195,33 +220,56 @@ function ProductList() {
 
             <div className="list-wrapper">
                 <div className="list-container">
-                    <motion.div
-                        variants={grid}
-                        initial="hidden"
-                        animate="visible"
-                    >
-                        <Grid container spacing={3} className="product-grid-container">
+                    {layoutType === 1 && (
+                        <motion.div
+                            variants={grid}
+                            initial="hidden"
+                            animate="visible"
+                        >
+                            <Grid container spacing={3} className="product-grid-container">
+                                {randomItem && randomItem.map((product, index) => (
+                                    <Grid
+                                        sm={6}
+                                        md={4}
+                                        xs={12}
+                                        item key={index}
+                                        className="product-grid-item"
+                                    >
+                                        <FigurePoster
+                                            key={index}
+                                            ImgSrc={product.thumbImg}
+                                            name={product.name}
+                                            price={product.price}
+                                            status={product.status}
+                                            id={product.id}
+                                            stock={product.stock}
+                                        />
+                                    </Grid>
+                                ))}
+                            </Grid>
+                        </motion.div>
+                    )}
+
+                    {layoutType === 2 && (
+                        <motion.div
+                            variants={grid}
+                            initial="hidden"
+                            animate="visible"
+                        >
                             {randomItem && randomItem.map((product, index) => (
-                                <Grid
-                                    sm={6}
-                                    md={4}
-                                    xs={12}
-                                    item key={index}
-                                    className="product-grid-item"
-                                >
-                                    <FigurePoster
-                                        key={index}
-                                        ImgSrc={product.thumbImg}
-                                        name={product.name}
-                                        price={product.price}
-                                        status={product.status}
-                                        id={product.id}
-                                        stock={product.stock}
-                                    />
-                                </Grid>
+                                <FigurePosterFlex
+                                    key={index}
+                                    ImgSrc={product.thumbImg}
+                                    name={product.name}
+                                    price={product.price}
+                                    status={product.status}
+                                    id={product.id}
+                                    stock={product.stock}
+                                    description={product.details.description}
+                                />
                             ))}
-                        </Grid>
-                    </motion.div>
+                        </motion.div>
+                    )}
                     <div className="pagination">
                         <Pagination
                             className={classes.root}

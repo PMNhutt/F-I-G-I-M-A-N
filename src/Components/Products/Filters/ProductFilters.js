@@ -138,12 +138,8 @@ function ProductFilters() {
             <div
                 className={context.isOpenFilter ? "filter-mobile" : "products-filters"}>
                 <AnimatePresence exitBeforeEnter>
-                    <motion.div
+                    <div
                         key={1}
-                        variants={filterMenu}
-                        initial="hidden"
-                        animate="visible"
-                        exit="hidden"
                     >
                         {context.isOpenFilter && (
                             <div className="mobile-header">
@@ -698,7 +694,7 @@ function ProductFilters() {
                                 </FormGroup>
                             </FormControl>
                         </div>
-                    </motion.div>
+                    </div>
 
                 </AnimatePresence>
             </div>

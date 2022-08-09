@@ -3,15 +3,14 @@ import { ModalContext } from '../../Context/ModalContext'
 import { Tooltip, tooltipClasses } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { products } from '../../data/products';
-import './FigurePoster.css'
+import './FigurePosterFlex.scss'
 import CachedIcon from '@mui/icons-material/Cached';
 import ZoomOutMapRoundedIcon from '@mui/icons-material/ZoomOutMapRounded';
 import Image from '../FigurePeekModal/Image';
 import * as sharedFunction from '../../share/_shared';
 
-function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
 
-
+function FigurePosterFlex({ ImgSrc, name, price, status, id, stock, description }) {
     //modal cart context
     const cartMenu = useContext(ModalContext)
 
@@ -175,19 +174,11 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
     // =================================================================
 
     return (
-        <>
-            <div className="figurePoster" >
-                <div className="container">
-                    <div className="figure-thumbnail">
-                        {/* <img src={ImgSrc} /> */}
-                        <Image src={ImgSrc} />
-                    </div>
-
-                    <div className="figure-info">
-                        <h3>{sharedFunction.truncate(name, 25)}</h3>
-                        <p>{sharedFunction.numberWithCommas(price)} ₫</p>
-                    </div>
-
+        <div className="figurePosterFlex">
+            <div className="container">
+                <div className="figure-thumbnail">
+                    {/* <img src={ImgSrc} /> */}
+                    <Image src={ImgSrc} />
                     {status === "new" && (
                         <div className="figure-status">
                             <h3>Mới</h3>
@@ -207,13 +198,23 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
                             </div>
                         </div>
                     </CustomToolTip>
+                </div>
 
 
-                    <div className="figure-info-hover">
+
+                <div className="info-wrapper">
+                    <div className="figure-info">
                         <h3>{name}</h3>
                         <p>{sharedFunction.numberWithCommas(price)} ₫</p>
-                        <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                            {status !== "preOrder" && (<div className={loadingBtn === false ? (stockAvailable == true ? "add-to-cart-btn" : "add-to-cart-btn disable-click") : "loading-btn"} onClick={() => handleAddToCart()}>
+                    </div>
+
+
+                    <div className="figure-description">
+                        <p>{description}</p>
+                    </div>
+                    <div className="figure-btns">
+                        <div style={{ width: '100%' }}>
+                            {status !== "preOrder" && (<div className={loadingBtn === false ? (stockAvailable === true ? "add-to-cart-btn" : "add-to-cart-btn disable-click") : "loading-btn"} onClick={() => handleAddToCart()}>
                                 {loadingBtn === false ? (stockAvailable === true ? "Thêm Vào Giỏ" : "Đã thêm") : "Đang thêm..."}
                                 {loadingBtn === true && <div ><CachedIcon className="loading-icon" /></div>}
                             </div>)}
@@ -223,11 +224,10 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
                             </div>)}
                         </div>
                     </div>
-
                 </div>
             </div>
-        </>
-    )
+        </div>
+    );
 }
 
-export default FigurePoster
+export default FigurePosterFlex;
