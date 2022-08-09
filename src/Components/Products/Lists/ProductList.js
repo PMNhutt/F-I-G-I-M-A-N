@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import ViewListIcon from '@mui/icons-material/ViewList';
 import ViewModuleIcon from '@mui/icons-material/ViewModule';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
@@ -9,6 +9,7 @@ import Pagination from '@mui/material/Pagination';
 import { makeStyles } from '@mui/styles';
 import { motion } from 'framer-motion';
 import { products } from '../../../data/products';
+import { ModalContext } from '../../../Context/ModalContext';
 import FigurePoster from '../../FigurePoster/FigurePoster';
 import '../../HomeInfo/HomeInfo.css';
 import * as sharedFunction from '../../../share/_shared';
@@ -35,8 +36,8 @@ function ProductList() {
             }
         },
         paper: {
-            background: "rgba(183, 218, 255, 0.75)",
-            color: "#141414",
+            background: "rgba(0, 0, 0, 0.8)",
+            color: "#d0d2d4",
         },
     }));
 
@@ -88,6 +89,16 @@ function ProductList() {
         console.log(e.target.textContent);
     }
 
+    /**
+     * *handle open filter (mobile)
+     */
+    const context = useContext(ModalContext)
+
+    const handleOpenFilter = () => {
+        context.setIsOpenFilter(prev => !prev)
+    }
+
+
     return (
         <div className="products-lists">
             <div className="view-options">
@@ -102,7 +113,10 @@ function ProductList() {
                             onClick={handleChangeView}
                         />
                     </div>
-                    <div className="filter-btn">
+                    <div
+                        onClick={handleOpenFilter}
+                        className="filter-btn"
+                    >
                         <FilterAltIcon />
                         <p>Bộ lọc</p>
                     </div>

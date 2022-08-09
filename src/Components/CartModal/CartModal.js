@@ -16,13 +16,13 @@ function CartModal() {
         visible: {
             opacity: 1, x: 0, transition: {
                 ease: "easeOut",
-                duration: 0.5
+                duration: 0.3
             }
         },
         hidden: {
             opacity: 0, x: "20vw", transition: {
                 ease: "easeOut",
-                duration: 0.5
+                duration: 0.3
             }
         }
     }

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Nav from '../Components/Nav/Nav'
 import Footer from '../Components/Footer/Footer'
+import ServiceChat from '../Components/ServiceChat/ServiceChat'
 import ProductsContainer from '../Components/Products/ProductsContainer';
 
 
@@ -15,6 +16,7 @@ function Products({ title }) {
         <div>
             <Nav />
             <ProductsContainer />
+            <ServiceChat />
             <Footer />
         </div>
     );

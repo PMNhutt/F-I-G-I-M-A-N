@@ -17,6 +17,7 @@ function ModalProvider({ children }) {
         amountAdded: 0,
     })
     const [forgetPassClick, setForgetPassClick] = useState(false)
+    const [isOpenFilter, setIsOpenFilter] = useState(false);
     
 
     const values = {
@@ -30,6 +31,7 @@ function ModalProvider({ children }) {
         addedAnouncement, setAddedAnouncement,
         cartPosition, setCartPosition,
         forgetPassClick, setForgetPassClick,
+        isOpenFilter, setIsOpenFilter
     }
 
     return (

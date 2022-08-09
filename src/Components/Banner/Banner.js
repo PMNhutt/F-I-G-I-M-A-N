@@ -1,6 +1,5 @@
-import { useRef, useEffect } from 'react'
 import './Banner.css'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 
 function Banner() {
