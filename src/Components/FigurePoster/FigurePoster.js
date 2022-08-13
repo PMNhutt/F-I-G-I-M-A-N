@@ -1,5 +1,4 @@
-import { useContext, useEffect, useState, useRef } from 'react'
-import { ModalContext } from '../../Context/ModalContext'
+import { useEffect, useState } from 'react'
 import { Tooltip, tooltipClasses } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { products } from '../../data/products';
@@ -8,72 +7,39 @@ import CachedIcon from '@mui/icons-material/Cached';
 import ZoomOutMapRoundedIcon from '@mui/icons-material/ZoomOutMapRounded';
 import Image from '../FigurePeekModal/Image';
 import * as sharedFunction from '../../share/_shared';
+import { useDispatch, useSelector } from 'react-redux';
+import { addItem, setStockAvailable, setAddedProduct } from '../../redux/cartSlice';
+import { openPeekModal, setProduct } from '../../redux/peekModalSlice';
 
 function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
 
-
-    //modal cart context
-    const cartMenu = useContext(ModalContext)
+    //use redux,
+    const cartStore = useSelector((state) => state.cart)
+    const peekModalStore = useSelector((state) => state.peekModal)
+    const dispatch = useDispatch();
 
     const [loadingBtn, setLoadingBtn] = useState(false)
     const [add, setAdd] = useState(false)
-    const [stockAvailable, setStockAvailable] = useState(true)
 
     const handleAddToCart = () => {
-        cartMenu.setCartEmpty(false)
         setAdd(prev => !prev)
 
-
-        let added = cartMenu.productList.find((product) => {
-            return product.id === id
-        })
-
-        let addedAmount = 0
-        let checkValidAmount = true
-        // addedAmount = context.product.stock - addedProduct.amountAdded
-        if (id === cartMenu.addedProduct.id) {
-            addedAmount = cartMenu.addedProduct.amountAdded
-
-            if (addedAmount >= stock) {
-                checkValidAmount = false
-            } else {
-                checkValidAmount = true
-            }
+        const product = {
+            id: id,
+            name: name,
+            ImgSrc: ImgSrc,
+            price: price,
+            amount: 1,
+            maxAmount: stock,
         }
-
-        if (checkValidAmount === true) {
-            setStockAvailable(true)
-            if (added === undefined) {
-                cartMenu.setProductList(prev => [...prev, {
-                    id: id,
-                    name: name,
-                    ImgSrc: ImgSrc,
-                    price: price,
-                    amount: 1,
-                    maxAmount: stock,
-                }])
-            } else {
-                let newAmount = 0
-                cartMenu.productList.map((pro, index) => {
-                    if (pro.id == added.id) {
-                        newAmount = pro.amount + 1
-                        cartMenu.productList.splice(index, 1)
-                    }
-                })
-                cartMenu.setProductList(prev => [...prev, {
-                    id: id,
-                    name: name,
-                    ImgSrc: ImgSrc,
-                    price: price,
-                    amount: newAmount,
-                    maxAmount: stock,
-                }])
-
-
-            }
-        } else {
-            setStockAvailable(false)
-        }
+        dispatch(addItem({
+            product: product,
+            id: id,
+            name: name,
+            ImgSrc: ImgSrc,
+            price: price,
+            stock: stock,
+        }))
 
         setLoadingBtn(true)
     }
@@ -105,49 +71,50 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
 
     //open peek modal 
     const handleOpenPeek = () => {
-        cartMenu.setShowPeekModal(true)
+        dispatch(openPeekModal(true))
         let newProduct
         newProduct = products.find(product => product.id === id)
         if (newProduct !== undefined) {
-            cartMenu.setProduct(newProduct)
+            dispatch(setProduct(newProduct))
         }
     }
 
     //check added products
     useEffect(() => {
 
-        let added = cartMenu.productList.find((product) => {
+        let added = cartStore.productslist.find((product) => {
             return product.id === id
         })
         let prevID
         if (added !== undefined) {
-            cartMenu.setAddedProduct({
+            dispatch(setAddedProduct({
                 id: added.id,
                 amountAdded: added.amount,
-            })
+            }))
             prevID = added.id
         } else {
-            cartMenu.setAddedProduct({
+            dispatch(setAddedProduct({
                 id: prevID,
                 amountAdded: 0,
-            })
+            }))
         }
 
 
-    }, [add, cartMenu.showModal])
+    }, [add, peekModalStore.showModal])
 
 
     //set state for "added" button
+    const [stockAvailable, setStockAvailable] = useState(true)
     useEffect(() => {
         let addedAmount = 0
 
-        let added = cartMenu.productList.find((product) => {
+        let added = cartStore.productslist.find((product) => {
             return product.id === id
         })
 
         if (added !== undefined) {
-            if (id === cartMenu.addedProduct.id) {
-                addedAmount = cartMenu.addedProduct.amountAdded
+            if (id === cartStore.addedProduct.id) {
+                addedAmount = cartStore.addedProduct.amountAdded
 
                 if (addedAmount === stock) {
                     setStockAvailable(false)
@@ -169,7 +136,7 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
         }
 
 
-    }, [cartMenu.addedProduct.amountAdded, cartMenu.showModal, cartMenu.productList])
+    }, [cartStore.addedProduct.amountAdded, peekModalStore.showModal, cartStore.productslist])
 
 
     // =================================================================
@@ -213,8 +180,8 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
                         <h3>{name}</h3>
                         <p>{sharedFunction.numberWithCommas(price)} ₫</p>
                         <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                            {status !== "preOrder" && (<div className={loadingBtn === false ? (stockAvailable == true ? "add-to-cart-btn" : "add-to-cart-btn disable-click") : "loading-btn"} onClick={() => handleAddToCart()}>
-                                {loadingBtn === false ? (stockAvailable === true ? "Thêm Vào Giỏ" : "Đã thêm") : "Đang thêm..."}
+                            {status !== "preOrder" && (<div className={loadingBtn === false ? ((stockAvailable) ? "add-to-cart-btn" : "add-to-cart-btn disable-click") : "loading-btn"} onClick={() => handleAddToCart()}>
+                                {loadingBtn === false ? ((stockAvailable) ? "Thêm Vào Giỏ" : "Đã thêm") : "Đang thêm..."}
                                 {loadingBtn === true && <div ><CachedIcon className="loading-icon" /></div>}
                             </div>)}
 

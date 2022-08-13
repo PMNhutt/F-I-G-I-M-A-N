@@ -1,15 +1,20 @@
-import { useContext, useState, useEffect, memo } from 'react'
+import { useState, useEffect, memo } from 'react'
 import './CartModal.css'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ModalContext } from '../../Context/ModalContext'
 import { Player } from '@lottiefiles/react-lottie-player';
 import CloseIcon from '@mui/icons-material/Close';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { openModal } from '../../redux/peekModalSlice';
+import { cartEmpty, deleteItem } from '../../redux/cartSlice';
+import * as sharedFunction from '../../share/_shared';
 
 function CartModal() {
 
-    //modal cart context
-    const cartMenu = useContext(ModalContext)
+    //use redux
+    const cartStore = useSelector((state) => state.cart)
+    const peekModalStore = useSelector((state) => state.peekModal)
+    const dispatch = useDispatch();
 
 
     const cartModal = {
@@ -29,8 +34,7 @@ function CartModal() {
 
 
     const handleCloseCart = () => {
-        // setOpenCart(false)
-        cartMenu.setShowModal(false)
+        dispatch(openModal(false))
     }
 
     //delete product from cart
@@ -38,37 +42,7 @@ function CartModal() {
 
     const handleDeleteProduct = (indexId) => {
         setDeleteProduct(prev => !prev)
-
-        let newAmount = 0
-
-        let added = cartMenu.productList.find((product) => {
-            return product.id === indexId
-        })
-
-        cartMenu.productList.map((pro, index) => {
-            if (pro.id === added.id) {
-
-                if (pro.amount === 1) {
-                    cartMenu.productList.splice(index, 1)
-
-                    cartMenu.setProductList(prev => [...prev])
-                } else {
-                    newAmount = pro.amount - 1
-                    cartMenu.productList.splice(index, 1)
-                    cartMenu.setProductList(prev => [...prev, {
-                        id: pro.id,
-                        name: pro.name,
-                        ImgSrc: pro.ImgSrc,
-                        price: pro.price,
-                        amount: newAmount,
-                        maxAmount: pro.maxAmount,
-                    }])
-                }
-            }
-
-        })
-
-
+        dispatch(deleteItem(indexId))
     }
 
 
@@ -76,28 +50,26 @@ function CartModal() {
     const [totalPrice, setTotalPrice] = useState(0)
     useEffect(() => {
         let total = 0;
-        cartMenu.productList.forEach(product => {
+        cartStore.productslist.forEach(product => {
             total += product.price * product.amount
         })
 
-        if (cartMenu.productList < 1) {
-            cartMenu.setCartEmpty(true)
+        if (cartStore.productslist < 1) {
+            dispatch(cartEmpty(true))
 
         }
         setTotalPrice(total)
 
-    }, [cartMenu.productList])
+    }, [cartStore.productslist])
 
-    function numberWithCommas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    }
+    
 
     //====================================
 
 
     return (
         <AnimatePresence exitBeforeEnter>
-            {cartMenu.showModal === true && (
+            {peekModalStore.showModal === true && (
                 <>
                     <motion.div
                         variants={cartModal}
@@ -113,7 +85,7 @@ function CartModal() {
                         <h2 style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.18)' }}>Giỏ hàng:</h2>
                         <div className="cart-items">
 
-                            {cartMenu.cartEmpty === true && (
+                            {cartStore.cartEmpty === true && (
                                 <>
                                     <AnimatePresence >
                                         <motion.div className="cart-lottie-container"
@@ -137,11 +109,11 @@ function CartModal() {
 
                             )}
 
-                            {cartMenu.cartEmpty === false && (
+                            {cartStore.cartEmpty === false && (
                                 <>
                                     <div className="lists">
                                         <AnimatePresence>
-                                            {cartMenu.productList.map((product, index) => (
+                                            {cartStore.productslist.map((product, index) => (
                                                 <motion.div className="product-item"
                                                     key={product.id}
                                                     exit={{
@@ -162,7 +134,7 @@ function CartModal() {
                                                     </div>
                                                     <div className="product-info">
                                                         <p className="product-name">{product.name}</p>
-                                                        <p className="product-price"><span>{product.amount} &times; </span>{numberWithCommas(product.price)} ₫</p>
+                                                        <p className="product-price"><span>{product.amount} &times; </span>{sharedFunction.numberWithCommas(product.price)} ₫</p>
                                                         {/* {console.log("amount in cart:", product.amount)} */}
                                                     </div>
                                                     <div className="delete-product">
@@ -183,25 +155,25 @@ function CartModal() {
 
                         <div className="cart-bottom" style={{
                             borderTop:
-                                `${cartMenu.cartEmpty === false ? "1px solid rgba(255, 255, 255, 0.18)" : "0px"}`
+                                `${cartStore.cartEmpty === false ? "1px solid rgba(255, 255, 255, 0.18)" : "0px"}`
                         }}>
 
-                            {cartMenu.cartEmpty === false && (
+                            {cartStore.cartEmpty === false && (
                                 <div className="subTotal" style={{ marginTop: '10px' }}>
                                     <h3>Tổng cộng:</h3>
-                                    <h3>{numberWithCommas(totalPrice)} ₫</h3>
+                                    <h3>{sharedFunction.numberWithCommas(totalPrice)} ₫</h3>
                                 </div>
                             )}
 
-                            <Link to={cartMenu.cartEmpty === true ? "/products" : "/"}
+                            <Link to={cartStore.cartEmpty === true ? "/products" : "/"}
                                 className="view-cart-btn"
                                 onClick={() => handleCloseCart()}>
                                 <div className="view-cart">
-                                    {cartMenu.cartEmpty === true ? "Ghé Shop Ngay" : "Xem Giỏ Hàng"}
+                                    {cartStore.cartEmpty === true ? "Ghé Shop Ngay" : "Xem Giỏ Hàng"}
                                 </div>
                             </Link>
 
-                            {cartMenu.cartEmpty === false && (
+                            {cartStore.cartEmpty === false && (
                                 <Link to="/" className="checkout-btn">
                                     <div className="checkout">
                                         Thanh Toán

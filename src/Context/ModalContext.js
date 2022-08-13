@@ -5,17 +5,19 @@ const ModalContext = createContext()
 function ModalProvider({ children }) {
 
     const [showModal, setShowModal] = useState(false)
-    const [cartEmpty, setCartEmpty] = useState(true)
-    const [product, setProduct] = useState()
-    const [productList, setProductList] = useState([])
     const [showPeekModal, setShowPeekModal] = useState(false)
-    const [error, setError] = useState(false)
+    const [product, setProduct] = useState()
     const [addedAnouncement, setAddedAnouncement] = useState(false)
+    const [error, setError] = useState(false)
+    
+    const [productList, setProductList] = useState([])
+    const [cartEmpty, setCartEmpty] = useState(true)
     const [cartPosition, setCartPosition] = useState()
     const [addedProduct, setAddedProduct] = useState({
         id: 0,
         amountAdded: 0,
     })
+
     const [forgetPassClick, setForgetPassClick] = useState(false)
     const [isOpenFilter, setIsOpenFilter] = useState(false);
     

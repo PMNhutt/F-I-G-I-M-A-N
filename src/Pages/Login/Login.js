@@ -7,7 +7,9 @@ import fbIcon from '../../data/LoginBackgroundImgs/fbIcon.png';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import PhoneForm from './PhoneForm';
-import { ModalContext } from '../../Context/ModalContext';
+import { useDispatch, useSelector } from 'react-redux';
+import { setForgetPassClick } from '../../redux/userSlice';
+
 
 
 function Login({ title }) {
@@ -16,7 +18,9 @@ function Login({ title }) {
     document.title = title;
   }, [title])
 
-  const context = useContext(ModalContext);
+  //use redux,
+  const userStore = useSelector((state) => state.user)
+  const dispatch = useDispatch();
 
   const [isClick, setIsClick] = useState(false)
 
@@ -29,7 +33,7 @@ function Login({ title }) {
   }
 
   const handleGoBackEmailForm = () => {
-    context.setForgetPassClick(false)
+    dispatch(setForgetPassClick(false))
   }
 
   return (
@@ -37,13 +41,13 @@ function Login({ title }) {
       <div className="login-form">
         <div className="login-form-container">
           {isClick && (
-            !context.forgetPassClick
+            !userStore.forgetPassClick
               ? <ChevronLeftIcon className="goBack" onClick={handleGoBack} />
               : <ChevronLeftIcon className="goBack" onClick={handleGoBackEmailForm} />
           )
           }
           <Link to="/"><img src={figiLogo} alt="Trang Chủ" className="logo" onClick={handleGoBackEmailForm} /></Link>
-          <p className="login-welcome">{!context.forgetPassClick
+          <p className="login-welcome">{!userStore.forgetPassClick
             ? "Đăng nhập vào Figiman"
             : "Lấy lại mật khẩu"}</p>
           {!isClick && (
@@ -65,7 +69,7 @@ function Login({ title }) {
           {isClick && (
             <PhoneForm />
           )}
-          {!context.forgetPassClick && (
+          {!userStore.forgetPassClick && (
             <p className="no-account">
               Bạn chưa có tài khoản? <Link to="/register">Đăng ký</Link>
             </p>

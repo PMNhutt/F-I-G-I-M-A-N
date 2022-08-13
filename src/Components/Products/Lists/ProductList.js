@@ -9,13 +9,14 @@ import Pagination from '@mui/material/Pagination';
 import { makeStyles } from '@mui/styles';
 import { motion } from 'framer-motion';
 import { products } from '../../../data/products';
-import { ModalContext } from '../../../Context/ModalContext';
 import { styled } from '@mui/material/styles';
 import { Tooltip, tooltipClasses } from '@mui/material';
 import FigurePoster from '../../FigurePoster/FigurePoster';
 import FigurePosterFlex from '../../FigurePoster/FigurePosterFlex';
 import '../../HomeInfo/HomeInfo.css';
 import * as sharedFunction from '../../../share/_shared';
+import { useDispatch, useSelector } from 'react-redux';
+import { setIsOpenFilter } from '../../../redux/userSlice';
 
 
 
@@ -99,10 +100,12 @@ function ProductList() {
     /**
      * *handle open filter (mobile)
      */
-    const context = useContext(ModalContext)
+    //use redux,
+    const userStore = useSelector((state) => state.user)
+    const dispatch = useDispatch();
 
     const handleOpenFilter = () => {
-        context.setIsOpenFilter(prev => !prev)
+        dispatch(setIsOpenFilter(true))
     }
 
     const CustomToolTip = styled(({ className, ...props }) => (

@@ -1,14 +1,18 @@
 import './App.css';
 import Main from './Components/Main/Main';
-import { useEffect, useContext } from 'react'
-import { ModalContext } from './Context/ModalContext';
+import { useEffect } from 'react'
+import { useSelector } from 'react-redux';
 
 function App() {
 
-  const modal = useContext(ModalContext)
+  //use redux,
+  const userStore = useSelector((state) => state.user)
+  const peekModalStore = useSelector((state) => state.peekModal)
+
+
   useEffect(() => {
-    (modal.showModal === true || modal.showPeekModal === true || modal.isOpenFilter === true) ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
-  }, [modal.showModal, modal.showPeekModal, modal.isOpenFilter])
+    (peekModalStore.showModal === true || peekModalStore.showPeekModal === true || userStore.isOpenFilter === true) ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
+  }, [peekModalStore.showModal, peekModalStore.showPeekModal, userStore.isOpenFilter])
 
   return (
     <div className="App">

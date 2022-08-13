@@ -35,7 +35,6 @@ body {
     z-index: 999;
     padding: 0 7vw;
     width: 100%;
-    /* backdrop-filter: blur(6px); */
     background-image:
         linear-gradient(180deg, rgba(0, 0, 0, .7) 5%, transparent);
 }
@@ -131,9 +130,6 @@ body {
     /* background-color: var(--text-color); */
     color: var(--text-color);
     background: rgba(183, 218, 255, 0.25);
-    box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -155,9 +151,6 @@ body {
         inset 0px 11px 28px 0px rgb(255, 255, 255); */
 
     background: rgba(183, 218, 255, 0.25);
-    box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.5s;
@@ -459,9 +452,6 @@ body {
         /* background-color: var(--text-color); */
         color: var(--text-color);
         background: rgba(183, 218, 255, 0.25);
-        box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.18);
     }

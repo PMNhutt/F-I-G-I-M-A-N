@@ -1,10 +1,14 @@
 import React, { useContext, useState } from 'react';
 import validator from 'validator';
-import { ModalContext } from '../../Context/ModalContext';
+import { useDispatch, useSelector } from 'react-redux';
+import { setForgetPassClick } from '../../redux/userSlice';
+
 
 function PhoneForm() {
 
-  const context = useContext(ModalContext)
+  //use redux,
+  const userStore = useSelector((state) => state.user)
+  const dispatch = useDispatch();
 
   const [phoneValid, setPhoneValid] = useState(false);
   const [emailValid, setEmailValid] = useState(false);
@@ -66,13 +70,14 @@ function PhoneForm() {
   }
 
   const handleForgotPass = () => {
-    context.setForgetPassClick(true)
+    dispatch(setForgetPassClick(true))
   }
+
   return (
     <div className="phone-form">
       <div className="label-group">
         <p>{!loginToggle ? "Số điện thoại" : "Email"}</p>
-        {!context.forgetPassClick && (
+        {!userStore.forgetPassClick && (
           <p className="log-with-toggle" onClick={handleLoginToggle}>
             {!loginToggle ? "Đăng nhập với email" : "Đăng nhập với SĐT"}
           </p>
@@ -120,7 +125,7 @@ function PhoneForm() {
             autoFocus
             placeholder="Địa chỉ email"
             onChange={handleEnterEmail} />
-          {!context.forgetPassClick && (
+          {!userStore.forgetPassClick && (
             <>
 
               <input
@@ -129,7 +134,7 @@ function PhoneForm() {
                 placeholder="Mật khẩu" />
             </>
           )}
-          {context.forgetPassClick && (
+          {userStore.forgetPassClick && (
             <>
               <div className="confirm-input-group">
                 <input
@@ -153,8 +158,8 @@ function PhoneForm() {
               ? { cursor: "pointer" }
               : {}}
             className="login-btn"
-            disabled={!emailValid}>{!context.forgetPassClick ? "Đăng nhập" : "Xác nhận"}</button>
-          {!context.forgetPassClick && (
+            disabled={!emailValid}>{!userStore.forgetPassClick ? "Đăng nhập" : "Xác nhận"}</button>
+          {!userStore.forgetPassClick && (
             <p className="forgot-pass" onClick={handleForgotPass}>Quên mật khẩu?</p>
           )}
         </>

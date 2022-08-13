@@ -1,5 +1,4 @@
-import React, { useContext, useState, useEffect, Suspense } from 'react'
-import { ModalContext } from '../../Context/ModalContext'
+import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { categories } from '../../data/categories';
 import './FigurePeekModal.css'
@@ -10,11 +9,18 @@ import ErrorIcon from '@mui/icons-material/Error';
 import ReportIcon from '@mui/icons-material/Report';
 import Image from '../FigurePeekModal/Image'
 import * as sharedFunction from '../../share/_shared';
+import { useDispatch, useSelector } from 'react-redux';
+import { openModal, openPeekModal } from '../../redux/peekModalSlice';
+import { addItemFromPeek, setAddedProduct, setAddedMessage, setErrorMessage, setStockAvailable, setStockAvailablePeek } from '../../redux/cartSlice';
+
 
 function FigurePeekModal() {
 
-    //modal  context
-    const context = useContext(ModalContext)
+    //use redux 
+    const cartStore = useSelector((state) => state.cart)
+    const peekModalStore = useSelector((state) => state.peekModal)
+    const dispatch = useDispatch();
+
     const [inputValue, setInputValue] = useState(1)
 
 
@@ -35,18 +41,18 @@ function FigurePeekModal() {
 
     //handleClosePeek
     const handleClosePeek = () => {
-        context.setShowPeekModal(false)
+        dispatch(openPeekModal(false))
         setInputValue(1)
-        setStockAvailable(false)
+        dispatch(setStockAvailablePeek(false))
         setOtherImages()
     }
     //close with esc key
     useEffect(() => {
         const close = (e) => {
             if (e.keyCode === 27) {
-                context.setShowPeekModal(false)
+                dispatch(openPeekModal(false))
                 setInputValue(1)
-                setStockAvailable(false)
+                dispatch(setStockAvailablePeek(false))
                 setOtherImages()
             }
         }
@@ -62,99 +68,42 @@ function FigurePeekModal() {
     const handleAddToCart = () => {
         setAdd(prev => !prev)
 
-        let added = context.productList.find((product) => {
-            return product.id === context.product.id
-        })
-
-
-        let addedAmount = 0
-        let checkValidAmount = true
-        // addedAmount = context.product.stock - addedProduct.amountAdded
-        if (context.product.id === context.addedProduct.id) {
-            addedAmount = context.addedProduct.amountAdded
-
-            if (inputValue + addedAmount > context.product.stock) {
-                checkValidAmount = false
-            } else {
-                checkValidAmount = true
-            }
-        }
-
-        // && inputValue <= (context.product.stock - addedAmount)
-        if (checkValidAmount == true) {
-            
-            if (inputValue >= 1) {
-                context.setCartEmpty(false)
-                context.setError(false)
-                context.setAddedAnouncement(true)
-                if (added == undefined) {
-                    context.setProductList(prev => [...prev, {
-                        id: context.product.id,
-                        name: context.product.name,
-                        ImgSrc: context.product.thumbImg,
-                        price: context.product.price,
-                        amount: inputValue,
-                        maxAmount: context.product.stock,
-                    }])
-                } else {
-                    let newAmount = 0
-                    context.productList.map((pro, index) => {
-                        if (pro.id == added.id) {
-                            newAmount = pro.amount + inputValue
-                            context.productList.splice(index, 1)
-                        }
-                    })
-                    context.setProductList(prev => [...prev, {
-                        id: context.product.id,
-                        name: context.product.name,
-                        ImgSrc: context.product.thumbImg,
-                        price: context.product.price,
-                        amount: newAmount,
-                        maxAmount: context.product.stock,
-                    }])
-
-
-                }
-            } else {
-                context.setError(true)
-                context.setAddedAnouncement(false)
-            }
-        } else {
-            context.setError(true)
-            setStockAvailable(true)
-        }
-
-
+        dispatch(addItemFromPeek({
+            id: peekModalStore.setProduct.id,
+            stock: peekModalStore.setProduct.stock,
+            inputValue: inputValue,
+            name: peekModalStore.setProduct.name,
+            thumbImg: peekModalStore.setProduct.thumbImg,
+            price: peekModalStore.setProduct.price,
+        }))
 
         setLoadingBtn(true)
     }
 
-    //get added product in cart => solve close peek modal lose addedProduct state
-    // const [addedProduct, setAddedProduct] = useState({
-    //     id: 0,
-    //     amountAdded: 0,
-    // })
     useEffect(() => {
 
-        let added = context.productList.find((product) => {
-            return product.id === context.product.id
-        })
+        let added;
+        if (peekModalStore.setProduct !== undefined) {
+            added = cartStore.productslist.find((product) => {
+                return product.id === peekModalStore.setProduct.id
+            })
+        }
         let prevID
         if (added !== undefined) {
-            context.setAddedProduct({
+            dispatch(setAddedProduct({
                 id: added.id,
                 amountAdded: added.amount,
-            })
+            }))
             prevID = added.id
         } else {
-            context.setAddedProduct({
+            dispatch(setAddedProduct({
                 id: prevID,
                 amountAdded: 0,
-            })
+            }))
         }
         // console.log(addedProduct);
 
-    }, [context.showPeekModal == true, add, inputValue])
+    }, [peekModalStore.showPeekModal == true, add, inputValue])
 
 
     useEffect(() => {
@@ -162,7 +111,7 @@ function FigurePeekModal() {
         if (loadingBtn === true) {
             delay = setTimeout(() => {
                 setLoadingBtn(false)
-                context.setAddedAnouncement(false)
+                dispatch(setAddedMessage(false))
             }, 2000)
         }
 
@@ -171,46 +120,46 @@ function FigurePeekModal() {
 
     useEffect(() => {
         let delay
-        if (context.error === true) {
+        if (cartStore.errorMessage === true) {
             delay = setTimeout(() => {
-                context.setError(false)
+                dispatch(setErrorMessage(false))
             }, 2000)
         }
 
         return () => clearTimeout(delay);
-    }, [context.error])
+    }, [cartStore.errorMessage])
 
     //get category
     const getCategoryName = () => {
         let name
-        if (context.showPeekModal == true) {
-            name = categories.find(cate => cate.id === context.product.categoryID)
+        if (peekModalStore.showPeekModal === true) {
+            name = categories.find(cate => cate.id === peekModalStore.setProduct.categoryID)
         }
         return name.name
     }
 
     //custom input 
-    const [stockAvailable, setStockAvailable] = useState(false)
+    // const [stockAvailable, setStockAvailable] = useState(false)
 
     const handleIncrese = () => {
         let addedAmount = 0
-        if (context.product.id === context.addedProduct.id) {
-            addedAmount = context.addedProduct.amountAdded
+        if (peekModalStore.setProduct.id === cartStore.addedProduct.id) {
+            addedAmount = cartStore.addedProduct.amountAdded
         }
 
-        if (inputValue >= (context.product.stock - addedAmount)) {
-            setStockAvailable(true)
-            context.setError(true)
+        if (inputValue >= (peekModalStore.setProduct.stock - addedAmount)) {
+            dispatch(setStockAvailablePeek(true))
+            dispatch(setErrorMessage(true))
         } else {
-            setStockAvailable(false)
+            dispatch(setStockAvailablePeek(false))
             setInputValue(prev => prev + 1)
         }
     }
 
     const handleDecrese = () => {
         setInputValue(prev => prev - 1)
-        setStockAvailable(false)
-        context.setError(false)
+        dispatch(setStockAvailablePeek(false))
+        dispatch(setErrorMessage(false))
 
         if (inputValue <= 1) {
             setInputValue(1)
@@ -224,15 +173,15 @@ function FigurePeekModal() {
             setInputValue(1)
         } else {
             let addedAmount = 0
-            if (context.product.id === context.addedProduct.id) {
-                addedAmount = context.addedProduct.amountAdded
+            if (peekModalStore.setProduct.id === cartStore.addedProduct.id) {
+                addedAmount = cartStore.addedProduct.amountAdded
             }
-            if (newValue >= (context.product.stock - addedAmount)) {
-                setStockAvailable(true)
-                context.setError(true)
-                setInputValue((context.product.stock - addedAmount))
+            if (newValue >= (peekModalStore.setProduct.stock - addedAmount)) {
+                dispatch(setStockAvailablePeek(true))
+                dispatch(setErrorMessage(true))
+                setInputValue((peekModalStore.setProduct.stock - addedAmount))
             } else {
-                setStockAvailable(false)
+                dispatch(setStockAvailablePeek(false))
                 setInputValue(newValue)
             }
         }
@@ -247,26 +196,21 @@ function FigurePeekModal() {
 
     const [activeSrc, setActiveSrc] = useState()
     useEffect(() => {
-        if (context.product != undefined) {
-            if (otherImages != undefined) {
+        if (peekModalStore.setProduct !== undefined) {
+            if (otherImages !== undefined) {
                 setActiveSrc(otherImages)
             } else {
-                setActiveSrc(context.product.details.imageDescription)
+                setActiveSrc(peekModalStore.setProduct.details.imageDescription)
             }
         }
 
-    }, [context.showPeekModal, otherImages])
-
-    // react-img
-    // const MyImage = React.lazy(() => {
-    //     return import('./Image')
-    // })
+    }, [peekModalStore.showPeekModal, otherImages])
 
 
     // =================================
     return (
         <AnimatePresence exitBeforeEnter>
-            {context.showPeekModal == true && (
+            {peekModalStore.showPeekModal === true && (
                 <>
                     <motion.div
                         variants={peekModal}
@@ -277,12 +221,12 @@ function FigurePeekModal() {
                     >
                         {/* close, status, error messages*/}
 
-                        {context.product.status === "new" && (
+                        {peekModalStore.setProduct.status === "new" && (
                             <div className="peek-status">
                                 <h3>Mới</h3>
                             </div>
                         )}
-                        {context.product.status === "preOrder" && (
+                        {peekModalStore.setProduct.status === "preOrder" && (
                             <div className="peek-status-order">
                                 <h3>Đặt trước</h3>
                             </div>
@@ -291,16 +235,16 @@ function FigurePeekModal() {
                             <CloseIcon onClick={() => handleClosePeek()} />
                         </div>
                         <AnimatePresence>
-                            {context.error == true && (<motion.div className="error-message"
+                            {cartStore.errorMessage === true && (<motion.div className="error-message"
                                 exit={{ opacity: 0 }}
                             >
-                                {stockAvailable === false ? <span>Có lỗi xảy ra <ErrorIcon sx={{ fontSize: '2vw', marginLeft: '5px' }} /></span> :
+                                {cartStore.stockAvailablePeek === false ? <span>Có lỗi xảy ra <ErrorIcon sx={{ fontSize: '2vw', marginLeft: '5px' }} /></span> :
                                     <span>Bạn đã chọn tối đa <ReportIcon sx={{ fontSize: '2vw', marginLeft: '5px' }} /></span>}
                             </motion.div>)}
                         </AnimatePresence>
 
                         <AnimatePresence>
-                            {context.addedAnouncement == true && (<motion.div className="added-message"
+                            {cartStore.addedMessage === true && (<motion.div className="added-message"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
@@ -316,7 +260,7 @@ function FigurePeekModal() {
                                 <Image src={activeSrc} />
                             </div>
                             <div className="img-list">
-                                {context.product.details.otherImages.slice(0, 4).map((image) => (
+                                {peekModalStore.setProduct.details.otherImages.slice(0, 4).map((image) => (
                                     <div className="img-item" key={image.id}
                                         style={{
                                             backgroundImage: `url( "${image.imgUrl}")`
@@ -331,20 +275,20 @@ function FigurePeekModal() {
                         <div className="peek-details">
 
                             <div className="product-name mb">
-                                <h2>{context.product.name}</h2>
+                                <h2>{peekModalStore.setProduct.name}</h2>
                             </div>
 
                             <div className="product-price mb">
-                                <h2>{sharedFunction.numberWithCommas(context.product.price)} ₫</h2>
-                                {context.product.status === "preOrder" &&
+                                <h2>{sharedFunction.numberWithCommas(peekModalStore.setProduct.price)} ₫</h2>
+                                {peekModalStore.setProduct.status === "preOrder" &&
                                     (<p style={{ marginTop: '10px' }}>
                                         <span style={{ color: '#fff', fontWeight: 600 }}>Đặt cọc: </span>
-                                        {sharedFunction.numberWithCommas(context.product.depositPrice)} ₫
+                                        {sharedFunction.numberWithCommas(peekModalStore.setProduct.depositPrice)} ₫
                                     </p>)}
                             </div>
 
                             <div className="product-description mb">
-                                <p>{sharedFunction.truncate(context.product.details.description, 200)}</p>
+                                <p>{sharedFunction.truncate(peekModalStore.setProduct.details.description, 200)}</p>
                             </div>
 
                             <div className="product-quantity mb">
@@ -354,12 +298,12 @@ function FigurePeekModal() {
                                     value={inputValue}
                                     onChange={e => handleInput(e)}
                                 />
-                                <div className={stockAvailable === false ? "insc-btn " : "insc-btn disable-click"} onClick={() => handleIncrese()}>+</div>
+                                <div className={cartStore.stockAvailablePeek === false ? "insc-btn " : "insc-btn disable-click"} onClick={() => handleIncrese()}>+</div>
                             </div>
 
                             <div className="product-stock mb">
                                 <span style={{ color: '#fff', fontWeight: 600 }}>Kho: </span>
-                                <span>{context.product.stock}</span>
+                                <span>{peekModalStore.setProduct.stock}</span>
                             </div>
 
                             <div className="product-category mb">
@@ -369,18 +313,18 @@ function FigurePeekModal() {
 
                             <div className="product-tagnames mb">
                                 <span style={{ color: '#fff', fontWeight: 600 }}>Từ khóa: </span>
-                                {context.product.tagName.map((tagName, index) => (
+                                {peekModalStore.setProduct.tagName.map((tagName, index) => (
                                     <span key={index} className="tagNames"><a>{(index ? ', ' : '') + `${tagName}`}</a></span>
                                 ))}
                             </div>
 
                             <div className="peek-btns">
-                                {context.product.status !== "preOrder" && (<div className={loadingBtn == false ? "add-to-cart-btn" : "loading-btn"} onClick={() => handleAddToCart()}>
-                                    {loadingBtn == false ? "Thêm Vào Giỏ" : "Đang thêm..."}
-                                    {loadingBtn == true && <div ><CachedIcon className="loading-icon" /></div>}
+                                {peekModalStore.setProduct.status !== "preOrder" && (<div className={loadingBtn === false ? "add-to-cart-btn" : "loading-btn"} onClick={() => handleAddToCart()}>
+                                    {loadingBtn === false ? "Thêm Vào Giỏ" : "Đang thêm..."}
+                                    {loadingBtn === true && <div ><CachedIcon className="loading-icon" /></div>}
                                 </div>)}
 
-                                {context.product.status === "preOrder" && (<div className="preOrder-btn">
+                                {peekModalStore.setProduct.status === "preOrder" && (<div className="preOrder-btn">
                                     Liên hệ
                                 </div>)}
 

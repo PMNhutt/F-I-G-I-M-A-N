@@ -1,9 +1,7 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import validator from 'validator';
-import { ModalContext } from '../../Context/ModalContext';
 
 function RegisterForm() {
-    const context = useContext(ModalContext);
     const [registerToggle, setRegisterToggle] = useState(false);
     const [phoneValid, setPhoneValid] = useState(false);
     const [emailValid, setEmailValid] = useState(false);

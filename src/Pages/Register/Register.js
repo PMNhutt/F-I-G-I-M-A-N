@@ -7,15 +7,12 @@ import fbIcon from '../../data/LoginBackgroundImgs/fbIcon.png';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import RegisterForm from './RegisterForm';
-import { ModalContext } from '../../Context/ModalContext';
 
 function Register({ title }) {
 
     useEffect(() => {
         document.title = title;
     }, [title])
-
-    const context = useContext(ModalContext);
 
     const [isClick, setIsClick] = useState(false)
 

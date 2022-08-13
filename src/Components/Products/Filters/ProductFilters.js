@@ -8,8 +8,9 @@ import CloseIcon from '@mui/icons-material/Close';
 import RemoveIcon from '@mui/icons-material/Remove';
 import Slider from '@mui/material/Slider';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ModalContext } from '../../../Context/ModalContext';
+import { useDispatch, useSelector } from 'react-redux';
 import * as sharedFunction from './_functions';
+import { setIsOpenFilter } from '../../../redux/userSlice';
 
 
 function ProductFilters() {
@@ -112,36 +113,23 @@ function ProductFilters() {
      * *animation fiilter
      */
 
-    const context = useContext(ModalContext)
-
-    const filterMenu = {
-        visible: {
-            opacity: 1, x: 0, transition: {
-                ease: "easeOut",
-                duration: 0.3
-            }
-        },
-        hidden: {
-            opacity: 0, x: "20vw", transition: {
-                ease: "easeOut",
-                duration: 0.3
-            }
-        }
-    }
+   //use redux,
+   const userStore = useSelector((state) => state.user)
+   const dispatch = useDispatch();
 
     const handleCloseFilter = () => {
-        context.setIsOpenFilter(false)
+        dispatch(setIsOpenFilter(false))
     }
 
     return (
         <>
             <div
-                className={context.isOpenFilter ? "filter-mobile" : "products-filters"}>
+                className={userStore.isOpenFilter ? "filter-mobile" : "products-filters"}>
                 <AnimatePresence exitBeforeEnter>
                     <div
                         key={1}
                     >
-                        {context.isOpenFilter && (
+                        {userStore.isOpenFilter && (
                             <div className="mobile-header">
                                 <h2>Bộ lọc</h2>
                                 <CloseIcon
@@ -699,7 +687,7 @@ function ProductFilters() {
                 </AnimatePresence>
             </div>
 
-            {context.isOpenFilter && (
+            {userStore.isOpenFilter && (
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

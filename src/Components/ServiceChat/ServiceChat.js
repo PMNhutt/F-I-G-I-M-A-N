@@ -25,7 +25,7 @@ function ServiceChat() {
     }
 
     useEffect(() => {
-        if (closeChatIcon == false) {
+        if (closeChatIcon === false) {
             window.addEventListener('scroll', handleScroll);
         } else {
             setScroll(false);
@@ -48,7 +48,7 @@ function ServiceChat() {
     }
 
     useEffect(() => {
-        if (closeChatIcon == true) {
+        if (closeChatIcon === true) {
             window.addEventListener('scroll', handleScrollOpen);
         } else {
             setScrollOpen(false);

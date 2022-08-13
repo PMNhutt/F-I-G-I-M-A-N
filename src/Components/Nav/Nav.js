@@ -1,5 +1,4 @@
-import { useEffect, useState, useContext } from 'react';
-import { ModalContext } from '../../Context/ModalContext';
+import { useEffect, useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion'
 import { Tooltip, tooltipClasses } from '@mui/material';
@@ -10,11 +9,15 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import SearchIcon from '@mui/icons-material/Search';
 import NotesIcon from '@mui/icons-material/Notes';
 import OutsideClickHandler from 'react-outside-click-handler';
+import { useDispatch, useSelector } from 'react-redux';
+import { openModal } from '../../redux/peekModalSlice';
 
 function Nav() {
 
-  //modal cart context
-  const cartMenu = useContext(ModalContext)
+  //use redux,
+  const cartStore = useSelector((state) => state.cart)
+  const peekModalStore = useSelector((state) => state.peekModal)
+  const dispatch = useDispatch();
 
   //scroll nav
   const [scroll, setScroll] = useState(false);
@@ -60,7 +63,7 @@ function Nav() {
 
 
   const handleOpenCart = () => {
-    cartMenu.setShowModal(true)
+    dispatch(openModal(true))
   }
 
 
@@ -83,9 +86,13 @@ function Nav() {
 
   useEffect(() => {
     let total = 0;
-    cartMenu.productList.forEach(product => {
-      total += product.amount
-    })
+    if (cartStore.productslist !== undefined) {
+      cartStore.productslist.forEach(product => {
+        total += product.amount
+      })
+    } else {
+      total = 0;
+    }
     let delay;
     delay = setTimeout(() => {
       setTotalAmount(total)
@@ -95,7 +102,7 @@ function Nav() {
 
     return () => clearTimeout(delay);
 
-  }, [cartMenu.productList])
+  }, [cartStore.productslist])
 
 
 
@@ -144,7 +151,7 @@ function Nav() {
           <SearchIcon className="icon search-icon" />
           <CustomToolTip enterDelay={1000} placement="bottom" title="Giỏ hàng">
             <div className={!shake ? "cart-wrapper cart-shake" : "cart-wrapper"} onClick={() => handleOpenCart()}>
-              <ShoppingCartOutlinedIcon className="icon"  />
+              <ShoppingCartOutlinedIcon className="icon" />
               <div className="cart-notifications">
                 <p>{totalAmount}</p>
               </div>
