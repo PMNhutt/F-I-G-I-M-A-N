@@ -33,6 +33,15 @@
     }
 
     .breadcrumb {
+
+        @include tablet {
+            margin-top: 3rem;
+        }
+
+        @include mobile {
+            display: none;
+        }
+
         ul {
             display: flex;
             align-items: center;
@@ -64,10 +73,20 @@
         display: flex;
         gap: 30px;
 
+        @include mobile {
+            flex-direction: column;
+        }
+
         .show-images {
             width: 50rem;
 
+            @include mobile {
+                width: 100%;
+            }
+
             .active-image {
+                position: relative;
+
                 img {
                     width: 100%;
                     border-radius: 5px;
@@ -94,8 +113,14 @@
         .show-actions {
             flex-grow: 1;
 
+
+
             .name {
                 font-size: 2rem;
+
+                @include tablet {
+                    font-size: 1.5rem;
+                }
             }
 
             .price {
@@ -103,6 +128,10 @@
                 margin-top: 1.5rem;
                 font-size: 2rem;
                 font-weight: 500;
+
+                @include tablet {
+                    font-size: 1.5rem;
+                }
             }
 
             .add-to-cart-btn {
@@ -117,6 +146,14 @@
                 text-align: center;
                 cursor: pointer;
                 user-select: none;
+
+                @include tablet {
+                    width: 100%;
+                }
+
+                @include mobile {
+                    width: 100%;
+                }
 
                 &:active {
                     animation: press 0.2s 1 linear;
@@ -197,6 +234,18 @@
                     background: rgba(183, 218, 255, 0.25);
                     border: 1px solid rgba(255, 255, 255, 0.18);
                     transition: 0.5s;
+
+                    @include tablet {
+                        font-size: 2.5vw;
+                        height: 4.5vw;
+                        width: 4.6vw;
+                    }
+
+                    @include mobile {
+                        font-size: 1.6rem;
+                        height: 2rem;
+                        width: 2rem;
+                    }
                 }
 
                 .desc-btn {
@@ -213,6 +262,18 @@
                     height: 2.5vw;
                     display: flex;
                     align-items: center;
+
+                    @include tablet {
+                        font-size: 2.5vw;
+                        height: 4.5vw;
+                    }
+
+                    @include mobile {
+                        justify-content: center;
+                        font-size: 1.6rem;
+                        height: 2rem;
+                        width: 2rem;
+                    }
 
                     &:hover {
                         background: rgba(183, 218, 255, 0.6);
@@ -233,6 +294,18 @@
                     height: 2.5vw;
                     display: flex;
                     align-items: center;
+
+                    @include tablet {
+                        font-size: 2.5vw;
+                        height: 4.5vw;
+                    }
+
+                    @include mobile {
+                        justify-content: center;
+                        font-size: 1.6rem;
+                        height: 2rem;
+                        width: 2rem;
+                    }
 
                     &:hover {
                         background: rgba(183, 218, 255, 0.6);
@@ -272,6 +345,12 @@
                 padding: 10px;
                 background-color: var(--color-red);
 
+                @include tablet {
+                    h3 {
+                        font-size: 18px;
+                    }
+                }
+
                 .new-icon {
                     width: 20px;
                     height: 20px;
@@ -285,6 +364,11 @@
                 display: flex;
                 align-items: center;
                 gap: 8px;
+
+                @include tablet {
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
 
                 a {
                     cursor: pointer;
@@ -303,8 +387,26 @@
         display: flex;
         gap: 20px;
 
+        @include tablet {
+            flex-direction: column-reverse;
+        }
+
+        @include mobile {
+            flex-direction: column-reverse;
+        }
+
         img {
             height: 20rem;
+
+            @include tablet {
+                height: auto;
+                width: auto;
+            }
+
+            @include mobile {
+                height: 50vw;
+                width: 40vw;
+            }
         }
 
         .main-details {
@@ -324,6 +426,10 @@
                 gap: 5rem;
                 margin-top: 20px;
 
+                @include mobile {
+                    display: none;
+                }
+
                 ul {
 
                     .info-label {
@@ -333,6 +439,28 @@
                     li {
                         margin-bottom: 8px;
                         list-style: none;
+                    }
+                }
+            }
+
+            .infos-container-mobile {
+                display: none;
+                margin-top: 20px;
+
+                @include mobile {
+                    display: block;
+
+                    ul {
+
+                        .info-label {
+                            font-weight: bold;
+                            margin-bottom: 3px;
+                        }
+    
+                        li {
+                            margin-bottom: 8px;
+                            list-style: none;
+                        }
                     }
                 }
             }
@@ -408,7 +536,7 @@
 
                 .info {
                     text-align: center;
-                    
+
                     a {
                         text-decoration: none;
                         color: var(--text-color);

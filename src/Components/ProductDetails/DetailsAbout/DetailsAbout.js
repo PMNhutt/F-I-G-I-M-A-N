@@ -40,6 +40,35 @@ function DetailsAbout() {
                     </ul>
                 </div>
 
+                <div className="infos-container-mobile">
+                    <ul>
+                        <li>
+                            <p className="info-label">
+                                Danh mục
+                            </p>
+                            <p>{getCategoryName()}</p>
+                        </li>
+                        <li>
+                            <p className="info-label">
+                                Nhà sản xuất
+                            </p>
+                            <p>{userStore.productDetail.details.company}</p>
+                        </li>
+                        <li>
+                            <p className="info-label">
+                                Chất liệu
+                            </p>
+                            <p>{userStore.productDetail.details.material}</p>
+                        </li>
+                        <li>
+                            <p className="info-label">
+                                Kích thước
+                            </p>
+                            <p>{userStore.productDetail.details.size}</p>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     )

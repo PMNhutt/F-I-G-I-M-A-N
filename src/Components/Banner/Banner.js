@@ -1,5 +1,6 @@
 import './Banner.css'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 
 function Banner() {
@@ -54,11 +55,13 @@ function Banner() {
                     >
                         Mang đến cho bạn cảm giác mua sắm hoàn hảo
                     </motion.h3>
-                    <motion.a variants={childAnimations}><motion.button
-                        className="banner-btn"
-                    >
-                        Khám Phá Ngay
-                    </motion.button></motion.a>
+                    <Link to='/products'>
+                        <motion.a variants={childAnimations}><motion.button
+                            className="banner-btn"
+                        >
+                            Khám Phá Ngay
+                        </motion.button></motion.a>
+                    </Link>
                 </motion.div>
             </div>
         </div>

@@ -102,8 +102,6 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
             }))
             prevID = added.id
         } else {
-            console.log("dispatch at poster");
-
             dispatch(setAddedProduct({
                 id: prevID,
                 amountAdded: 0,
