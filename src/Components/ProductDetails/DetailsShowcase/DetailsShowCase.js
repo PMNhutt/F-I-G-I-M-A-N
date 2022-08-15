@@ -17,6 +17,8 @@ function DetailsShowCase({ data }) {
     //use redux 
     const cartStore = useSelector((state) => state.cart)
     const userStore = useSelector((state) => state.user)
+    const peekModalStore = useSelector((state) => state.peekModal)
+
     const dispatch = useDispatch();
 
     const [loadingBtn, setLoadingBtn] = useState(false)
@@ -112,7 +114,6 @@ function DetailsShowCase({ data }) {
                 return product.id === userStore.productDetail.id
             })
         }
-        let prevID
         if (added !== undefined) {
             dispatch(setAddedProduct({
                 id: added.id,
@@ -125,7 +126,7 @@ function DetailsShowCase({ data }) {
             }))
         }
 
-    }, [userStore.productDetail, add, inputValue])
+    }, [peekModalStore.showModal, add, inputValue])
 
     //======================================
 

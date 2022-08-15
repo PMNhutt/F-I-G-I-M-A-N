@@ -176,6 +176,14 @@
                 display: flex;
                 text-align: center;
                 justify-content: center;
+
+                @include tablet {
+                    width: 100%;
+                }
+
+                @include mobile {
+                    width: 100%;
+                }
             }
 
             .preOrder-btn {
@@ -192,6 +200,10 @@
                 cursor: pointer;
                 user-select: none;
                 pointer-events: none;
+
+                @include mobile {
+                    width: 100%;
+                }
             }
 
             .loading-icon {
@@ -203,6 +215,14 @@
                 animation-duration: 3s;
                 animation-timing-function: ease;
                 animation-iteration-count: infinite;
+
+                @include tablet {
+                    font-size: 1.5rem;
+                }
+
+                @include mobile {
+                    font-size: 1.5rem;
+                }
             }
 
             .product-quantity {
