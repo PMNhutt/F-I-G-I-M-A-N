@@ -63,7 +63,13 @@
     margin-bottom: 5px;
 }
 
-.figurePoster .container .figure-info-hover h3:hover {
+.figurePoster .container .figure-info-hover h3 a {
+    text-decoration: none;
+    color: var(--color-blue);
+}
+
+.figurePoster .container .figure-info-hover h3 a:hover {
+    transition: 0.2s;
     color: var(--color-bold-blue);
 }
 
@@ -79,7 +85,6 @@
     font-weight: 600;
     padding: 10px 1vw;
     background: rgba(183, 218, 255, 0.25);
-    box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.5s;
@@ -95,7 +100,6 @@
     font-weight: 600;
     padding: 10px 1vw;
     background: rgba(10, 116, 229, 0.25);
-    box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.5s;
@@ -114,7 +118,6 @@
     font-weight: 600;
     padding: 10px 1vw;
     background: rgba(10, 116, 229, 0.25);
-    box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.5s;
@@ -204,7 +207,6 @@
 .figurePoster .container .figure-peek {
     position: absolute;
     background: rgba(183, 218, 255, 0.5);
-    box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     top: 15px;

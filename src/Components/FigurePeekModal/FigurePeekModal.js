@@ -4,17 +4,22 @@ import { categories } from '../../data/categories';
 import './FigurePeekModal.css'
 import CloseIcon from '@mui/icons-material/Close';
 import CachedIcon from '@mui/icons-material/Cached';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import ErrorIcon from '@mui/icons-material/Error';
-import ReportIcon from '@mui/icons-material/Report';
 import Image from '../FigurePeekModal/Image'
 import * as sharedFunction from '../../share/_shared';
 import { useDispatch, useSelector } from 'react-redux';
-import { openModal, openPeekModal } from '../../redux/peekModalSlice';
-import { addItemFromPeek, setAddedProduct, setAddedMessage, setErrorMessage, setStockAvailable, setStockAvailablePeek } from '../../redux/cartSlice';
+import { openPeekModal } from '../../redux/peekModalSlice';
+import { addItemFromPeek, setAddedProduct, setStockAvailablePeek } from '../../redux/cartSlice';
+import { Link } from 'react-router-dom';
+import { openProductDetails } from '../../redux/userSlice';
+import { toast } from 'react-toastify';
 
 
 function FigurePeekModal() {
+
+    const notifyWarn = () => toast.warn("Bạn đã chọn tối đa !", {
+        theme: 'dark',
+        pauseOnHover: false,
+    });
 
     //use redux 
     const cartStore = useSelector((state) => state.cart)
@@ -76,7 +81,6 @@ function FigurePeekModal() {
             thumbImg: peekModalStore.setProduct.thumbImg,
             price: peekModalStore.setProduct.price,
         }))
-
         setLoadingBtn(true)
     }
 
@@ -101,9 +105,8 @@ function FigurePeekModal() {
                 amountAdded: 0,
             }))
         }
-        // console.log(addedProduct);
 
-    }, [peekModalStore.showPeekModal == true, add, inputValue])
+    }, [peekModalStore.showPeekModal, add, inputValue])
 
 
     useEffect(() => {
@@ -111,23 +114,11 @@ function FigurePeekModal() {
         if (loadingBtn === true) {
             delay = setTimeout(() => {
                 setLoadingBtn(false)
-                dispatch(setAddedMessage(false))
             }, 2000)
         }
 
         return () => clearTimeout(delay);
     }, [loadingBtn])
-
-    useEffect(() => {
-        let delay
-        if (cartStore.errorMessage === true) {
-            delay = setTimeout(() => {
-                dispatch(setErrorMessage(false))
-            }, 2000)
-        }
-
-        return () => clearTimeout(delay);
-    }, [cartStore.errorMessage])
 
     //get category
     const getCategoryName = () => {
@@ -149,7 +140,7 @@ function FigurePeekModal() {
 
         if (inputValue >= (peekModalStore.setProduct.stock - addedAmount)) {
             dispatch(setStockAvailablePeek(true))
-            dispatch(setErrorMessage(true))
+            notifyWarn()
         } else {
             dispatch(setStockAvailablePeek(false))
             setInputValue(prev => prev + 1)
@@ -159,7 +150,6 @@ function FigurePeekModal() {
     const handleDecrese = () => {
         setInputValue(prev => prev - 1)
         dispatch(setStockAvailablePeek(false))
-        dispatch(setErrorMessage(false))
 
         if (inputValue <= 1) {
             setInputValue(1)
@@ -178,7 +168,7 @@ function FigurePeekModal() {
             }
             if (newValue >= (peekModalStore.setProduct.stock - addedAmount)) {
                 dispatch(setStockAvailablePeek(true))
-                dispatch(setErrorMessage(true))
+                notifyWarn()
                 setInputValue((peekModalStore.setProduct.stock - addedAmount))
             } else {
                 dispatch(setStockAvailablePeek(false))
@@ -205,6 +195,15 @@ function FigurePeekModal() {
         }
 
     }, [peekModalStore.showPeekModal, otherImages])
+
+    //handle detail page 
+    const handleOpenDetail = () => {
+        let product
+        if (peekModalStore.setProduct !== undefined) {
+            product = peekModalStore.setProduct
+        }
+        dispatch(openProductDetails(product))
+    }
 
 
     // =================================
@@ -234,24 +233,6 @@ function FigurePeekModal() {
                         <div className="close-peek-btn">
                             <CloseIcon onClick={() => handleClosePeek()} />
                         </div>
-                        <AnimatePresence>
-                            {cartStore.errorMessage === true && (<motion.div className="error-message"
-                                exit={{ opacity: 0 }}
-                            >
-                                {cartStore.stockAvailablePeek === false ? <span>Có lỗi xảy ra <ErrorIcon sx={{ fontSize: '2vw', marginLeft: '5px' }} /></span> :
-                                    <span>Bạn đã chọn tối đa <ReportIcon sx={{ fontSize: '2vw', marginLeft: '5px' }} /></span>}
-                            </motion.div>)}
-                        </AnimatePresence>
-
-                        <AnimatePresence>
-                            {cartStore.addedMessage === true && (<motion.div className="added-message"
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                            >
-                                <span>Đã thêm vào giỏ <CheckCircleIcon sx={{ fontSize: '2vw', marginLeft: '5px' }} /></span>
-                            </motion.div>)}
-                        </AnimatePresence>
 
                         {/* main peek detail */}
                         <div className="peek-imgs">
@@ -328,9 +309,11 @@ function FigurePeekModal() {
                                     Liên hệ
                                 </div>)}
 
-                                <div className="details-btn">
-                                    Xem chi tiết
-                                </div>
+                                <Link to={'/detail/' + peekModalStore.setProduct.name} onClick={handleOpenDetail}>
+                                    <div className="details-btn">
+                                        Xem chi tiết
+                                    </div>
+                                </Link>
                             </div>
 
 

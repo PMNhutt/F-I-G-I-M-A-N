@@ -4,6 +4,7 @@ import HomeInfo from '../Components/HomeInfo/HomeInfo'
 import Footer from '../Components/Footer/Footer'
 import ServiceChat from '../Components/ServiceChat/ServiceChat'
 import { useEffect } from 'react';
+import { ToastContainer } from 'react-toastify';
 
 function Homepage({ title }) {
 
@@ -16,6 +17,8 @@ function Homepage({ title }) {
     <div>
       <Nav />
       <Banner />
+      <ToastContainer
+        autoClose={3000} />
       <HomeInfo />
       <ServiceChat />
       <Footer />

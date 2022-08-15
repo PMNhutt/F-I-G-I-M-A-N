@@ -78,9 +78,6 @@
     /* background-color: var(--text-color); */
     color: var(--text-color);
     background: rgba(183, 218, 255, 0.25);
-    box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.18);

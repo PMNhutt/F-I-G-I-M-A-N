@@ -3,6 +3,7 @@ import Homepage from '../../Pages/Homepage'
 import Login from '../../Pages/Login/Login'
 import Register from '../../Pages/Register/Register'
 import Products from '../../Pages/Products'
+import ProductDetail from '../../Pages/ProductDetail'
 import News from '../../Pages/News'
 import CartModal from '../../Components/CartModal/CartModal'
 import FigurePeekModal from '../../Components/FigurePeekModal/FigurePeekModal'
@@ -38,6 +39,10 @@ function Main() {
 
         <Route path="/news" element={
           <News title="Tin tức" />
+        } />
+
+        <Route path="/detail/:name" element={
+          <ProductDetail />
         } />
 
       </Routes>

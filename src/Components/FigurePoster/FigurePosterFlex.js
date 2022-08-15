@@ -8,11 +8,17 @@ import ZoomOutMapRoundedIcon from '@mui/icons-material/ZoomOutMapRounded';
 import Image from '../FigurePeekModal/Image';
 import * as sharedFunction from '../../share/_shared';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItem, setStockAvailable, setAddedProduct, cartEmpty } from '../../redux/cartSlice';
+import { addItem, setAddedProduct } from '../../redux/cartSlice';
 import { openPeekModal, setProduct } from '../../redux/peekModalSlice';
+import { toast } from 'react-toastify';
 
 function FigurePosterFlex({ ImgSrc, name, price, status, id, stock, description }) {
     
+    const notify = (name) => toast.success(`Đã thêm 1 ${name} vào giỏ hàng`, {
+        theme: 'dark',
+        pauseOnHover: false,
+    });
+
     //use redux,
     const cartStore = useSelector((state) => state.cart)
     const peekModalStore = useSelector((state) => state.peekModal)
@@ -40,7 +46,7 @@ function FigurePosterFlex({ ImgSrc, name, price, status, id, stock, description 
             price: price,
             stock: stock,
         }))
-
+        notify(name)
         setLoadingBtn(true)
     }
 
@@ -100,7 +106,7 @@ function FigurePosterFlex({ ImgSrc, name, price, status, id, stock, description 
         }
 
 
-    }, [add, peekModalStore.showModal])
+    }, [add, cartStore.productslist])
 
 
     //set state for "added" button

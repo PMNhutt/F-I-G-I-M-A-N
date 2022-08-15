@@ -1,4 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from 'react-toastify';
+
+const notify = (name, value) => toast.success(`Đã thêm ${value} ${name} vào giỏ hàng`, {
+    theme: 'dark',
+    pauseOnHover: false,
+});
+const notifyError = () => toast.error("Có lỗi xảy ra !", {
+    theme: 'dark',
+    pauseOnHover: false,
+});
+const notifyWarn = () => toast.warn("Bạn đã thêm tối đa sản phẩm này!", {
+    theme: 'dark',
+    pauseOnHover: false,
+});
 
 export const cartSlice = createSlice({
     name: 'cart',
@@ -10,8 +24,6 @@ export const cartSlice = createSlice({
             productID: 0,
         },
         stockAvailablePeek: false,
-        addedMessage: false,
-        errorMessage: false,
         cartPosition: {},
         addedProduct: {
             id: 0,
@@ -87,8 +99,7 @@ export const cartSlice = createSlice({
 
                 if (action.payload.inputValue >= 1) {
                     state.cartEmpty = false
-                    state.errorMessage = false
-                    state.addedMessage = true
+                    notify(action.payload.name, action.payload.inputValue)
                     if (added === undefined) {
                         state.productslist = [...state.productslist, {
                             id: action.payload.id,
@@ -116,11 +127,10 @@ export const cartSlice = createSlice({
                         }]
                     }
                 } else {
-                    state.errorMessage = true
-                    state.addedMessage = false
+                    notifyError()
                 }
             } else {
-                state.errorMessage = true
+                notifyWarn()
                 state.stockAvailablePeek = true
             }
         },
@@ -165,14 +175,10 @@ export const cartSlice = createSlice({
         setCartPosition: (state, action) => {
             state.cartPosition = action.payload
         },
-        setAddedMessage: (state, action) => {
-            state.addedMessage = action.payload;
-        },
-        setErrorMessage: (state, action) => {
-            state.errorMessage = action.payload;
-        }
     }
 })
 
-export const { addItem, addItemFromPeek, deleteItem, cartEmpty, setStockAvailable, setStockAvailablePeek, setAddedProduct, setCartPosition, setAddedMessage, setErrorMessage } = cartSlice.actions;
+export const { addItem, addItemFromPeek, deleteItem,
+    cartEmpty, setStockAvailable, setStockAvailablePeek,
+    setAddedProduct, setCartPosition } = cartSlice.actions;
 export default cartSlice.reducer;

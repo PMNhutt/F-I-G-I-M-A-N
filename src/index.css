@@ -13,3 +13,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Toastify__toast-container--top-right {
+  top: 5em!important;
+  z-index: 999999999!important;
+}

@@ -3,6 +3,7 @@ import Nav from '../Components/Nav/Nav'
 import Footer from '../Components/Footer/Footer'
 import ServiceChat from '../Components/ServiceChat/ServiceChat'
 import ProductsContainer from '../Components/Products/ProductsContainer';
+import { ToastContainer } from 'react-toastify';
 
 
 function Products({ title }) {
@@ -15,6 +16,7 @@ function Products({ title }) {
     return (
         <div>
             <Nav />
+            <ToastContainer autoClose={3000}/>
             <ProductsContainer />
             <ServiceChat />
             <Footer />

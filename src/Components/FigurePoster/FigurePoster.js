@@ -8,11 +8,19 @@ import ZoomOutMapRoundedIcon from '@mui/icons-material/ZoomOutMapRounded';
 import Image from '../FigurePeekModal/Image';
 import * as sharedFunction from '../../share/_shared';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItem, setStockAvailable, setAddedProduct } from '../../redux/cartSlice';
+import { addItem, setAddedProduct } from '../../redux/cartSlice';
 import { openPeekModal, setProduct } from '../../redux/peekModalSlice';
+import { openProductDetails } from '../../redux/userSlice';
+import { Link } from "react-router-dom";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
 
+    const notify = (name) => toast.success(`Đã thêm 1 ${name} vào giỏ hàng`, {
+        theme: 'dark',
+        pauseOnHover: false,
+    });
     //use redux,
     const cartStore = useSelector((state) => state.cart)
     const peekModalStore = useSelector((state) => state.peekModal)
@@ -41,6 +49,7 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
             stock: stock,
         }))
 
+        notify(name)
         setLoadingBtn(true)
     }
 
@@ -93,6 +102,8 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
             }))
             prevID = added.id
         } else {
+            console.log("dispatch at poster");
+
             dispatch(setAddedProduct({
                 id: prevID,
                 amountAdded: 0,
@@ -115,7 +126,6 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
         if (added !== undefined) {
             if (id === cartStore.addedProduct.id) {
                 addedAmount = cartStore.addedProduct.amountAdded
-
                 if (addedAmount === stock) {
                     setStockAvailable(false)
                 } else {
@@ -139,6 +149,10 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
     }, [cartStore.addedProduct.amountAdded, peekModalStore.showModal, cartStore.productslist])
 
 
+    const handleOpenDetail = () => {
+        let product = products.find(p => p.id === id);
+        dispatch(openProductDetails(product))
+    }
     // =================================================================
 
     return (
@@ -146,8 +160,9 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
             <div className="figurePoster" >
                 <div className="container">
                     <div className="figure-thumbnail">
-                        {/* <img src={ImgSrc} /> */}
-                        <Image src={ImgSrc} />
+                        <Link to={'/detail/' + name} onClick={handleOpenDetail}>
+                            <Image src={ImgSrc} />
+                        </Link>
                     </div>
 
                     <div className="figure-info">
@@ -177,7 +192,9 @@ function FigurePoster({ ImgSrc, name, price, status, id, stock }) {
 
 
                     <div className="figure-info-hover">
-                        <h3>{name}</h3>
+                        <h3>
+                            <Link to={'/detail/' + name} onClick={handleOpenDetail}>{name}</Link>
+                        </h3>
                         <p>{sharedFunction.numberWithCommas(price)} ₫</p>
                         <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                             {status !== "preOrder" && (<div className={loadingBtn === false ? ((stockAvailable) ? "add-to-cart-btn" : "add-to-cart-btn disable-click") : "loading-btn"} onClick={() => handleAddToCart()}>

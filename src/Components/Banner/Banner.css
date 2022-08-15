@@ -68,10 +68,6 @@
     font-weight: 600;
     padding: 0.7vw 1vw;
     background: rgba(183, 218, 255, 0.25);
-
-    box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.5s;
@@ -179,8 +175,6 @@
     .content .banner-btn {
         font-size: 3.2vw;
         padding: 2.7vw 2vw;
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
         border-radius: 10px;
     }
 

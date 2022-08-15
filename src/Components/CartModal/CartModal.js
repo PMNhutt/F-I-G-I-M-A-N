@@ -8,6 +8,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { openModal } from '../../redux/peekModalSlice';
 import { cartEmpty, deleteItem } from '../../redux/cartSlice';
 import * as sharedFunction from '../../share/_shared';
+import { openProductDetails } from '../../redux/userSlice';
+import { products } from '../../data/products';
 
 function CartModal() {
 
@@ -62,8 +64,13 @@ function CartModal() {
 
     }, [cartStore.productslist])
 
-    
 
+
+    //handle detail page 
+    const handleOpenDetail = (id) => {
+        let product = products.find(p => p.id === id);
+        dispatch(openProductDetails(product))
+    }
     //====================================
 
 
@@ -123,17 +130,20 @@ function CartModal() {
                                                         }
                                                     }}
                                                 >
-                                                    <div className="product-img"
-                                                        style={{
-                                                            backgroundImage: `url(
-                                                        "${product.ImgSrc}"
-                                                    )`,
-                                                        }}
-                                                    >
-                                                        {/* <img src={product.ImgSrc} /> */}
-                                                    </div>
+                                                    <Link to={'/detail/' + product.name} onClick={() => handleOpenDetail(product.id)}>
+                                                        <div className="product-img"
+                                                            style={{
+                                                                backgroundImage: `url(
+                                                                "${product.ImgSrc}"
+                                                                )`,
+                                                            }}
+                                                        >
+                                                        </div>
+                                                    </Link>
                                                     <div className="product-info">
-                                                        <p className="product-name">{product.name}</p>
+                                                        <Link to={'/detail/' + product.name} onClick={() => handleOpenDetail(product.id)}>
+                                                            <p className="product-name">{product.name}</p>
+                                                        </Link>
                                                         <p className="product-price"><span>{product.amount} &times; </span>{sharedFunction.numberWithCommas(product.price)} ₫</p>
                                                         {/* {console.log("amount in cart:", product.amount)} */}
                                                     </div>
@@ -192,9 +202,10 @@ function CartModal() {
                         onClick={() => handleCloseCart()}
                     ></motion.div>
                 </>
-            )}
+            )
+            }
 
-        </AnimatePresence>
+        </AnimatePresence >
     )
 }
 
