@@ -18,7 +18,7 @@ function Homepage({ title }) {
       <Nav />
       <Banner />
       <ToastContainer
-        autoClose={3000} />
+        autoClose={2000} />
       <HomeInfo />
       <ServiceChat />
       <Footer />

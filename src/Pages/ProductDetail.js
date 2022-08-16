@@ -29,7 +29,7 @@ function ProductDetail() {
     <div>
       <Nav />
       <ToastContainer
-        autoClose={3000} />
+        autoClose={2000} />
       <ProductDetailContainer name={params.name} />
       <ServiceChat />
       <Footer />
